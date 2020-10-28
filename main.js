@@ -113,10 +113,12 @@ client.on('message', message=>{
             message.reply('OK😥');
             client.off();
             break;
+            /*
         case 'shutdown':
             message.reply('Shutting down......');
             client.destroy();
             break;
+            */
         case 'restart':
             message.reply('Restarting......');
             client.destroy();
