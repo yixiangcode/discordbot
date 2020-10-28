@@ -77,7 +77,7 @@ client.on('message',message=>{
     if(message.content ==="丑逼"){
         message.channel.send({files:["./images/ML.jpg"]});
     }
-    if(message.content ==="011"){
+    if(message.content ==="11"){
         message.channel.send("yyyyyyyyyyyyyyyyyyi");
     }
 })
