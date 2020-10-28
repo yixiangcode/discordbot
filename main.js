@@ -80,6 +80,18 @@ client.on('message',message=>{
     if(message.content ==="我爱的人"){
         message.channel.send("不爱你😭");
     }
+    if(message.content ==="。。"){
+        message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。。");
+    }
+    if(message.content ==="来咯"){
+        message.channel.send("来月经是吗");
+    }
+    if(message.content ==="ok"){
+        message.channel.send("walao又ok");
+    }
+    if(message.content ==="走咯"){
+        message.channel.send("走去地狱是吗，带上我😏");
+    }
 })
 
 const PREFIX = '!';
