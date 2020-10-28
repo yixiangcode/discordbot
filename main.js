@@ -20,17 +20,14 @@ client.on('message',message=>{
     if(message.content ==="hi"){
         message.reply('hi你麻痹');
     }
-    if(message.content ==="谁最帅"){
-        message.reply('那必须是益翔~');
-    }
     if(message.content ==="晚安"){
-        message.reply('晚安~');
+        message.reply('晚安😘');
     }
     if(message.content ==="sad"){
-        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是030");
+        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
     }
     if(message.content ==="QAQ"){
-        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是030");
+        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
     }
     if(message.content ==="030"){
         message.reply("walao你以为你很可爱是吗");
@@ -53,6 +50,9 @@ client.on('message',message=>{
     if(message.content ==="笑死"){
         message.channel.send("🤣");
     }
+    if(message.content ==="嘿嘿"){
+        message.channel.send("😏");
+    }
     if(message.content ==="你懂的"){
         message.channel.send("😏");
     }
@@ -68,7 +68,7 @@ client.on('message',message=>{
     if(message.content ==="喵"){
         message.channel.send("喵喵尼哥");
     }
-    if(message.content ==="汪"){
+    if(message.content ==="拿"){
         message.channel.send("🖕😑🖕");
     }
     if(message.content ==="666"){
@@ -77,8 +77,8 @@ client.on('message',message=>{
     if(message.content ==="丑逼"){
         message.channel.send({files:["./images/ML.jpg"]});
     }
-    if(message.content ==="11"){
-        message.channel.send("yyyyyyyyyyyyyyyyyyi");
+    if(message.content ==="我爱的人"){
+        message.channel.send("不爱你😭");
     }
 })
 
@@ -109,21 +109,21 @@ client.on('message', message=>{
         case 'q':
             message.reply('看懒啊')
             break;
+            /*
         case '闭嘴':
             message.reply('OK😥');
             client.off();
             break;
-            /*
         case 'shutdown':
             message.reply('Shutting down......');
             client.destroy();
             break;
-            */
         case 'restart':
             message.reply('Restarting......');
             client.destroy();
             client.login(process.env.token);
             break;
+            */
     }
 })
 
