@@ -14,7 +14,10 @@ client.once('message',message=>{
 })
 */
 client.on('message',message=>{
-    if(message.content ==="嗨","hi"){
+    if(message.content ==="嗨"){
+        message.reply('hiiii亲爱的');
+    }
+    if(message.content ==="hi"){
         message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
