@@ -15,7 +15,7 @@ client.once('message',message=>{
 */
 client.on('message',message=>{
     if(message.content ==="嗨"){
-        message.reply('嗨嗨嗨亲爱的');
+        message.reply('嗨亲爱的');
     }
     if(message.content ==="hi"){
         message.reply('hiiii亲爱的');
@@ -36,7 +36,7 @@ client.on('message',message=>{
         message.reply("好孩子不能骂粗话哟~");
     }
     if(message.content ==="先下"){
-        message.reply("下啦下啦下地狱啦030");
+        message.reply("亲爱的早点睡");
     }
     if(message.content ==="下了"){
         message.reply("下啦下啦下地狱啦030");
@@ -84,13 +84,19 @@ client.on('message',message=>{
         message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。。");
     }
     if(message.content ==="来咯"){
-        message.channel.send("来月经是吗");
+        message.channel.send("亲爱的我来惹~");
     }
     if(message.content ==="ok"){
-        message.channel.send("walao又ok");
+        message.channel.send("yes ok");
     }
     if(message.content ==="走咯"){
         message.channel.send("走去地狱是吗，带上我😏");
+    }
+    if(message.content ==="刷"){
+        message.channel.send("//repeat");
+        if(message.content==="//repeat"){
+            message.channel.send("//repeat");
+        }
     }
 })
 
@@ -105,7 +111,7 @@ client.on('message', message=>{
             message.channel.send('pong!');
             break;
         case 'clear':
-            if(!args[1]) return message.reply('md现在是不会写几行是吗030');
+            if(!args[1]) return message.reply('亲爱的要写几行哟~');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
             break;
