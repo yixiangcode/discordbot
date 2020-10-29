@@ -92,7 +92,6 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
-    message.channel.send("//repeat");
 })
 
 const PREFIX = '!';
