@@ -81,7 +81,7 @@ client.on('message',message=>{
         message.channel.send("不爱你😭");
     }
     if(message.content ==="。。"){
-        message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。。");
+        message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
     }
     if(message.content ==="来咯"){
         message.channel.send("亲爱的我来惹~");
