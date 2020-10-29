@@ -44,6 +44,9 @@ client.on('message',message=>{
     if(message.content ==="有人嗎"){
         message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
     }
+    if(message.content ==="有人吗"){
+        message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
+    }
     if(message.content ==="笑死"){
         message.channel.send("🤣");
     }
@@ -74,8 +77,8 @@ client.on('message',message=>{
     if(message.content ==="丑逼"){
         message.channel.send({files:["./images/ML.jpg"]});
     }
-    if(message.content ==="我爱你"){
-        message.channel.send("我也爱你😘");
+    if(message.content ==="爱你"){
+        message.channel.send("baby我也爱你😘");
     }
     if(message.content ==="。。"){
         message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
