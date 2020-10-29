@@ -121,6 +121,11 @@ client.on('message', message=>{
         case 'q':
             message.reply('看懒啊\n看懒')
             break;
+        case 'restart':
+            message.reply('Restarting......');
+            client.destroy();
+            client.login(process.env.token);
+            break;
             /*
         case '闭嘴':
             message.reply('OK😥');
