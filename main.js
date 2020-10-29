@@ -96,6 +96,16 @@ client.on('message',message=>{
         message.channel.send("//repeat");
 
     }
+    if(message.channel.send("//repeat")){
+        if(message.content ==="停"){
+            break;
+        }
+        break;
+    }
+    if(message.content ==="stop"){
+        message.reply('Restarting......');
+            client.destroy();
+    }
 })
 
 const PREFIX = '!';
