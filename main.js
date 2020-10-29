@@ -95,9 +95,6 @@ client.on('message',message=>{
     if(message.content ==="刷"){
         message.channel.send("//repeat");
     }
-    if(message.content ==="//repeat"){
-        message.channel.send("//repeat");
-    }
 })
 
 const PREFIX = '!';
