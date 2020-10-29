@@ -15,10 +15,10 @@ client.once('message',message=>{
 */
 client.on('message',message=>{
     if(message.content ==="嗨"){
-        message.reply('嗨你麻痹');
+        message.reply('嗨嗨嗨亲爱的');
     }
     if(message.content ==="hi"){
-        message.reply('hi你麻痹');
+        message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
         message.reply('晚安😘');
@@ -116,10 +116,10 @@ client.on('message', message=>{
             message.reply('walao又skip');
             break;
         case 'p':
-            message.reply('妈的这首不好听勒');
+            message.reply('亲爱的这首不好听😳');
             break;
         case 'q':
-            message.reply('看懒啊')
+            message.reply('看懒啊\nabc')
             break;
             /*
         case '闭嘴':
