@@ -93,7 +93,7 @@ client.on('message',message=>{
         message.channel.send("带上我😏");
     }
     if(message.content ==="刷"){
-        while(true){
+        while(message.content!="停"){
             message.content ==="//repeat";
         }
     }
