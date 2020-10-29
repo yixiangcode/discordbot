@@ -89,18 +89,17 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
-    if(message.content ==="<<hentai"){
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
-        message.channel.send("<<hentai");
+    if(message.content ==="刷"){
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
+        message.channel.send(">>hentai");
     }
 })
 
