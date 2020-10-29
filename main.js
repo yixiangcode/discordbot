@@ -110,7 +110,7 @@ client.on('message', message=>{
             message.reply('人家还要听嘛');
             break;
         case 's':
-            message.reply('walao又skip');
+            message.reply('亲爱的不要');
             break;
         case 'p':
             message.reply('亲爱的这首不好听😳');
