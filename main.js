@@ -95,6 +95,10 @@ client.on('message',message=>{
     if(message.content ==="刷"){
         message.channel.send("//repeat");
     }
+    if(message.content ==="//repeat"){
+        if(message.content !=="停")
+        message.channel.send("//repeat");
+    }
 })
 
 const PREFIX = '!';
