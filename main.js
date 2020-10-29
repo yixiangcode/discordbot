@@ -125,7 +125,7 @@ client.on('message', message=>{
             message.reply('亲爱的这首不好听😳');
             break;
         case 'q':
-            message.reply('看懒啊\n看懒啊')
+            message.reply('看懒啊\n看懒')
             break;
             /*
         case '闭嘴':
