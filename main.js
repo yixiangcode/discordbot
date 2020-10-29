@@ -96,8 +96,7 @@ client.on('message',message=>{
         message.channel.send("//repeat");
     }
     if(message.content ==="//repeat"){
-        if(message.content !=="停")
-        message.channel.send("//repeat");
+
     }
 })
 
