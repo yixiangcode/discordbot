@@ -59,9 +59,6 @@ client.on('message',message=>{
     if(message.content ==="哭哭"){
         message.channel.send("😥");
     }
-    if(message.content ==="爱你"){
-        message.channel.send("😘");
-    }
     if(message.content ==="傻眼"){
         message.channel.send("🙄");
     }
@@ -79,6 +76,9 @@ client.on('message',message=>{
     }
     if(message.content ==="爱你"){
         message.channel.send("baby我也爱你😘");
+    }
+    if(message.content ==="你好好看"){
+        message.channel.send("biiii你很sweet勒~");
     }
     if(message.content ==="。。"){
         message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
