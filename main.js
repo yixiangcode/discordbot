@@ -90,13 +90,10 @@ client.on('message',message=>{
         message.channel.send("yes ok");
     }
     if(message.content ==="走咯"){
-        message.channel.send("走去地狱是吗，带上我😏");
+        message.channel.send("带上我😏");
     }
-    if(message.content ==="刷"){
+    while(message.content ==="刷"){
         message.channel.send("//repeat");
-        if(message.content==="//repeat"){
-            message.channel.send("//repeat");
-        }
     }
 })
 
