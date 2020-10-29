@@ -100,6 +100,7 @@ client.on('message',message=>{
         if(message.content ==="停"){
             break;
         }
+        break;
     }
 })
 
