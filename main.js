@@ -36,16 +36,13 @@ client.on('message',message=>{
         message.reply("好孩子不能骂粗话哟~");
     }
     if(message.content ==="先下"){
-        message.reply("亲爱的早点睡");
+        message.reply("亲爱的早点睡哟");
     }
     if(message.content ==="下了"){
-        message.reply("下啦下啦下地狱啦030");
+        message.reply("亲爱的早点睡哟");
     }
-    if(message.content ==="有人吗"){
+    if(message.content ==="有人嗎"){
         message.reply("看起来是有吗");
-    }
-    if(message.content ==="懂的"){
-        message.channel.send("都懂");
     }
     if(message.content ==="笑死"){
         message.channel.send("🤣");
@@ -92,6 +89,19 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
+    if(message.content ==="<<hentai"){
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+        message.channel.send("<<hentai");
+    }
 })
 
 const PREFIX = '!';
@@ -110,7 +120,7 @@ client.on('message', message=>{
             message.reply("```message deleted```");
             break;
         case 'fs':
-            message.reply('walao又skip');
+            message.reply('人家还要听嘛');
             break;
         case 's':
             message.reply('walao又skip');
@@ -120,11 +130,6 @@ client.on('message', message=>{
             break;
         case 'q':
             message.reply('😘')
-            break;
-        case 'restart':
-            message.reply('Restarting......');
-            client.destroy();
-            client.login(process.env.token);
             break;
             /*
         case '闭嘴':
