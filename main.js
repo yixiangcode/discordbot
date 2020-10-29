@@ -14,14 +14,11 @@ client.once('message',message=>{
 })
 */
 client.on('message',message=>{
-    if(message.content ==="嗨"){
-        message.reply('嗨亲爱的');
-    }
-    if(message.content ==="hi"){
+    if(message.content ==="嗨","hi"){
         message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
-        message.reply('晚安😘');
+        message.reply('晚安亲爱的😘');
     }
     if(message.content ==="sad"){
         message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
@@ -30,19 +27,19 @@ client.on('message',message=>{
         message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
     }
     if(message.content ==="030"){
-        message.reply("walao你以为你很可爱是吗");
+        message.reply("你以为你跟我一样可爱吗😘");
     }
     if(message.content ==="干"){
         message.reply("好孩子不能骂粗话哟~");
     }
     if(message.content ==="先下"){
-        message.reply("亲爱的早点睡哟");
+        message.reply("亲爱的早点睡哟😘");
     }
     if(message.content ==="下了"){
-        message.reply("亲爱的早点睡哟");
+        message.reply("亲爱的早点睡哟😘");
     }
     if(message.content ==="有人嗎"){
-        message.reply("看起来是有吗");
+        message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
     }
     if(message.content ==="笑死"){
         message.channel.send("🤣");
@@ -74,8 +71,8 @@ client.on('message',message=>{
     if(message.content ==="丑逼"){
         message.channel.send({files:["./images/ML.jpg"]});
     }
-    if(message.content ==="我爱的人"){
-        message.channel.send("不爱你😭");
+    if(message.content ==="我爱你"){
+        message.channel.send("我也爱你😘");
     }
     if(message.content ==="。。"){
         message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
@@ -84,7 +81,7 @@ client.on('message',message=>{
         message.channel.send("亲爱的我来惹~");
     }
     if(message.content ==="ok"){
-        message.channel.send("yes ok");
+        message.channel.send("😘");
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
@@ -109,14 +106,14 @@ client.on('message', message=>{
         case 'fs':
             message.reply('人家还要听嘛');
             break;
-        case 's':
+        case 's','skip':
             message.reply('亲爱的不要');
             break;
         case 'p':
             message.reply('亲爱的这首不好听😳');
             break;
         case 'q':
-            message.reply('😘')
+            message.reply('人家也有在你的清单里面吗😜')
             break;
             /*
         case '闭嘴':
