@@ -109,14 +109,17 @@ client.on('message', message=>{
         case 'fs':
             message.reply('人家还要听嘛');
             break;
-        case 's','skip':
+        case 's':
+            message.reply('亲爱的不要');
+            break;
+        case 'skip':
             message.reply('亲爱的不要');
             break;
         case 'p':
             message.reply('亲爱的这首不好听😳');
             break;
         case 'q':
-            message.reply('人家也有在你的清单里面吗😜')
+            message.reply('人家也在清单里吗😜')
             break;
             /*
         case '闭嘴':
