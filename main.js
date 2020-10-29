@@ -152,7 +152,7 @@ function image(message){
     };
 }
 
-request(options,function(error,response,responseBody){
+Request(options,function(error,response,responseBody){
     if(error){
         return;
     }
