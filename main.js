@@ -92,7 +92,21 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
+    if(message.content ==="刷"){
+        message.channel.send("//repeat");
 
+    }
+    while(message.channel.send("//repeat")){
+        if(message.content ==="停"){
+            break;
+        }
+        break;
+    }
+    if(message.content ==="stop"){
+        message.reply('Restarting......');
+            client.destroy();
+            client.login(process.env.token);
+    }
 })
 
 const PREFIX = '!';
@@ -120,7 +134,7 @@ client.on('message', message=>{
             message.reply('亲爱的这首不好听😳');
             break;
         case 'q':
-            message.reply('看懒啊\n看懒')
+            message.reply('😘')
             break;
         case 'restart':
             message.reply('Restarting......');
