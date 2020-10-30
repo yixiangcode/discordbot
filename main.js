@@ -125,6 +125,7 @@ client.on('message', message=>{
             var embed = new Discord.MessageEmbed()
             .setAuthor('小可爱 BOT LIST')
             .setDescription('```Hello World!```')
+            .setDescription('```Hello World!```')
             .addFields({name:'Developer',value:'```Yi Xiang\n```',inline:true})
             .addFields({name:'Birthday',value:'```‎Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM\n```',inline:true})
             .addFields({name:'Instruction',value:'```hi\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n哭哭\n喵\n拿\n666\n丑逼\n爱你\n你好好看\n。。\n来咯\nok\n走咯\n```',inline:true})
