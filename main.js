@@ -102,7 +102,7 @@ client.on('message', message=>{
 
     if(message.content==="!bothelp"){
         var embed = new Discord.MessageEmbed()
-        .setAuthor('THE LIST')
+        .setAuthor('YI XIANG BOT LIST')
         .setDescription('```hi | hello | mute```')
         .addFields({name:'Prefix',value:'```?```',inline:true})
         .setColor('#00FFF3')
@@ -122,7 +122,13 @@ client.on('message', message=>{
             message.channel.send('hi\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n哭哭\n喵\n拿\n666\n丑逼\n爱你\n你好好看\n。。\n来咯\nok\n走咯\n')
             break;
         case 'help':
-            
+            var embed = new Discord.MessageEmbed()
+            .setAuthor('小可爱 BOT LIST')
+            .setDescription('```hi | 嗨 | 030```')
+            .addFields({name:'Developer',value:'```Yi Xiang```',inline:true})
+            .setColor('#00FFF3')
+            message.channel.send(embed);
+            break;
         case 'fs':
             message.reply('人家还要听嘛');
             break;
