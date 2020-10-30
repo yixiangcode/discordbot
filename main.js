@@ -100,6 +100,15 @@ client.on('message', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
 
+    if(message.content==="!bothelp"){
+        var embed = new Discord.MessageEmbed()
+        .setAuthor('THE LIST')
+        .setDescription('```hi | hello | mute```')
+        .addFields({name:'Prefix',value:'```?```',inline:true})
+        .setColor('#00FFF3')
+
+        message.channel.send(embed);
+    }
     switch(args[0]){
         case 'ping':
             message.channel.send('pong!');
@@ -109,8 +118,11 @@ client.on('message', message=>{
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
             break;
-        case 'help':
+        case 'list':
             message.channel.send('hi\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n哭哭\n喵\n拿\n666\n丑逼\n爱你\n你好好看\n。。\n来咯\nok\n走咯\n')
+            break;
+        case 'help':
+            
         case 'fs':
             message.reply('人家还要听嘛');
             break;
