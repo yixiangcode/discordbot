@@ -126,15 +126,15 @@ client.on('message', message=>{
 
             .setColor('#00FFF3')
             .setTitle('小可爱 BOT LIST')
-            .setURL('https://facebook.com')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://yixiang.000webhostapp.com/')
+            .setURL('https://yixiang.000webhostapp.com/')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Hello World!')
             .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: '```This is a bot.```' },
                 { name: 'Instruction', value: '```hi | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 哭哭 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 你好好看 | 。。 | 来咯 | ok | 走咯```'},
-                { name: 'Introduction', value: '```Yi Xiang```' },
+                { name: 'Features', value: '```%clear 10```' },
                 { name: '\u200B', value: '\u200B' },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
