@@ -132,13 +132,13 @@ client.on('message', message=>{
             .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
-                { name: 'Regular field title', value: 'Some value here' },
+                { name: 'Instruction', value: '```hi | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 哭哭 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 你好好看 | 。。 | 来咯 | ok | 走咯```'},
                 { name: '\u200B', value: '\u200B' },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
             )
             .addField('Inline field title', 'Some value here', true)
-            .setImage('https://i.imgur.com/O0VqCrZ.jpg')
+            //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setTimestamp()
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/JrrIlVe.jpg');
             message.channel.send(embed);
