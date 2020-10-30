@@ -127,18 +127,18 @@ client.on('message', message=>{
             .setColor('#00FFF3')
             .setTitle('小可爱 BOT LIST')
             .setURL('https://facebook.com')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/5xNDnPw.jpg', 'https://instagram.com')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'yixiang.000webhostapp.com')
             .setDescription('Hello World!')
-            .setThumbnail('https://i.imgur.com/O0VqCrZ.jpg')
+            .setThumbnail('https://i.imgur.com/O0VqCrZ.jpghttps://i.imgur.com/5xNDnPw.jpg')
             .addFields(
-                { name: 'Regular field title', value: 'Some value here' },
+                { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Regular field title', value: 'Some value here' },
                 { name: '\u200B', value: '\u200B' },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
                 { name: 'Inline field title', value: 'Some value here', inline: true },
             )
             .addField('Inline field title', 'Some value here', true)
-            .setImage('https://i.imgur.com/wSTFkRM.png')
+            .setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setTimestamp()
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/JrrIlVe.jpg');
             message.channel.send(embed);
