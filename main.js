@@ -127,9 +127,9 @@ client.on('message', message=>{
             .setColor('#00FFF3')
             .setTitle('小可爱 BOT LIST')
             .setURL('https://facebook.com')
-            .setAuthor('Yi Xiang', {files:["./images/x.jpg"]}, 'https://instagram.com')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/wSTFkRM.png', 'https://instagram.com')
             .setDescription('Hello World!')
-            .setThumbnail({files:["./images/b.jpg"]})
+            .setThumbnail('https://i.imgur.com/wSTFkRM.png')
             .addFields(
                 { name: 'Regular field title', value: 'Some value here' },
                 { name: '\u200B', value: '\u200B' },
@@ -139,7 +139,7 @@ client.on('message', message=>{
             .addField('Inline field title', 'Some value here', true)
             .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
-            .setFooter('Birthday:Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', {files:["./images/m.jpg"]});
+            .setFooter('Birthday:Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/wSTFkRM.png');
             message.channel.send(embed);
             break;
 
