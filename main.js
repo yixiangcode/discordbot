@@ -139,8 +139,9 @@ client.on('message', message=>{
             .addField('Inline field title', 'Some value here', true)
             .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
-            .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
+            .setFooter('Birthday:Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', {files:["./images/m.jpg"]});
+            message.channel.send(embed);
+            break;
 
 /*
             .setAuthor('小可爱 BOT LIST')
