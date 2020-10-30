@@ -127,9 +127,9 @@ client.on('message', message=>{
             .setColor('#00FFF3')
             .setTitle('小可爱 BOT LIST')
             .setURL('https://facebook.com')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'yixiang.000webhostapp.com')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://yixiang.000webhostapp.com/')
             .setDescription('Hello World!')
-            .setThumbnail('https://i.imgur.com/O0VqCrZ.jpghttps://i.imgur.com/5xNDnPw.jpg')
+            .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Regular field title', value: 'Some value here' },
