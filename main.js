@@ -113,7 +113,7 @@ client.on('message', message=>{
         case '电':
             var embed = new Discord.MessageEmbed()
 
-            .setColor('#green')
+            .setColor("GREEN")
             .setAuthor("课程表")
             .addFields(
                 { name: '高一电机电子1', value: '```一||国文|物理|华文||电路|数位|英文||班会|电子\n二||电路|英文|电脑||体育|电子|华文||数学|国文\n三||华文|电子|数学||数位 实习|电脑||数位|物理\n四||数学|电子 实习||国历|电机|英文||联课|联课\n五||数学|数学|英文||物理|华文|国文||电机|电路\n六||空节|电机|国文||空节|数学|英文||华文|空节```' },
