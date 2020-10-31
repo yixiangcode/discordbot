@@ -136,14 +136,13 @@ client.on('message', message=>{
             .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
-                { name: 'Introduction', value: '```This is a bot.```' },
-                { name: 'Instruction', value: '```hi\n嗨\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n喵\n拿\n666\n丑逼\n爱你\n好看\n。。\n来咯\nok\n走咯```'},
+                { name: 'Introduction', value: "```This is a bot.That's all~```" },
+                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 好看 | 。。 | 来咯 | ok | 走咯```'},
                 { name: 'Features', value: '```%clear 10```' },
-                { name: '\u200B', value: '\u200B' },
-                //{ name: 'Inline field title', value: 'Some value here', inline: true },
+                //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
-            .addField('More features are in development',true)
+            .addField('','More features are in development',true)
             //.addField('Inline field title', 'Some value here', true)
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
