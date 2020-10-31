@@ -139,10 +139,10 @@ client.on('message', message=>{
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 好看 | 。。 | 来咯 | ok | 走咯```'},
                 { name: 'Features', value: '```%clear 10```' },
-                { name: '\u200B', value: '\u200B' },
+                //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
-            .addField('','More features are in development',true)
+            //.addField('','More features are in development',true)
             //.addField('Inline field title', 'Some value here', true)
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
