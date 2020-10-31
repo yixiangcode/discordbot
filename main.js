@@ -136,7 +136,7 @@ client.on('message', message=>{
             .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
-                { name: 'Introduction', value: "```This is a bot.That's all~```" },
+                { name: 'Introduction', value: '```This is a bot.```' },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 好看 | 。。 | 来咯 | ok | 走咯```'},
                 { name: 'Features', value: '```%clear 10```' },
                 //{ name: '\u200B', value: '\u200B' },
