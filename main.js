@@ -24,7 +24,7 @@ client.on('message',message=>{
         message.reply('晚安亲爱的😘');
     }
     if(message.content ==="sad"){
-        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
+        message.reply("😥");
     }
     if(message.content ==="QAQ"){
         message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
@@ -33,7 +33,7 @@ client.on('message',message=>{
         message.reply("你以为你跟我一样可爱吗😘");
     }
     if(message.content ==="干"){
-        message.reply("好孩子不能骂粗话哟~");
+        message.reply("亲爱的骂粗话bad bad啊");
     }
     if(message.content ==="先下"){
         message.reply("亲爱的早点睡哟😘");
@@ -56,9 +56,6 @@ client.on('message',message=>{
     if(message.content ==="你懂的"){
         message.channel.send("😏");
     }
-    if(message.content ==="哭哭"){
-        message.channel.send("😥");
-    }
     if(message.content ==="傻眼"){
         message.channel.send("🙄");
     }
@@ -77,7 +74,7 @@ client.on('message',message=>{
     if(message.content ==="爱你"){
         message.channel.send("baby我也爱你😘");
     }
-    if(message.content ==="你好好看"){
+    if(message.content ==="好看"){
         message.channel.send("biiii你很sweet勒~");
     }
     if(message.content ==="。。"){
@@ -87,7 +84,7 @@ client.on('message',message=>{
         message.channel.send("亲爱的我来惹~");
     }
     if(message.content ==="ok"){
-        message.channel.send("😘");
+        message.channel.send("👌");
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
@@ -128,9 +125,6 @@ client.on('message', message=>{
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
             break;
-        case 'list':
-            message.channel.send('hi\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n哭哭\n喵\n拿\n666\n丑逼\n爱你\n你好好看\n。。\n来咯\nok\n走咯\n')
-            break;
         case 'help':
             var embed = new Discord.MessageEmbed()
 
@@ -138,18 +132,19 @@ client.on('message', message=>{
             .setTitle('小可爱 BOT LIST')
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
-            .setDescription('Hello World!')
+            .setDescription('Thanks for using me~')
             .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: '```This is a bot.```' },
-                { name: 'Instruction', value: '```hi | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 哭哭 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 你好好看 | 。。 | 来咯 | ok | 走咯```'},
+                { name: 'Instruction', value: '```hi\n嗨\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n喵\n拿\n666\n丑逼\n爱你\n好看\n。。\n来咯\nok\n走咯```'},
                 { name: 'Features', value: '```%clear 10```' },
                 { name: '\u200B', value: '\u200B' },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
+                //{ name: 'Inline field title', value: 'Some value here', inline: true },
+                //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
-            .addField('Inline field title', 'Some value here', true)
+            .addField('More features are in development',true)
+            //.addField('Inline field title', 'Some value here', true)
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             .setTimestamp()
@@ -178,20 +173,16 @@ client.on('message', message=>{
             message.reply('亲爱的不要');
             break;
         case 'p':
-            message.reply('亲爱的这首不好听😳');
+            message.reply('好听咩亲爱的😗');
             break;
         case 'q':
-            message.reply('人家也在清单里吗😜')
+            message.reply('人家也在你的清单里吗😜')
             break;
-            /*
-        case '闭嘴':
-            message.reply('OK😥');
+        case 'emergencyshutdown':
+            message.reply('Shutting down......');
             client.off();
             break;
-        case 'shutdown':
-            message.reply('Shutting down......');
-            client.destroy();
-            break;
+            /*
         case 'restart':
             message.reply('Restarting......');
             client.destroy();
