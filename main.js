@@ -109,7 +109,7 @@ client.on('message',message=>{
             message.channel.send('pong!');
             break;
         case 'pong':
-            message.channel.send('peng!')
+            message.author.send('peng!')
             break;
         case '电路':
             var embed = new Discord.MessageEmbed()
@@ -164,7 +164,7 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case 'clear':
-            if(!args[1]) return message.reply('亲爱的要写几行哟~');
+            if(!args[0]) return message.reply('亲爱的要写几行哟~');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
             break;
