@@ -91,10 +91,8 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
-})
 
-client.on('messag', message=>{
-    
+
     let args = message.content.substring(PREFIX.length).split(" ");
 
     if(message.content==="!bothelp"){
