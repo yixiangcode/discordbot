@@ -94,15 +94,15 @@ client.on('message',message=>{
 
     
     let args = message.content.substring(PREFIX.length).split(" ");
-    
-    const command = args.shift().toLowerCase();
 
-    if(command === "play"){
+   // const command = args.shift().toLowerCase();
+
+    if(message.content === "&play"){
         let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
         message.channel.send('正在播放 ${track.name}! - Requested by ${track.requestedBy}');
     }
 
-    if(command === 'stop'){
+    if(message.content === '&stop'){
         let track =await client.player.stop(message.guild.id);
         message.channel.send('我停了喔~~');
     }
