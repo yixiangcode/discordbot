@@ -12,11 +12,7 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
 });
-/*
-client.once('message',message=>{
-    message.reply('你的小可爱已上线哟~');
-})
-*/
+
 client.on('message',message=>{
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
