@@ -111,7 +111,7 @@ client.on('message', message=>{
             message.channel.send('pong!');
             break;
         case 'pong':
-            message.channel.send('peng!');
+            message.channel.send('peng!')
             break;
         case '电路':
             var embed = new Discord.MessageEmbed()
