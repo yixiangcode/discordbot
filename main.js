@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const Commando = require('discord.js-commando')
+const path = require('path')
 
 module.exports = class PlayAudioCommand extends Commando.Command{
     constructor(client){
@@ -19,7 +20,9 @@ module.exports = class PlayAudioCommand extends Commando.Command{
             return
         }
 
-        voice.channel.join();
+        voice.channel.join().then((connection)=>{
+            connection.play(path.join(__dirname,'Intro.m4a'))
+        });
     }
 }
 const client = new Discord.Client();
