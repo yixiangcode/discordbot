@@ -1,5 +1,27 @@
 const Discord = require('discord.js');
+const Commando = require('discord.js-commando')
 
+module.exports = class PlayAudioCommand extends Commando.Command{
+    constructor(client){
+        super(client,{
+            name: 'playaudio',
+            group: 'misc',
+            memberName: 'playaudio',
+            description: 'Plays some audio',
+        })
+    }
+
+    async run(message){
+        const { voice } = message.member
+
+        if(!voice.channelID){
+            message.reply('亲爱的要在语音频道哟😘')
+            return
+        }
+
+        voice.channel.join();
+    }
+}
 const client = new Discord.Client();
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
