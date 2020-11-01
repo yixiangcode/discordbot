@@ -94,7 +94,7 @@ client.on('message',message=>{
 
     
     let args = message.content.substring(PREFIX.length).split(" ");
-    /*
+    
     const command = args.shift().toLowerCase();
 
     if(command === "play"){
@@ -106,7 +106,6 @@ client.on('message',message=>{
         let track =await client.player.stop(message.guild.id);
         message.channel.send('我停了喔~~');
     }
-*/
     
 
     if(message.content==="!bothelp"){
