@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
-const Prefix = '%';
+const PREFIX = '&';
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
@@ -95,7 +95,7 @@ client.on('message',message=>{
 
 client.on('message', message=>{
     
-    let args = message.content.substring(Prefix.length).split(" ");
+    let args = message.content.substring(PREFIX.length).split(" ");
 
     if(message.content==="!bothelp"){
         var embed = new Discord.MessageEmbed()
