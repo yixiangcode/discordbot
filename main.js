@@ -116,7 +116,12 @@ client.on('message', message=>{
             .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
             message.channel.send(embed);
             break;
-
+        case '数学':
+                var embed = new Discord.MessageEmbed()
+                .setTitle('数学LINK')
+                .setURL('https://us02web.zoom.us/j/7479775377?pwd=Uk1rZUxyNGpWU1FYUVpHK2RqVTFxQT09')
+                message.channel.send(embed);
+                break;
         case '电':
             var embed = new Discord.MessageEmbed()
 
