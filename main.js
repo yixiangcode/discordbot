@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
+const PREFIX = '%';
+
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
@@ -91,8 +93,6 @@ client.on('message',message=>{
     }
 })
 
-const PREFIX = '!';
-
 client.on('message', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
@@ -109,6 +109,9 @@ client.on('message', message=>{
     switch(args[0]){
         case 'ping':
             message.channel.send('pong!');
+            break;
+        case 'pong':
+            message.channel.send('peng!');
             break;
         case '电路':
             var embed = new Discord.MessageEmbed()
