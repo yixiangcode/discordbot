@@ -8,6 +8,8 @@ client.player = player;
 */
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
+const PREFIX = '&';
+
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
@@ -90,7 +92,7 @@ client.on('message',message=>{
         message.channel.send("带上我😏");
     }
 
-    const PREFIX = '&';
+    
 /*
     const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
