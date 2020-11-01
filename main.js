@@ -1,11 +1,7 @@
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-/*
-const { Player } = require("discord-player");
-const player = new Player(client);
-client.player = player;
-*/
+
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 const PREFIX = '&';
@@ -95,7 +91,7 @@ client.on('message',message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
 
-   // const command = args.shift().toLowerCase();
+   /* const command = args.shift().toLowerCase();
 
     if(message.content === "&play"){
         let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
@@ -106,7 +102,7 @@ client.on('message',message=>{
         let track =await client.player.stop(message.guild.id);
         message.channel.send('我停了喔~~');
     }
-    
+    */
 
     if(message.content==="!bothelp"){
         var embed = new Discord.MessageEmbed()
