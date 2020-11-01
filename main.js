@@ -93,7 +93,7 @@ client.on('message',message=>{
     }
 
     
-    const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
+    let args = message.content.substring(PREFIX.length).split(" ");
     /*
     const command = args.shift().toLowerCase();
 
