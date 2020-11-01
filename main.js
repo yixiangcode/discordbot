@@ -117,11 +117,41 @@ client.on('message', message=>{
             message.channel.send(embed);
             break;
         case '数学':
-                var embed = new Discord.MessageEmbed()
-                .setTitle('数学LINK')
-                .setURL('https://us02web.zoom.us/j/7479775377?pwd=Uk1rZUxyNGpWU1FYUVpHK2RqVTFxQT09')
-                message.channel.send(embed);
-                break;
+            var embed = new Discord.MessageEmbed()
+            .setTitle('数学LINK')
+            .setURL('https://us02web.zoom.us/j/7479775377?pwd=Uk1rZUxyNGpWU1FYUVpHK2RqVTFxQT09')
+            message.channel.send(embed);
+            break;
+        case '英文':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('英文LINK')
+            .setURL('https://meet.google.com/lookup/edq6e7yffr')
+            message.channel.send(embed);
+            break;
+        case '数位':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('数位LINK')
+            .setURL('https://meet.google.com/lookup/hk3hboi2l2')
+            message.channel.send(embed);
+            break;
+        case '国文':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('国文LINK')
+            .setURL('https://meet.google.com/lookup/d5c2c4lq77')
+            message.channel.send(embed);
+            break;
+        case '华文':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('华文LINK')
+            .setURL('https://meet.google.com/lookup/byaxnxtspq')
+            message.channel.send(embed);
+            break;
+        case 'dp':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('德培LINK')
+            .setURL('https://meet.google.com/lookup/gdimhoedfm')
+            message.channel.send(embed);
+            break;
         case '电':
             var embed = new Discord.MessageEmbed()
 
