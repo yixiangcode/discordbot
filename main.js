@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-
+/*
 const { Player } = require("discord-player");
 const player = new Player(client);
 client.player = player;
+*/
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 client.once('ready',()=>{
@@ -94,7 +95,7 @@ client.on('message',message=>{
     }
 
     const PREFIX = '&';
-
+/*
     const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
@@ -107,7 +108,7 @@ client.on('message',message=>{
         let track =await client.player.stop(message.guild.id);
         message.channel.send('我停了喔~~');
     }
-
+*/
     
 
     if(message.content==="!bothelp"){
