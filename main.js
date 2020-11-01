@@ -105,7 +105,7 @@ client.on('message',message=>{
 
     if(command === 'stop'){
         let track =await client.player.stop(message.guild.id);
-        message.channel.send('我停了喔~');
+        message.channel.send('我停了喔~~');
     }
 
     
