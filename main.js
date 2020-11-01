@@ -2,9 +2,10 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+const { Player } = require("discord-player");
+const player = new Player(client);
+client.player = player;
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
-
-const PREFIX = '&';
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
@@ -92,8 +93,22 @@ client.on('message',message=>{
         message.channel.send("带上我😏");
     }
 
+    const PREFIX = '&';
 
-    let args = message.content.substring(PREFIX.length).split(" ");
+    const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if(command === "play"){
+        let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
+        message.channel.send('正在播放 ${track.name}! - Requested by ${track.requestedBy}');
+    }
+
+    if(command === 'stop'){
+        let track =await client.player.stop(message.guild.id);
+        message.channel.send('我停了喔~');
+    }
+
+    
 
     if(message.content==="!bothelp"){
         var embed = new Discord.MessageEmbed()
@@ -164,7 +179,7 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case 'clear':
-            if(!args[0]) return message.reply('亲爱的要写几行哟~');
+            if(!args[1]) return message.reply('亲爱的要写几行哟~');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
             break;
