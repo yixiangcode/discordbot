@@ -93,8 +93,8 @@ client.on('message',message=>{
     }
 
     
-/*
     const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
+    /*
     const command = args.shift().toLowerCase();
 
     if(command === "play"){
