@@ -110,6 +110,13 @@ client.on('message', message=>{
         case 'ping':
             message.channel.send('pong!');
             break;
+        case '电路':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('电路LINK')
+            .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
+            message.channel.send(embed);
+            break;
+
         case '电':
             var embed = new Discord.MessageEmbed()
 
