@@ -93,7 +93,7 @@ client.on('message',message=>{
     }
 })
 
-client.on('message', message=>{
+client.on('messag', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
 
