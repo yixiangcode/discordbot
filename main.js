@@ -21,7 +21,7 @@ module.exports = class PlayAudioCommand extends Commando.Command{
 const client = new Discord.Client();
 
 const ytdl = require("ytdl-core");
-
+var version = '1.2';
 var servers = {};
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
@@ -178,6 +178,7 @@ client.on('message',message=>{
             if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
                 play(connection,message);
             })
+            break;
         case 'ping':
             message.channel.send('pong!');
             break;
