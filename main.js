@@ -151,7 +151,7 @@ client.on('message',message=>{
     switch (args[0]) {
         case 'play':
             function play(connection,message){
-                var server = servers[message.guild.id];
+                var server = servers[message.guild.me.id];
                 server.dispatcher = connection.play(ytdl(server.queue[0], {filter: "audioonly"}));
                 server.queue.shift();
                 server.dispatcher.on("end",function(){
@@ -170,23 +170,23 @@ client.on('message',message=>{
                 message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
                 return;
             }
-            if(!servers[message.guild.id]) servers[message.guild.id] = {
+            if(!servers[message.guild.me.id]) servers[message.guild.me.id] = {
                 queue: []
             }
-            var server = servers[message.guild.id];
+            var server = servers[message.guild.me.id];
             server.queue.push(args[1]);
             if(!message.member.voice.connection) message.member.voice.channel.join().then(function(connection){
                 play(connection,message);
             })
             break;
         case 'skip':
-            var server = servers[message.guild.id];
+            var server = servers[message.guild.me.id];
             if(server.dispatcher) server.dispatcher.end();
             message.channel.send("亲爱的跳过咯😘》》》")
             break;
         case 'stop':
-            var server =servers[message.guild.id];
-            if(message.guild.voice.connection){
+            var server =servers[message.guild.me.id];
+            if(message.guild.me.voice.connection){
                 for(var i = server.queue.length -1;i >= 0; i--){
                     server.queue.splice(i,1);
                 }
@@ -194,7 +194,7 @@ client.on('message',message=>{
                 server.dispatcher.end();
                 message.channel.send("结束LIST离开语音频道~")
             }
-            if(message.guild.connection) message.guild.voice.connection.disconnect();
+            if(message.guild.me.connection) message.guild.me.voice.connection.disconnect();
             break;
         case 'ping':
             message.channel.send('pong!');
