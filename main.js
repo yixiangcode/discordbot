@@ -247,7 +247,7 @@ client.on('message',message=>{
             .setColor("BLUE")
             .setAuthor("课程表")
             .addFields(
-                { name: '高一电机电子1', value: '```一||国文|物理|华文||电路|数位|英文||班会|电子\n二||电路|英文|电脑||体育|电子|华文||数学|国文\n三||华文|电子|数学||数位 实习|电脑||数位|物理\n四||数学|电子 实习||国历|电机|英文||联课|联课\n五||数学|数学|英文||物理|华文|国文||电机|电路\n六||空节|电机|国文||空节|数学|英文||华文|空节```' },
+                { name: '高一电机电子1', value: '```一.国文|物理|华文||电路|数位|英文||班会|电子\n二.电路|英文|电脑||体育|电子|华文||数学|国文\n三.华文|电子|数学||数位 实习|电脑||数位|物理\n四.数学|电子 实习||国历|电机|英文||联课|联课\n五.数学|数学|英文||物理|华文|国文||电机|电路\n六.空节|电机|国文||空节|数学|英文||华文|空节```' },
             )
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             message.channel.send(embed);
@@ -269,7 +269,8 @@ client.on('message',message=>{
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
-                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 好看 | 。。 | 来咯 | ok | 走咯```'},
+                { name: 'Emoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
+                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
