@@ -170,12 +170,12 @@ client.on('message',message=>{
                 message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
                 return;
             }
-            if(!servers[message.guild.id]) servers[message.guild.id] = {
+            if(!servers[message.member.id]) servers[message.member.id] = {
                 queue: []
             }
             var server = servers[message.guild.id];
             server.queue.push(args[1]);
-            if(!message.guild.voice.connection) message.member.voice.channel.join().then(function(connection){
+            if(!message.member.voice.connection) message.member.voice.channel.join().then(function(connection){
                 play(connection,message);
             })
             break;
