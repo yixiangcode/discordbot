@@ -151,7 +151,7 @@ client.on('message',message=>{
     switch (args[0]) {
         case 'play':
             function play(connection,message){
-                var server = servers[message.guild.id];
+                var server = servers[message.guild.me.id];
                 server.dispatcher = connection.play(ytdl(server.queue[0], {filter: "audioonly"}));
                 server.queue.shift();
                 server.dispatcher.on("finish",function(){
@@ -170,10 +170,10 @@ client.on('message',message=>{
                 message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
                 return;
             }
-            if(!servers[message.guild.id]) servers[message.guild.id] = {
+            if(!servers[message.guild.me.id]) servers[message.guild.me.id] = {
                 queue: []
             }
-            var server = servers[message.guild.id];
+            var server = servers[message.guild.me.id];
             server.queue.push(args[1]);
             if(!message.member.voice.connection) message.member.voice.channel.join().then(function(connection){
                 play(connection,message);
