@@ -28,20 +28,6 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
-    if (!message.guild) return;
-  if (message.content === '/join') {
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-      .then(connection => {
-        const dispatcher = connection.playFile('./musik/taisonin.mp3');
-        dispatcher.resume()
-        dispatcher.on("end", end => {message.memver.voiceChannel.leave()});
-      });
-    } else {
-      message.reply('-');
-    }
-  }
-    /*
     const { voice } = message.member
 
     if(!voice.channelID){
@@ -50,9 +36,9 @@ client.on('message',message=>{
     }
 
     voice.channel.join().then((connection)=>{
-        connection.play(path.join(__dirname,'Intro.m4a'))
+        connection.play(path.join(__dirname,'hellp.mp3'))
     });
-    */
+
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
