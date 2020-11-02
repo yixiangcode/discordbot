@@ -263,7 +263,7 @@ client.on('message',message=>{
             var embed = new Discord.MessageEmbed()
 
             .setColor('#00FFF3')
-            .setTitle('小可爱 BOT LIST')
+            .setTitle('y²N Bot List')
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
@@ -281,7 +281,7 @@ client.on('message',message=>{
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             .setTimestamp()
-            .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/JrrIlVe.jpg');
+            .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
 
