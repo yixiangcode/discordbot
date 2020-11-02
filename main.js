@@ -1,5 +1,4 @@
 const {
-    Client,
     Discord,
     Attachment
 } = require('discord.js');
