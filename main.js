@@ -33,7 +33,7 @@ client.on('message',message=>{
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
       .then(connection => {
-        const dispatcher = connection.playFile('Intro.m4a');
+        const dispatcher = connection.playFile('./Intro.m4a');
         dispatcher.resume()
         dispatcher.on("end", end => {message.memver.voiceChannel.leave()});
       });
@@ -41,6 +41,18 @@ client.on('message',message=>{
       message.reply('-');
     }
   }
+    /*
+    const { voice } = message.member
+
+    if(!voice.channelID){
+        message.reply('')
+        return
+    }
+
+    voice.channel.join().then((connection)=>{
+        connection.play(path.join(__dirname,'Intro.m4a'))
+    });
+    */
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
