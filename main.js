@@ -31,7 +31,7 @@ client.on('message',message=>{
     const { voice } = message.member
 
     if(!voice.channelID){
-        message.reply('亲爱的要在语音频道哟😘')
+        message.reply('')
         return
     }
 
