@@ -183,7 +183,7 @@ client.on('message',message=>{
             var server = servers[message.guild.id];
             if(server.dispatcher) server.dispatcher.end();
             message.channel.send("亲爱的跳过咯😘》》》")
-        break;
+            break;
         case 'stop':
             var server =servers[message.guild.id];
             if(message.guild.voice.connection){
@@ -195,6 +195,7 @@ client.on('message',message=>{
                 message.channel.send("结束LIST离开语音频道~")
             }
             if(message.guild.connection) message.guild.voice.connection.disconnect();
+            break;
         case 'ping':
             message.channel.send('pong!');
             break;
