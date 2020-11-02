@@ -175,7 +175,7 @@ client.on('message',message=>{
             }
             var server = servers[message.guild.id];
             server.queue.push(args[1]);
-            if(!message.member.voice.connection) message.member.voice.channel.join().then(function(connection){
+            if(!message.member.voice.connection) message.guild.me.voice.channel.join().then(function(connection){
                 play(connection,message);
             })
             break;
