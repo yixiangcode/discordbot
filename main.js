@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = class PlayAudioCommand extends Commando.Command{
     constructor(client){
         super(client,{
-            name: 'join',
+            name: 'playaudio',
             group: 'misc',
             memberName: 'playaudio',
             description: 'Plays some audio',
@@ -28,17 +28,19 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
-    const { voice } = message.member
-
-    if(!voice.channelID){
-        message.reply('')
-        return
+    if (!message.guild) return;
+  if (message.content === '/join') {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+      .then(connection => {
+        const dispatcher = connection.playFile('./musik/taisonin.mp3');
+        dispatcher.resume()
+        dispatcher.on("end", end => {message.memver.voiceChannel.leave()});
+      });
+    } else {
+      message.reply('-');
     }
-
-    voice.channel.join().then((connection)=>{
-        connection.play(path.join(__dirname,'Intro.m4a'))
-    });
-
+  }
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
