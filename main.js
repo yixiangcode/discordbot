@@ -199,9 +199,6 @@ client.on('message',message=>{
         case 'ping':
             message.channel.send('pong!');
             break;
-        case 'pong':
-            message.author.send('peng!')
-            break;
         case '电路':
             var embed = new Discord.MessageEmbed()
             .setTitle('电路LINK')
@@ -272,7 +269,7 @@ client.on('message',message=>{
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | sad | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 笑死 | 嘿嘿 | 你懂的 | 喵 | 拿 | 666 | 丑逼 | 爱你 | 好看 | 。。 | 来咯 | ok | 走咯```'},
-                { name: 'Features', value: '```%clear 10```' },
+                { name: 'Features', value: '```$clear 10 | $电 | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
@@ -311,7 +308,7 @@ client.on('message',message=>{
         case 'q':
             message.reply('人家也在你的清单里吗😜')
             break;
-        case 'emergencyshutdown':
+        case 'fshutdown':
             message.reply('Shutting down......');
             client.off();
             break;
