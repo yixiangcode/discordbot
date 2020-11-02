@@ -170,7 +170,7 @@ client.on('message',message=>{
                 message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
                 return;
             }
-            if(!servers[message.member.id]) servers[message.member.id] = {
+            if(!servers[message.guild.id]) servers[message.guild.id] = {
                 queue: []
             }
             var server = servers[message.guild.id];
