@@ -154,7 +154,7 @@ client.on('message',message=>{
                 var server = servers[message.guild.id];
                 server.dispatcher = connection.play(ytdl(server.queue[0], {filter: "audioonly"}));
                 server.queue.shift();
-                server.dispatcher.on("finish",function(){
+                server.dispatcher.on("end",function(){
                     if(server.queue[0]){
                         play(connection,message);
                     }else{
@@ -179,6 +179,22 @@ client.on('message',message=>{
                 play(connection,message);
             })
             break;
+        case 'skip':
+            var server = servers[message.guild.id];
+            if(server.dispatcher) server.dispatcher.end();
+            message.channel.send("亲爱的跳过咯😘》》》")
+        break;
+        case 'stop':
+            var server =servers[message.guild.id];
+            if(message.guild.voice.connection){
+                for(var i = server.queue.length -1;i >= 0; i--){
+                    server.queue.splice(i,1);
+                }
+
+                server.dispatcher.end();
+                message.channel.send("结束LIST离开语音频道~")
+            }
+            if(message.guild.connection) message.guild.voice.connection.disconnect();
         case 'ping':
             message.channel.send('pong!');
             break;
