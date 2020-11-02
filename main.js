@@ -13,16 +13,7 @@ module.exports = class PlayAudioCommand extends Commando.Command{
     }
 
     async run(message){
-        const { voice } = message.member
-
-        if(!voice.channelID){
-            message.reply('亲爱的要在语音频道哟😘')
-            return
-        }
-
-        voice.channel.join().then((connection)=>{
-            connection.play(path.join(__dirname,'Intro.m4a'))
-        });
+        
     }
 }
 const client = new Discord.Client();
@@ -37,6 +28,17 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
+    const { voice } = message.member
+
+    if(!voice.channelID){
+        message.reply('亲爱的要在语音频道哟😘')
+        return
+    }
+
+    voice.channel.join().then((connection)=>{
+        connection.play(path.join(__dirname,'Intro.m4a'))
+    });
+
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
