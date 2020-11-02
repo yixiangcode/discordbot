@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const Commando = require('discord.js-commando')
 const path = require('path')
-
+/*
 module.exports = class PlayAudioCommand extends Commando.Command{
     constructor(client){
         super(client,{
@@ -16,7 +16,13 @@ module.exports = class PlayAudioCommand extends Commando.Command{
         
     }
 }
+*/
+
 const client = new Discord.Client();
+
+const ytdl = require("ytdl-core");
+
+var servers = {};
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
@@ -28,6 +34,7 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
+    /*
     const { voice } = message.member
 
     if(!voice.channelID){
@@ -38,6 +45,7 @@ client.on('message',message=>{
     voice.channel.join().then((connection)=>{
         connection.play(path.join(__dirname,'hellp.mp3'))
     });
+    */
 
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
@@ -140,7 +148,36 @@ client.on('message',message=>{
 
         message.channel.send(embed);
     }
-    switch(args[0]){
+    switch (args[0]) {
+        case 'play':
+            function play(connection,message){
+                var server = servers[message.guild.id];
+                server.dispatcher = connection.playStream(ytdl(server.queue[0],{filter: "audioonly"}));
+                server.queue.shift();
+                server.dispatcher.on("end",function(){
+                    if(server.queue[0]){
+                        play(connection,message);
+                    }else{
+                        connection.disconnect();
+                    }
+                })
+            }
+            if(!args[1]){
+                message.channel.send("亲爱的要给link哟~");
+                return;
+            }
+            if(!message.member.voiceChannel){
+                message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
+                return;
+            }
+            if(!servers[message.guild.id]) servers[message.guild.id] = {
+                queue: []
+            }
+            var server = servers[message.guild.id];
+            server.queue.push(args[1]);
+            if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+                play(connection,message);
+            })
         case 'ping':
             message.channel.send('pong!');
             break;
