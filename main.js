@@ -166,7 +166,7 @@ client.on('message',message=>{
                 message.channel.send("亲爱的要给link哟~");
                 return;
             }
-            if(!message.member.voiceChannel){
+            if(!message.member.voice.channel){
                 message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
                 return;
             }
@@ -175,7 +175,7 @@ client.on('message',message=>{
             }
             var server = servers[message.guild.id];
             server.queue.push(args[1]);
-            if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+            if(!message.guild.voice.connection) message.member.voice.channel.join().then(function(connection){
                 play(connection,message);
             })
             break;
