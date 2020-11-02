@@ -33,7 +33,7 @@ client.on('message',message=>{
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
       .then(connection => {
-        const dispatcher = connection.playFile('./Intro.m4a');
+        const dispatcher = connection.playFile('./hello.mp3');
         dispatcher.resume()
         dispatcher.on("end", end => {message.memver.voiceChannel.leave()});
       });
