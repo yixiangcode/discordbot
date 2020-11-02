@@ -267,7 +267,7 @@ client.on('message',message=>{
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
-            .setThumbnail('https://i.imgur.com/5xNDnPw.jpg')
+            .setThumbnail('https://i.imgur.com/VDMbwcb.png')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
