@@ -244,7 +244,7 @@ client.on('message',message=>{
         case '体育':
             var embed = new Discord.MessageEmbed()
             .setTitle('体育LINK')
-            .setURL('')
+            .setURL('https://meet.google.com/qxa-ebio-zuf')
             message.channel.send(embed);
             break;
         case '电':
