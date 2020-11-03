@@ -241,6 +241,12 @@ client.on('message',message=>{
             .setURL('https://meet.google.com/lookup/gdimhoedfm')
             message.channel.send(embed);
             break;
+        case '体育':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('体育LINK')
+            .setURL('')
+            message.channel.send(embed);
+            break;
         case '电':
             var embed = new Discord.MessageEmbed()
 
@@ -254,6 +260,7 @@ client.on('message',message=>{
             break;
         case 'time':
             message.channel.send("上课时间\n```第一节：7.35am-8.15am\n第二节：8.20am-9.00am\n第三节：9.05am-9.45am\n第四节：9.50am-10.30am\n第五节：10.35am-11.15am\n第六节：11.20am-12.00pm\n第七节：12.20pm-1.00pm\n第八节：1.05pm-1.45```")
+            break;
         case 'clear':
             if(!args[1]) return message.reply('亲爱的要写几行哟~');
             message.channel.bulkDelete(args[1]);
