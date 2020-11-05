@@ -65,11 +65,11 @@ const rank = new canvacord.Rank()
  
 rank.build()
     .then(data => {
-        const attachment = new Discord.MessageAttachment(data, "RankCard.png");
+        const attachment = new Discord.MessageAttachment(data, "x.png");
         message.channel.send(attachment);
     });
 
-    
+
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
