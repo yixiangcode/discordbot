@@ -39,7 +39,7 @@ module.exports.run = async(client,message,args)=>{
     const target = message.author;
     const user = await Levels.fetch(target.id,message.guild.id);
     const neededXp = Levels.xpFor(parseInt(user.level) +1);
-    if(!user) return message.reply("你还没有xp值，试试发点信息呗~")
+    if(!user) return message.reply("你还没有xp值，试试发点信息呗~");
     const rank = new canvacord.Rank()
         .setAvatar(message.author.displayAvatarURL({ dynamic:false,format:'png'}))
         .setCurrentXP(user.xp)
