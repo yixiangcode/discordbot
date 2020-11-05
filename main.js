@@ -76,7 +76,7 @@ client.on('message',message=>{
        let image = await canvacord.Canvas.trigger(avatar);
        let attachment = new Discord.MessageAttachment(image, "x.png");
        return message.channel.send(attachment);
-
+   }
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
