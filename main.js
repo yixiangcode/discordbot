@@ -42,7 +42,7 @@ module.exports.run = async(client,message,args)=>{
     const neededXp = Levels.xpFor(parseInt(user.level) +1);
     if(!user) return message.reply("你还没有xp值，试试发点信息呗~");
     const rank = new canvacord.Rank()
-        .setAvatar(img)
+        .setAvatar('https://i.imgur.com/VDMbwcb.png')
         .setCurrentXP(userData.xp)
         .setRequiredXP(userData.requiredXP)
         .setStatus("dnd")
@@ -51,7 +51,7 @@ module.exports.run = async(client,message,args)=>{
         .setDiscriminator("0007");
     rank.build()
         then(data=>{
-            const attatchment = new Discord.MessageAttachment(data,'x.png')
+            const attatchment = new Discord.MessageAttachment(data)
             message.channel.send(attatchment);
         })
 
@@ -76,7 +76,7 @@ client.on('message',message=>{
        let image = await canvacord.Canvas.trigger(avatar);
        let attachment = new Discord.MessageAttachment(image, "x.png");
        return message.channel.send(attachment);
-    
+   }
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
