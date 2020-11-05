@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Levels = require('discord-xp');
+const _levels = require('discord-xp');
 const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
@@ -37,8 +37,8 @@ client.once('ready',()=>{
 });
 module.exports.run = async (client,message,args)=>{
     const target = message.author;
-    const user = await Levels.fetch(target.id,message.guild.id);
-    const neededXp = Levels.xpFor(parseInt(use.level) + 1);
+    const user = await _levels.fetch(target.id,message.guild.id);
+    const neededXp = _levels.xpFor(parseInt(use.level) + 1);
     if(!user) return message.reply("你还没有xp值哟，试试发点信息呗~");
     const img = "https://cdn.discordapp.com/embed/avatars/0.png";
 
@@ -53,7 +53,7 @@ module.exports.run = async (client,message,args)=>{
  
     rank.build()
         .then(data => {
-            const attachment = new Discord.MessageAttachment(data, "funny.png");
+            const attachment = new Discord.MessageAttachment(data, "funnys.png");
             message.channel.send(attachment);
         });
 }
