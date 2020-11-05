@@ -35,8 +35,7 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
 });
-
-client.on('message',message=>{
+module.exports.username = async(bot,message,args)=>{
     const target = message.author;
     const user = await Levels.fetch(target.id,message.guild.id);
     const neededXp = Levels.xpFor(parseInt(user.level) +1);
@@ -44,6 +43,7 @@ client.on('message',message=>{
     const rank = new canvacord.Rank()
         .setAvatar(message.author.displayAvatarURL({ dynamic:false,format:'png'}))
         .setCurrentXP(user.xp)
+        .setLevel(user.level)
         .setRequiredXP(neededXp)
         .setStatus(message.member.presence.status)
         .setProgressBar('#FFA500',"COLOR")
@@ -55,6 +55,9 @@ client.on('message',message=>{
             message.channel.send(attatchment);
         })
 
+}
+client.on('message',message=>{
+    
     /*
     const { voice } = message.member
 
@@ -353,4 +356,8 @@ client.on('message',message=>{
             */
     }
 })
+module.exports.apiConfig={
+    name:"rank",
+    aliases:['level']
+}
 client.login(process.env.token);
