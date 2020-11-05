@@ -33,8 +33,18 @@ const PREFIX = '&';
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
-
 });
+
+client.on("message", async (message) => {
+    if (message.author.bot) return;
+    if (message.content === "!test") {
+        let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+        let image = await canvacord.Canvas.trigger(avatar);
+        let attachment = new Discord.MessageAttachment(image, "triggered.gif");
+        return message.channel.send(attachment);
+    }
+});
+
 client.on('message',message=>{
     
     /*
@@ -49,26 +59,6 @@ client.on('message',message=>{
         connection.play(path.join(__dirname,'hellp.mp3'))
     });
     */
-   const canvacord = require("canvacord");
-const img = "https://cdn.discordapp.com/embed/avatars/0.png";
- 
-const userData = getDataSomehow();
- 
-const rank = new canvacord.Rank()
-    .setAvatar(img)
-    .setCurrentXP(userData.xp)
-    .setRequiredXP(userData.requiredXP)
-    .setStatus("dnd")
-    .setProgressBar("#FFFFFF", "COLOR")
-    .setUsername("Snowflake")
-    .setDiscriminator("0007");
- 
-rank.build()
-    .then(data => {
-        const attachment = new Discord.MessageAttachment(data, "x.png");
-        message.channel.send(attachment);
-    });
-
 
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
