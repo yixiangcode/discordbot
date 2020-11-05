@@ -35,8 +35,7 @@ const PREFIX = '&';
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
-
-client.on('message',message=>{
+module.exports.run = async (client,message,args)=>{
     const target = message.author;
     const user = await Levels.fetch(target.id,message.guild.id);
     const neededXp = Levels.xpFor(parseInt(use.level) + 1);
@@ -57,6 +56,8 @@ client.on('message',message=>{
             const attachment = new Discord.MessageAttachment(data, "RankCard.png");
             message.channel.send(attachment);
         });
+}
+client.on('message',message=>{
     /*
     const { voice } = message.member
 
