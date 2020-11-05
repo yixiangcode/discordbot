@@ -41,8 +41,9 @@ module.exports.run = async (client,message,args)=>{
     const neededXp = _levels.xpFor(parseInt(use.level) + 1);
     if(!user) return message.reply("你还没有xp值哟，试试发点信息呗~");
     const img = "https://cdn.discordapp.com/embed/avatars/0.png";
-
-    const rank = new canvacord.Rank()
+    if(message.content==="%rank"){
+        const rank = new canvacord.Rank()
+    
         .setAvatar(message.author.displayAvatarURL({dynamic:false,format:'png'}))
         .setCurrentXP(user.xp)
         .setRequiredXP(neededXp)
@@ -50,7 +51,7 @@ module.exports.run = async (client,message,args)=>{
         .setProgressBar("#FFA500", "COLOR")
         .setUsername(message.author.username)
         .setDiscriminator(message.author.discriminator);
- 
+    }
     rank.build()
         .then(data => {
             const attachment = new Discord.MessageAttachment(data, "funnys.png");
