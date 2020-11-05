@@ -143,9 +143,13 @@ client.on('message',message=>{
     }
     if(message.content ==="ok"){
         message.channel.send("👌");
+        console.log(author.name);
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
+    }
+    if(message.author.name==="yixiang"){
+        message.channel.send("hi");
     }
 
     
