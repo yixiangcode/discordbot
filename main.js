@@ -36,7 +36,7 @@ client.once('ready',()=>{
 });
 
 client.on("message", async (message) => {
-    if (message.author.bot) return;
+    if (message.author.client) return;
     if (message.content === "!test") {
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
         let image = await canvacord.Canvas.trigger(avatar);
