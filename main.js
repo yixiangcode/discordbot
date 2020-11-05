@@ -53,7 +53,7 @@ module.exports.run = async (client,message,args)=>{
  
     rank.build()
         .then(data => {
-            const attachment = new Discord.MessageAttachment(data, "x.png");
+            const attachment = new Discord.MessageAttachment(data, "funny.png");
             message.channel.send(attachment);
         });
 }
