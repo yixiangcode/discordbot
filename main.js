@@ -38,9 +38,7 @@ client.once('ready',()=>{
 client.on('message',message=>{
     const canvacord = require("canvacord");
     const img = "https://cdn.discordapp.com/embed/avatars/0.png";
- 
-    const userData = getDataSomehow();
- 
+
     const rank = new canvacord.Rank()
         .setAvatar(img)
         .setCurrentXP(userData.xp)
