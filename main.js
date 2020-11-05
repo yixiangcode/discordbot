@@ -143,14 +143,15 @@ client.on('message',message=>{
     }
     if(message.content ==="ok"){
         message.channel.send("👌");
-        console.log(author.id);
+        console.log(message.author.id);
+        if(message.author.id==="yixiang#5732"){
+            message.channel.send("hi");
+        }
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
-    if(message.author.id==="yixiang#5732"){
-        message.channel.send("hi");
-    }
+    
 
     
     let args = message.content.substring(PREFIX.length).split(" ");
