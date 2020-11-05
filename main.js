@@ -35,27 +35,6 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
 });
-const userData=getDataSomehow();
-module.exports.run = async(client,message,args)=>{
-    const target = message.author;
-    const user = await Levels.fetch(target.id,message.guild.id);
-    const neededXp = Levels.xpFor(parseInt(user.level) +1);
-    if(!user) return message.reply("你还没有xp值，试试发点信息呗~");
-    const rank = new canvacord.Rank()
-        .setAvatar('https://i.imgur.com/VDMbwcb.png')
-        .setCurrentXP(userData.xp)
-        .setRequiredXP(userData.requiredXP)
-        .setStatus("dnd")
-        .setProgressBar("#FFFFFF", "COLOR")
-        .setUsername("Snowflake")
-        .setDiscriminator("0007");
-    rank.build()
-        then(data=>{
-            const attatchment = new Discord.MessageAttachment(data)
-            message.channel.send(attatchment);
-        })
-
-}
 client.on('message',message=>{
     
     /*
@@ -70,13 +49,27 @@ client.on('message',message=>{
         connection.play(path.join(__dirname,'hellp.mp3'))
     });
     */
-   if (message.author.client) return;
-   if (message.content === "!test") {
-       let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-       let image = await canvacord.Canvas.trigger(avatar);
-       let attachment = new Discord.MessageAttachment(image, "x.png");
-       return message.channel.send(attachment);
-   }
+   const canvacord = require("canvacord");
+const img = "https://cdn.discordapp.com/embed/avatars/0.png";
+ 
+const userData = getDataSomehow();
+ 
+const rank = new canvacord.Rank()
+    .setAvatar(img)
+    .setCurrentXP(userData.xp)
+    .setRequiredXP(userData.requiredXP)
+    .setStatus("dnd")
+    .setProgressBar("#FFFFFF", "COLOR")
+    .setUsername("Snowflake")
+    .setDiscriminator("0007");
+ 
+rank.build()
+    .then(data => {
+        const attachment = new Discord.MessageAttachment(data, "RankCard.png");
+        message.channel.send(attachment);
+    });
+
+    
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
