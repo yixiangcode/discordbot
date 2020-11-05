@@ -143,8 +143,8 @@ client.on('message',message=>{
     }
     if(message.content ==="ok"){
         message.channel.send("👌");
-        console.log(message.author.id);
-        if(message.author.id==="yixiang#5732"){
+        console.log(message.author.username);
+        if(message.author.username==="yixiang#5732"){
             message.channel.send("hi");
         }
     }
