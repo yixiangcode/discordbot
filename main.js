@@ -348,8 +348,4 @@ client.on('message',message=>{
             */
     }
 })
-module.exports.apiConfig={
-    name:"rank",
-    aliases:['level']
-}
 client.login(process.env.token);
