@@ -35,7 +35,7 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
 });
-module.exports.username = async(client,message,args)=>{
+module.exports.run = async(client,message,args)=>{
     const target = message.author;
     const user = await Levels.fetch(target.id,message.guild.id);
     const neededXp = Levels.xpFor(parseInt(user.level) +1);
