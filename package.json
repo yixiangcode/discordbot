@@ -8,6 +8,8 @@
   "author": "Yi Xiang",
   "license": "ISC",
   "dependencies": {
+    "canvacord": "^5.0.8",
+    "discord-xp": "^1.0.6",
     "discord.js": "^12.4.1",
     "discord.js-commando": "^0.10.0",
     "ffmpeg": "0.0.4",

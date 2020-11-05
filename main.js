@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const Levels = require("discord-xp");
+const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
 /*
@@ -21,6 +23,7 @@ module.exports = class PlayAudioCommand extends Commando.Command{
 const client = new Discord.Client();
 
 const ytdl = require("ytdl-core");
+const levels = require('discord-xp/models/levels');
 var version = '1.2';
 var servers = {};
 
@@ -34,6 +37,24 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
+    const target = message.author;
+    const user = await Levels.fetch(target.id,message.guild.id);
+    const neededXp = Levels.xpFor(parseInt(user.level) +1);
+    if(!user) return message.reply("你还没有xp值，试试发点信息呗~")
+    const rank = new canvacord.Rank()
+        .setAvatar(message.author.displayAvatarURL({ dynamic:false,format:'png'}))
+        .setCurrentXP(user.xp)
+        .setRequiredXP(neededXp)
+        .setStatus(message.member.presence.status)
+        .setProgressBar('#FFA500',"COLOR")
+        .setUsername(message.author.username)
+        .setDiscriminator('0001')
+    rank.build()
+        then(data=>{
+            const attatchment = new Discord.MessageAttachment(data,'x.png')
+            message.channel.send(attatchment);
+        })
+
     /*
     const { voice } = message.member
 
