@@ -35,7 +35,7 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
 
-client.on("message", async (message) => {
+client.on('message',message=>{
     const canvacord = require("canvacord");
     const img = "https://cdn.discordapp.com/embed/avatars/0.png";
  
@@ -55,10 +55,6 @@ client.on("message", async (message) => {
             const attachment = new Discord.MessageAttachment(data, "RankCard.png");
             message.channel.send(attachment);
         });
-
-
-client.on('message',message=>{
-    
     /*
     const { voice } = message.member
 
