@@ -35,20 +35,20 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 
 });
+const userData=getDataSomehow();
 module.exports.run = async(client,message,args)=>{
     const target = message.author;
     const user = await Levels.fetch(target.id,message.guild.id);
     const neededXp = Levels.xpFor(parseInt(user.level) +1);
     if(!user) return message.reply("你还没有xp值，试试发点信息呗~");
     const rank = new canvacord.Rank()
-        .setAvatar(message.author.displayAvatarURL({ dynamic:false,format:'png'}))
-        .setCurrentXP(user.xp)
-        .setLevel(user.level)
-        .setRequiredXP(neededXp)
-        .setStatus(message.member.presence.status)
-        .setProgressBar('#FFA500',"COLOR")
-        .setUsername(message.author.username)
-        .setDiscriminator('0001')
+        .setAvatar(img)
+        .setCurrentXP(userData.xp)
+        .setRequiredXP(userData.requiredXP)
+        .setStatus("dnd")
+        .setProgressBar("#FFFFFF", "COLOR")
+        .setUsername("Snowflake")
+        .setDiscriminator("0007");
     rank.build()
         then(data=>{
             const attatchment = new Discord.MessageAttachment(data,'x.png')
@@ -76,7 +76,7 @@ client.on('message',message=>{
        let image = await canvacord.Canvas.trigger(avatar);
        let attachment = new Discord.MessageAttachment(image, "x.png");
        return message.channel.send(attachment);
-   }
+    
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
     }
