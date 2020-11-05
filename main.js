@@ -53,7 +53,7 @@ module.exports.run = async (client,message,args)=>{
  
     rank.build()
         .then(data => {
-            const attachment = new Discord.MessageAttachment(data, "RankCard.png");
+            const attachment = new Discord.MessageAttachment(data, "x.png");
             message.channel.send(attachment);
         });
 }
@@ -356,4 +356,9 @@ client.on('message',message=>{
             */
     }
 })
+module.exports.config = {
+    name:"rank",
+    aliases:['level']
+}
+
 client.login(process.env.token);
