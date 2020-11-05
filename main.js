@@ -43,6 +43,9 @@ client.on("message", async (message) => {
         let attachment = new Discord.MessageAttachment(image, "triggered.gif");
         return message.channel.send(attachment);
     }
+    if(message.content==="he"){
+        message.channel.send("dafug");
+    }
 });
 
 client.on('message',message=>{
