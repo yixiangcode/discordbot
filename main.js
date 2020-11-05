@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Levels = require("discord-xp");
 const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
