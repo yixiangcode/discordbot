@@ -145,9 +145,9 @@ client.on('message',message=>{
         console.log(message.author.username);
         if(message.author.username==="yixiang"){
             message.channel.send("Sorry");
-            break;
+        }else{
+            message.channel.send("👌");
         }
-        message.channel.send("👌");
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
