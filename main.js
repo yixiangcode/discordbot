@@ -70,6 +70,12 @@ client.on('message',message=>{
         connection.play(path.join(__dirname,'hellp.mp3'))
     });
     */
+   if (message.author.client) return;
+   if (message.content === "!test") {
+       let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+       let image = await canvacord.Canvas.trigger(avatar);
+       let attachment = new Discord.MessageAttachment(image, "x.png");
+       return message.channel.send(attachment);
 
     if(message.content ==="嗨"){
         message.reply('hiiii亲爱的');
