@@ -24,6 +24,7 @@ const client = new Discord.Client();
 
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
+const { author } = require('canvacord');
 var version = '1.2';
 var servers = {};
 
@@ -41,8 +42,8 @@ client.on('message',message=>{
 
     const rank = new canvacord.Rank()
         .setAvatar(img)
-        .setCurrentXP(userData.xp)
-        .setRequiredXP(userData.requiredXP)
+        .setCurrentXP(author.xp)
+        .setRequiredXP(author.requiredXP)
         .setStatus("dnd")
         .setProgressBar("#FFFFFF", "COLOR")
         .setUsername("Snowflake")
