@@ -37,17 +37,20 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
-    const canvacord = require("canvacord");
+    const target = message.author;
+    const user = await Levels.fetch(target.id,message.guild.id);
+    const neededXp = Levels.xpFor(parseInt(use.level) + 1);
+    if(!user) return message.reply("你还没有xp值哟，试试发点信息呗~");
     const img = "https://cdn.discordapp.com/embed/avatars/0.png";
 
     const rank = new canvacord.Rank()
-        .setAvatar(img)
-        .setCurrentXP(author.xp)
-        .setRequiredXP(author.requiredXP)
-        .setStatus("dnd")
-        .setProgressBar("#FFFFFF", "COLOR")
-        .setUsername("Snowflake")
-        .setDiscriminator("0007");
+        .setAvatar(message.author.displayAvatarURL({dynamic:false,format:'png'}))
+        .setCurrentXP(user.xp)
+        .setRequiredXP(neededXp)
+        .setStatus(message.author.presence.status)
+        .setProgressBar("#FFA500", "COLOR")
+        .setUsername(message.author.username)
+        .setDiscriminator(message.author.discriminator);
  
     rank.build()
         .then(data => {
