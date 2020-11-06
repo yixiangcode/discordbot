@@ -154,6 +154,9 @@ client.on('message',message=>{
     }
     console.log(message.author.username);
     console.log(message.content);
+    console.log(message.guild.id);
+    console.log(guild.id);
+    console.log(guild.name);
     /*
     message.channel.send("是吗疯子，原来你有小号喔，好厉害呀")
     message.channel.send("我到想看看你账号多，还是老子代码多")
@@ -311,11 +314,11 @@ client.on('message',message=>{
             
         case 'clear':
             console.log(message.author.username);
-            if(!args[1]) return message.reply('亲爱的要写几行哟~');
             if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="yixiang"||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
                 message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
+                if(!args[1]) return message.reply('亲爱的要写几行哟~');
                 message.channel.bulkDelete(args[1]);
                 message.reply("```message deleted```");
             }
