@@ -295,10 +295,10 @@ client.on('message',message=>{
             console.log(message.author.username);
             break;
         case 'clear':
+            console.log(message.author.username);
             if(!args[1]) return message.reply('亲爱的要写几行哟~');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
-            console.log(message.author.username);
             break;
         case 'help':
             var embed = new Discord.MessageEmbed()
