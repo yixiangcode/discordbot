@@ -154,10 +154,11 @@ client.on('message',message=>{
     }
     console.log(message.author.username);
     console.log(message.content);
+    /*
     message.channel.send("是吗疯子，原来你有小号喔，好厉害呀")
     message.channel.send("我到想看看你账号多，还是老子代码多")
-    message.channel.send("收皮吧小可爱😘")
-
+    message.channel.send("收皮吧宝贝😘，留着我只是个隐患")
+*/
     let args = message.content.substring(PREFIX.length).split(" ");
 
    /* const command = args.shift().toLowerCase();
