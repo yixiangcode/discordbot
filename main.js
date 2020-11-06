@@ -275,7 +275,7 @@ client.on('message',message=>{
         case 'dp':
             var embed = new Discord.MessageEmbed()
             .setTitle('德培LINK')
-            .setURL('https://meet.google.com/lookup/gdimhoedfm')
+            .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
             message.channel.send(embed);
             break;
         case '体育':
@@ -289,7 +289,6 @@ client.on('message',message=>{
             console.log(message.author.username);
             if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
-                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 var embed = new Discord.MessageEmbed()
                 .setColor("BLUE")
@@ -305,7 +304,6 @@ client.on('message',message=>{
             console.log(message.author.username);
             if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
-                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 message.channel.send("上课时间\n```第一节：7.35am-8.15am\n第二节：8.20am-9.00am\n第三节：9.05am-9.45am\n第四节：9.50am-10.30am\n第五节：10.35am-11.15am\n第六节：11.20am-12.00pm\n第七节：12.20pm-1.00pm\n第八节：1.05pm-1.45```")
             }
@@ -315,7 +313,6 @@ client.on('message',message=>{
             console.log(message.author.username);
             if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="yixiang"||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
-                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 if(!args[1]) return message.reply('亲爱的要写几行哟~');
                 message.channel.bulkDelete(args[1]);
