@@ -155,8 +155,7 @@ client.on('message',message=>{
     console.log(message.author.username);
     console.log(message.content);
     console.log(message.guild.id);
-    console.log(guild.id);
-    console.log(guild.name);
+    console.log(message.guild.name);
     /*
     message.channel.send("是吗疯子，原来你有小号喔，好厉害呀")
     message.channel.send("我到想看看你账号多，还是老子代码多")
