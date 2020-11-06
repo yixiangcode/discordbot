@@ -285,8 +285,9 @@ client.on('message',message=>{
         case '电':
             
             console.log(message.author.username);
-            if(message.author.username==="K."||"yixiang"){
+            if(message.author.username==="K."||"yixiang"||"KK."||"阿乐"||"疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
+                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 var embed = new Discord.MessageEmbed()
                 .setColor("BLUE")
@@ -300,25 +301,27 @@ client.on('message',message=>{
             break;
         case 'time':
             console.log(message.author.username);
-            if(message.author.username==="疯子"){
+            if(message.author.username==="K."||"yixiang"||"KK."||"阿乐"||"疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
+                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 message.channel.send("上课时间\n```第一节：7.35am-8.15am\n第二节：8.20am-9.00am\n第三节：9.05am-9.45am\n第四节：9.50am-10.30am\n第五节：10.35am-11.15am\n第六节：11.20am-12.00pm\n第七节：12.20pm-1.00pm\n第八节：1.05pm-1.45```")
             }
             break;
-            /*
+            
         case 'clear':
             console.log(message.author.username);
             if(!args[1]) return message.reply('亲爱的要写几行哟~');
-            if(message.author.username==="K."){
+            if(message.author.username==="K."||"yixiang"||"KK."||"阿乐"||"疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
+                message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
                 message.channel.bulkDelete(args[1]);
                 message.reply("```message deleted```");
             }
             
             break;
-            */
+
         case 'help':
             var embed = new Discord.MessageEmbed()
 
@@ -371,11 +374,12 @@ client.on('message',message=>{
             break;
         case 'q':
             message.reply('人家也在你的清单里吗😜')
-            break;/*
+            break;
         case 'fshutdown':
             message.reply('Shutting down......');
             client.off();
             break;
+            /*
         case 'restart':
             message.reply('Restarting......');
             client.destroy();
