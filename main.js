@@ -301,7 +301,7 @@ client.on('message',message=>{
             break;
         case 'time':
             console.log(message.author.username);
-            if(message.author.username==="K."||"KK."||"阿乐"||"疯子"){
+            if(message.author.username.includes("K."||"KK."||"阿乐"||"疯子")){
                 message.channel.send("Sorry! y²N is not longer support your username.");
                 message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
@@ -312,7 +312,7 @@ client.on('message',message=>{
         case 'clear':
             console.log(message.author.username);
             if(!args[1]) return message.reply('亲爱的要写几行哟~');
-            if(message.author.username==="K."||"KK."||"阿乐"||"疯子"){
+            if(message.author.username.includes("K."||"yixiang"||"KK."||"阿乐"||"疯子")){
                 message.channel.send("Sorry! y²N is not longer support your username.");
                 message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
