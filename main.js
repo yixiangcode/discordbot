@@ -311,7 +311,7 @@ client.on('message',message=>{
             
         case 'clear':
             console.log(message.author.username);
-            if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="yixiang"||message.author.username==="阿乐"||message.author.username==="疯子"){
+            if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
             }else{
                 if(!args[1]) return message.reply('亲爱的要写几行哟~');
