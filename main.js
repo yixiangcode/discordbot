@@ -152,6 +152,7 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
+    console.log(message.author.username);
     console.log(message.content);
 
     
