@@ -285,7 +285,7 @@ client.on('message',message=>{
         case '电':
             
             console.log(message.author.username);
-            if(message.author.username==="K."||"KK."||"阿乐"||"疯子"){
+            if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子"){
                 message.channel.send("Sorry! y²N is not longer support your username.");
                 message.channel.send("我倒想看你账号多还是老子代码多宝贝😘");
             }else{
