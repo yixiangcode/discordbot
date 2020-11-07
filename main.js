@@ -14,7 +14,8 @@ var servers = {};
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
-const PREFIX = '&';
+//const PREFIX = '&';
+client = commands.Bot(command_prefix = "%")
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
@@ -76,10 +77,7 @@ client.on('message',message=>{
     if(message.content ==="干"){
         message.reply("亲爱的骂粗话bad bad啊");
     }
-    if(message.content ==="先下"){
-        message.reply("亲爱的早点睡哟😘");
-    }
-    if(message.content ==="下了"){
+    if(message.content ==="先下"||message.content ==="下了"){
         message.reply("亲爱的早点睡哟😘");
     }
     if(message.content ==="有人嗎"||message.content ==="有人吗"){
@@ -88,10 +86,7 @@ client.on('message',message=>{
     if(message.content ==="笑死"){
         message.channel.send("🤣");
     }
-    if(message.content ==="嘿嘿"){
-        message.channel.send("😏");
-    }
-    if(message.content ==="你懂的"){
+    if(message.content ==="嘿嘿"||message.content ==="你懂的"){
         message.channel.send("😏");
     }
     if(message.content ==="傻眼"){
@@ -132,7 +127,7 @@ client.on('message',message=>{
     console.log(message.guild.id);
     console.log(message.guild.name);
 
-    let args = message.content.substring(PREFIX.length).split(" ");
+    let args = message.content.substring(command_prefix.length).split(" ");
 
     switch (args[0]) {
         case 'play':
