@@ -3,22 +3,6 @@ const _levels = require('discord-xp');
 const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
-/*
-module.exports = class PlayAudioCommand extends Commando.Command{
-    constructor(client){
-        super(client,{
-            name: 'playaudio',
-            group: 'misc',
-            memberName: 'playaudio',
-            description: 'Plays some audio',
-        })
-    }
-
-    async run(message){
-        
-    }
-}
-*/
 
 const client = new Discord.Client();
 
@@ -35,6 +19,7 @@ const PREFIX = '&';
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
+
 module.exports.run = async (client,message,args)=>{
     const target = message.mentions.users.first() || message.author;
     const user = await _levels.fetch(target.id,message.guild.id);
@@ -58,6 +43,7 @@ module.exports.run = async (client,message,args)=>{
             message.channel.send(attachment);
         });
 }
+
 client.on('message',message=>{
     /*
     const { voice } = message.member
@@ -72,10 +58,7 @@ client.on('message',message=>{
     });
     */
 
-    if(message.content ==="嗨"){
-        message.reply('hiiii亲爱的');
-    }
-    if(message.content ==="hi"){
+    if(message.content ==="嗨"||message.content ==="hi"){
         message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
@@ -99,10 +82,7 @@ client.on('message',message=>{
     if(message.content ==="下了"){
         message.reply("亲爱的早点睡哟😘");
     }
-    if(message.content ==="有人嗎"){
-        message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
-    }
-    if(message.content ==="有人吗"){
+    if(message.content ==="有人嗎"||message.content ==="有人吗"){
         message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
     }
     if(message.content ==="笑死"){
@@ -142,12 +122,7 @@ client.on('message',message=>{
         message.channel.send("亲爱的我来惹~");
     }
     if(message.content ==="ok"){
-        console.log(message.author.username);
-        if(message.author.username==="yixiang"){
-            message.channel.send("Sorry");
-        }else{
-            message.channel.send("👌");
-        }
+        message.channel.send("👌");
     }
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
@@ -156,35 +131,9 @@ client.on('message',message=>{
     console.log(message.content);
     console.log(message.guild.id);
     console.log(message.guild.name);
-    /*
-    message.channel.send("是吗疯子，原来你有小号喔，好厉害呀")
-    message.channel.send("我到想看看你账号多，还是老子代码多")
-    message.channel.send("收皮吧宝贝😘，留着我只是个隐患")
-*/
+
     let args = message.content.substring(PREFIX.length).split(" ");
 
-   /* const command = args.shift().toLowerCase();
-
-    if(message.content === "&play"){
-        let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
-        message.channel.send('正在播放 ${track.name}! - Requested by ${track.requestedBy}');
-    }
-
-    if(message.content === '&stop'){
-        let track =await client.player.stop(message.guild.id);
-        message.channel.send('我停了喔~~');
-    }
-    */
-
-    if(message.content==="!bothelp"){
-        var embed = new Discord.MessageEmbed()
-        .setAuthor('YI XIANG BOT LIST')
-        .setDescription('```hi | hello | mute```')
-        .addFields({name:'Prefix',value:'```?```',inline:true})
-        .setColor('#00FFF3')
-
-        message.channel.send(embed);
-    }
     switch (args[0]) {
         case 'play':
             function play(connection,message){
@@ -347,18 +296,6 @@ client.on('message',message=>{
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
-
-/*
-            .setAuthor('小可爱 BOT LIST')
-            .setDescription('```Hello World!```')
-            .setThumbnail
-            .addFields({name:'Developer',value:'```Yi Xiang\n```',inline:true})
-            .addFields({name:'Birthday',value:'```‎Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM\n```',inline:true})
-            .addFields({name:'Instruction',value:'```hi\n晚安\nsad\nQAQ\n030\n干\n先下\n下了\n有人吗\n笑死\n嘿嘿\n你懂的\n哭哭\n喵\n拿\n666\n丑逼\n爱你\n你好好看\n。。\n来咯\nok\n走咯\n```',inline:true})
-            .setColor('#00FFF3')
-            message.channel.send(embed);
-            break;
-            */
         case 'fs':
             message.reply('人家还要听嘛');
             break;
@@ -378,13 +315,11 @@ client.on('message',message=>{
             message.reply('Shutting down......');
             client.off();
             break;
-            /*
         case 'restart':
             message.reply('Restarting......');
             client.destroy();
             client.login(process.env.token);
             break;
-            */
     }
 })
 module.exports.config = {
