@@ -14,12 +14,8 @@ var servers = {};
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
-//const PREFIX = '&';
+const PREFIX = '&';
 
-const PREFIX = new commando.Client({
-    commandPrefix: '%'
-    });
-    
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
