@@ -15,8 +15,11 @@ var servers = {};
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 //const PREFIX = '&';
-const command_prefix = "%";
 
+const PREFIX = new commando.Client({
+    commandPrefix: '%'
+    });
+    
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
@@ -127,7 +130,7 @@ client.on('message',message=>{
     console.log(message.guild.id);
     console.log(message.guild.name);
 
-    let args = message.content.substring(command_prefix.length).split(" ");
+    let args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
         case 'play':
