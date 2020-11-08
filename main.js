@@ -177,9 +177,6 @@ client.on('message',message=>{
         case 'ping':
             message.channel.send('pong!');
             break;
-        case 'time':
-            message.channel.send(setTimestamp());
-            break;
         case '电路':
             var embed = new Discord.MessageEmbed()
             .setTitle('电路LINK')
@@ -244,7 +241,7 @@ client.on('message',message=>{
                 message.channel.send(embed);
             }
             break;
-        case '时间':
+        case 'time':
             console.log(message.author.username);
             if(message.author.username==="K."){
                 message.channel.send("Sorry! y²N is not longer support your username.");
