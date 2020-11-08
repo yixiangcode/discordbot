@@ -1,10 +1,12 @@
-const client = new Discord.Client();
 const Discord = require('discord.js');
 const _levels = require('discord-xp');
 const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
+
+const client = new Discord.Client();
 const date = new Date( timeStamp );
+
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const { author } = require('canvacord');
