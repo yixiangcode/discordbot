@@ -5,11 +5,8 @@ const Commando = require('discord.js-commando')
 const path = require('path')
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
-const { author } = require('canvacord');
-const { timeStamp } = require('console');
 
 const client = new Discord.Client();
-const date = new Date( timeStamp );
 var version = '1.2';
 var servers = {};
 
@@ -181,8 +178,7 @@ client.on('message',message=>{
             message.channel.send('pong!');
             break;
         case 'time':
-            date = date.getHours() + ":" + date.getMinutes() + ", " + date.toDateString();
-            message.channel.send(date);
+            message.channel.send(setTimestamp());
             break;
         case '电路':
             var embed = new Discord.MessageEmbed()
