@@ -181,7 +181,7 @@ client.on('message',message=>{
             message.channel.send('pong!');
             break;
         case 'time':
-            date = d.getHours() + ":" + d.getMinutes() + ", " + d.toDateString();
+            date = date.getHours() + ":" + date.getMinutes() + ", " + date.toDateString();
             message.channel.send(date);
             break;
         case '电路':
