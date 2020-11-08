@@ -3,14 +3,13 @@ const _levels = require('discord-xp');
 const canvacord = require("canvacord");
 const Commando = require('discord.js-commando')
 const path = require('path')
-
-const client = new Discord.Client();
-const date = new Date( timeStamp );
-
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const { author } = require('canvacord');
 const { timeStamp } = require('console');
+
+const client = new Discord.Client();
+const date = new Date( timeStamp );
 var version = '1.2';
 var servers = {};
 
