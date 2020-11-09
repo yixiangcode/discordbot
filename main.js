@@ -18,30 +18,6 @@ client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
 });
 
-module.exports.run = async (client,message,args)=>{
-    const target = message.mentions.users.first() || message.author;
-    const user = await _levels.fetch(target.id,message.guild.id);
-    const neededXp = _levels.xpFor(parseInt(use.level) + 1);
-    if(!user) return message.reply("你还没有xp值哟，试试发点信息呗~");
-    const img = "https://cdn.discordapp.com/embed/avatars/0.png";
-    if(message.content==="%rank"){
-        const rank = new canvacord.Rank()
-    
-        .setAvatar(message.author.displayAvatarURL({dynamic:false,format:'png'}))
-        .setCurrentXP(user.xp)
-        .setRequiredXP(neededXp)
-        .setStatus(message.author.presence.status)
-        .setProgressBar("#FFA500", "COLOR")
-        .setUsername(message.author.username)
-        .setDiscriminator(message.author.discriminator);
-    }
-    rank.build()
-        .then(data => {
-            const attachment = new Discord.MessageAttachment(data, "funnys.png");
-            message.channel.send(attachment);
-        });
-}
-
 client.on('message',message=>{
     /*
     const { voice } = message.member
@@ -119,10 +95,10 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
-    console.log(message.author.username);
-    console.log(message.content);
-    console.log(message.guild.id);
-    console.log(message.guild.name);
+    console.log("用户名称：",message.author.username);
+    console.log("信息内容：",message.content);
+    console.log("服务器id：",message.guild.id);
+    console.log("服务器名称：",message.guild.name);
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -314,9 +290,4 @@ client.on('message',message=>{
             break;
     }
 })
-module.exports.config = {
-    name:"rank",
-    aliases:['level']
-}
-
 client.login(process.env.token);
