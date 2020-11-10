@@ -95,6 +95,11 @@ client.on('message',message=>{
     if(message.content ==="走咯"){
         message.channel.send("带上我😏");
     }
+    if(message.content ==="emoji"){
+        message.react("🤪");
+        message.react("🥳");
+        message.react("🤔");
+    }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
