@@ -100,6 +100,7 @@ client.on('message',message=>{
         message.react("🥳");
         message.react("🤔");
         message.member.roles.add("人工智障");
+    }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
