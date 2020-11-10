@@ -99,7 +99,7 @@ client.on('message',message=>{
         message.react("🤪");
         message.react("🥳");
         message.react("🤔");
-        message.member.roles.add("人工智障");
+        //message.member.roles.add("人工智障");
     }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
