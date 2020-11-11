@@ -96,10 +96,7 @@ client.on('message',message=>{
         message.channel.send("带上我😏");
     }
     if(message.content ==="emoji"){
-        message.react("🤪");
-        message.react("🤪");
-        message.react("🤪");
-        message.react("🥳");
+        message.react("🤪","🥳");
         message.react("🤔");
         message.react("👀");
         message.react("😋");
