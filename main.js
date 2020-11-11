@@ -287,11 +287,10 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case '025':
-            if(message.content==="剪刀"||message.content==="石头"||message.content==="布"){
+            if(!args[1]) return message.reply('亲爱的要写几行哟~');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 message.reply(random025);
-            }
             break;            
         case 'fs':
             message.reply('人家还要听嘛');
