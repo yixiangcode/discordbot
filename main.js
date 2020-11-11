@@ -116,11 +116,6 @@ client.on('message',message=>{
         message.react("😕");
         //message.member.roles.add("人工智障");
     }
-    if(message.content==="025"){
-        const messages = ["石头","剪刀","布"];
-        const random025 = messages[Math.floor(Math.random() * messages.length)];
-        message.channel.send(random025);
-    }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
@@ -291,6 +286,15 @@ client.on('message',message=>{
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
+        case '025':
+            if(message.content==="025"){
+                const messages = ["石头","剪刀","布"];
+                const random025 = messages[Math.floor(Math.random() * messages.length)];
+                if(!args[1]) return message.reply('请选择要出什么哟~');
+                message.channel.bulkDelete(args[1]);
+                message.reply(random025);
+            }
+            break;            
         case 'fs':
             message.reply('人家还要听嘛');
             break;
