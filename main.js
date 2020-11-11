@@ -288,17 +288,16 @@ client.on('message',message=>{
             break;
         case '025':
             if(!args[1]) return message.reply('是不会出喔🙄');
-                const messages = ("石头"||"剪刀"||"布");
+                const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 message.reply(random025);
-                message.reply(messages);
-                if(random025 === "剪刀"&& messages === "石头"){
+                if(random025 === "剪刀"&& message.content === "石头"){
                     message.reply("嫩喔😏")
                 }
-                if(random025 === "石头"&& messages === "石头"){
+                if(random025 === "石头"&& message.content === "石头"){
                     message.reply("不要学我好吗=-=")
                 }
-                if(random025 === "布"&& messages === "石头"){
+                if(random025 === "布"&& messages.content === "石头"){
                     message.reply("=-=")
                 }
             break;            
