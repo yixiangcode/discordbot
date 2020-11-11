@@ -286,7 +286,7 @@ client.on('message',message=>{
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
-        case '025':
+        case '':
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
