@@ -288,7 +288,7 @@ client.on('message',message=>{
             break;
         case '025':
             if(!args[1]) return message.reply('是不会出喔🙄');
-                const messages = ["石头","剪刀","布"];
+                const messages = ("石头"||"剪刀"||"布");
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 message.reply(random025);
                 message.reply(messages);
