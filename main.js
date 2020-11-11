@@ -293,6 +293,7 @@ client.on('message',message=>{
                 if(!args[1] === "剪刀"&& messages === "石头"){
                     message.reply("嫩喔😏")
                 }
+                message.channel.send(args[1]);
                 message.reply(random025);
             break;            
         case 'fs':
