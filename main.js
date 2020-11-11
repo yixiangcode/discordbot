@@ -96,14 +96,14 @@ client.on('message',message=>{
         message.channel.send("带上我😏");
     }
     if(message.content ==="emoji"){
-        message.react("🤪"&&"🥳");
+        message.react("🥳");
+        message.react("🤪");
         message.react("🤔");
         message.react("👀");
         message.react("😋");
         message.react("😳");
         message.react("🦥");
         message.react("🖕🏻");
-        message.react("🕸️");
         message.react("❌");
         message.react("✅");
         message.react("😶");
@@ -114,9 +114,12 @@ client.on('message',message=>{
         message.react("🎃");
         message.react("💈");
         message.react("😕");
-
-
         //message.member.roles.add("人工智障");
+    }
+    if(message.content==="025"){
+        const messages = ["石头","剪刀","布"];
+        const random025 = messages[Math.floor(Math.random() * messages.length)];
+        message.channel.send(random025);
     }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
