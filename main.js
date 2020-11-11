@@ -290,8 +290,14 @@ client.on('message',message=>{
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
-                if(!args[1] === "剪刀"&& messages === "石头"){
+                if(random025 === "剪刀"&& messages === "石头"){
                     message.reply("嫩喔😏")
+                }
+                if(random025 === "石头"&& messages === "石头"){
+                    message.reply("不要学我好吗=-=")
+                }
+                if(random025 === "布"&& messages === "石头"){
+                    message.reply("=-=")
                 }
                 message.channel.send(args[1]);
                 message.reply(random025);
