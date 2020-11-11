@@ -297,7 +297,7 @@ client.on('message',message=>{
                 if(random025 === "石头"&& message.content === "石头"){
                     message.reply("不要学我好吗=-=")
                 }
-                if(random025 === "布"&& messages.content === "石头"){
+                if(random025 === "布"&& message.content === "石头"){
                     message.reply("=-=")
                 }
             break;            
