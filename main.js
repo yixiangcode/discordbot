@@ -272,7 +272,7 @@ client.on('message',message=>{
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
-                { name: 'Emoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
+                { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
                 //{ name: '\u200B', value: '\u200B' },
@@ -287,9 +287,12 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case '025':
-            if(!args[1]) return message.reply('亲爱的要写几行哟~');
+            if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
+                if(!args[1] === "剪刀"&& messages === "石头"){
+                    message.reply("嫩喔😏")
+                }
                 message.reply(random025);
             break;            
         case 'fs':
