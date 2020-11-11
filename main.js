@@ -291,16 +291,32 @@ client.on('message',message=>{
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 message.reply(random025);
-                console.log(args[1]);
-                console.log(random025);
                 if(random025 === "剪刀"&& args[1] === "石头"){
-                    message.reply("嫩喔😏");
+                    message.channel.send("让你一回=-=");
                 }
                 if(random025 === "石头"&& args[1] === "石头"){
-                    message.reply("不要学我好吗=-=");
+                    message.channel.send("不要学我好吗=-=");
                 }
                 if(random025 === "布"&& args[1] === "石头"){
-                    message.reply("=-=");
+                    message.channel.send("嫩喔😏");
+                }
+                if(random025 === "剪刀"&& args[1] === "剪刀"){
+                    message.channel.send("不要学我好吗=-=");
+                }
+                if(random025 === "石头"&& args[1] === "剪刀"){
+                    message.channel.send("嫩喔😏");
+                }
+                if(random025 === "布"&& args[1] === "剪刀"){
+                    message.channel.send("让你一回=-=");
+                }
+                if(random025 === "剪刀"&& args[1] === "布"){
+                    message.channel.send("嫩喔😏");
+                }
+                if(random025 === "石头"&& args[1] === "布"){
+                    message.channel.send("让你一回=-=");
+                }
+                if(random025 === "布"&& args[1] === "布"){
+                    message.channel.send("不要学我好吗=-=");
                 }
             break;            
         case 'fs':
