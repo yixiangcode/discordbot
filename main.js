@@ -291,7 +291,7 @@ client.on('message',message=>{
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 message.reply(random025);
-                console.log(message);
+                console.log(message.content);
                 console.log(random025);
                 if(random025 === "剪刀"&& message.content === "石头"){
                     message.reply("嫩喔😏");
