@@ -290,7 +290,7 @@ client.on('message',message=>{
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
-                var v = 0;
+                v=Math.floor()
                 var s = 0;
                 let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
                 let gameWin = false;
@@ -305,7 +305,7 @@ client.on('message',message=>{
                 }
                 if(random025 === "剪刀"&& args[1] === "石头"){
                     message.channel.send("让你一回=-=");
-                    s++;
+                    gameWin = true;
                     message.channel.send(score);
                 }
                 if(random025 === "石头"&& args[1] === "石头"){
@@ -314,7 +314,7 @@ client.on('message',message=>{
                 }
                 if(random025 === "布"&& args[1] === "石头"){
                     message.channel.send("嫩喔😏");
-                    v++;
+                    gameWin = false;
                     message.channel.send(score);
                 }
                 if(random025 === "剪刀"&& args[1] === "剪刀"){
@@ -323,27 +323,30 @@ client.on('message',message=>{
                 }
                 if(random025 === "石头"&& args[1] === "剪刀"){
                     message.channel.send("嫩喔😏");
-                    v++;
+                    gameWin = false;
                     message.channel.send(score);
                 }
                 if(random025 === "布"&& args[1] === "剪刀"){
                     message.channel.send("让你一回=-=");
-                    s++;
+                    gameWin = true;
                     message.channel.send(score);
                 }
                 if(random025 === "剪刀"&& args[1] === "布"){
                     message.channel.send("嫩喔😏");
-                    v++;
+                    gameWin = false;
                     message.channel.send(score);
                 }
                 if(random025 === "石头"&& args[1] === "布"){
                     message.channel.send("让你一回=-=");
-                    s++;
+                    gameWin = true;
                     message.channel.send(score);
                 }
                 if(random025 === "布"&& args[1] === "布"){
                     message.channel.send("不要学我好吗=-=");
                     message.channel.send(score);
+                }
+                if(gameWin = true){
+                    s+=1;
                 }
             break;            
         case 'fs':
