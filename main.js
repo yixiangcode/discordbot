@@ -297,7 +297,6 @@ client.on('message',message=>{
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
-                let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
                 let gameWin = false;
                 if(random025==="石头"){
                     message.react("👊");
@@ -355,6 +354,7 @@ client.on('message',message=>{
                 }else{
                     v+=1;
                 }
+                let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
             break;            
         case 'fs':
             message.reply('人家还要听嘛');
