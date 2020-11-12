@@ -349,14 +349,12 @@ client.on('message',message=>{
                     message.channel.send(score);
                 }
                 if(gameWin = true){
-                    s+=1;
+                    return s+=1;
                 }else{
-                    v+=1;
+                    return v+=1;
                 }
                 message.channel.send("s="+s);
                 message.channel.send("v="+v);
-                var v = 0;
-                var s = 0;
             break;            
         case 'fs':
             message.reply('人家还要听嘛');
