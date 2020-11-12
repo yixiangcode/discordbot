@@ -347,6 +347,8 @@ client.on('message',message=>{
                 }
                 if(gameWin = true){
                     s+=1;
+                }else{
+                    v+=1;
                 }
             break;            
         case 'fs':
