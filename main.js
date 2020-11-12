@@ -9,6 +9,8 @@ const levels = require('discord-xp/models/levels');
 const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
+var v=0;
+var s=0;
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
@@ -295,8 +297,6 @@ client.on('message',message=>{
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
-                var v;
-                var s;
                 let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
                 let gameWin = false;
                 if(random025==="石头"){
