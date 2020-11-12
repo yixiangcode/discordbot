@@ -351,7 +351,9 @@ client.on('message',message=>{
                     v+=1;
                 }
                 message.channel.send("s="+s);
-                message.channel.send("v="+v);
+                message.channel.send("v="+v)
+                var v = v;
+                var s = s;
             break;            
         case 'fs':
             message.reply('人家还要听嘛');
