@@ -351,9 +351,9 @@ client.on('message',message=>{
                     message.channel.send(score);
                 }
                 if(gameWin = true){
-                    s += 1;
+                    s = new value(s+=1);
                 }else{
-                    v += 1;
+                    v = new value(v+=1);
                 }
             break;            
         case 'fs':
