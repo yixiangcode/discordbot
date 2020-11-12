@@ -292,7 +292,7 @@ client.on('message',message=>{
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 var v = 0;
                 var s = 0;
-                let score = "Bot : "+v+"VS"+"Player : "+s;
+                let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
                 let gameWin = false;
                 if(random025==="石头"){
                     message.react("👊");
@@ -305,7 +305,7 @@ client.on('message',message=>{
                 }
                 if(random025 === "剪刀"&& args[1] === "石头"){
                     message.channel.send("让你一回=-=");
-                    s+=1;
+                    s++;
                     message.channel.send(score);
                 }
                 if(random025 === "石头"&& args[1] === "石头"){
@@ -314,7 +314,7 @@ client.on('message',message=>{
                 }
                 if(random025 === "布"&& args[1] === "石头"){
                     message.channel.send("嫩喔😏");
-                    v+=1;
+                    v++;
                     message.channel.send(score);
                 }
                 if(random025 === "剪刀"&& args[1] === "剪刀"){
@@ -323,22 +323,22 @@ client.on('message',message=>{
                 }
                 if(random025 === "石头"&& args[1] === "剪刀"){
                     message.channel.send("嫩喔😏");
-                    v+=1;
+                    v++;
                     message.channel.send(score);
                 }
                 if(random025 === "布"&& args[1] === "剪刀"){
                     message.channel.send("让你一回=-=");
-                    s+=1;
+                    s++;
                     message.channel.send(score);
                 }
                 if(random025 === "剪刀"&& args[1] === "布"){
                     message.channel.send("嫩喔😏");
-                    v+=1;
+                    v++;
                     message.channel.send(score);
                 }
                 if(random025 === "石头"&& args[1] === "布"){
                     message.channel.send("让你一回=-=");
-                    s+=1;
+                    s++;
                     message.channel.send(score);
                 }
                 if(random025 === "布"&& args[1] === "布"){
