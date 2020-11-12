@@ -116,6 +116,11 @@ client.on('message',message=>{
         message.react("😕");
         //message.member.roles.add("人工智障");
     }
+    var o=0;
+    if(message.content==="rps"){
+        o+=1;
+        message.channel.send(o);
+    }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
