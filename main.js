@@ -295,8 +295,8 @@ client.on('message',message=>{
             if(!args[1]) return message.reply('是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
-                var v=0;
-                var s=0;
+                let v=0;
+                let s=0;
                 let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
                 let gameWin = false;
                 if(random025==="石头"){
@@ -351,9 +351,9 @@ client.on('message',message=>{
                     message.channel.send(score);
                 }
                 if(gameWin = true){
-                    return(v+=1);
+                    v+=1;
                 }else{
-                    return(s+=1);
+                    s+=1;
                 }
             break;            
         case 'fs':
