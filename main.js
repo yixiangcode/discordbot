@@ -249,7 +249,7 @@ client.on('message',message=>{
                 .setColor("84FF00")
                 .setAuthor("上课时间")
                 .addFields(
-                { name: '高一电机电子1：', value: '```第一节：8.00am-8.40am\n第二节：8.50am-9.30am\n第三节：9.40am-10.20am\n第四节：10.30am-11.10am\n第五节：11.20am-12.00pm\n第六节：12.30pm-1.10pm\n第七节：1.20pm-2.00pm\n第八节：2.10pm-2.50```' },
+                { name: '高一电机电子1', value: '```第一节：8.00am-8.40am\n第二节：8.50am-9.30am\n第三节：9.40am-10.20am\n第四节：10.30am-11.10am\n第五节：11.20am-12.00pm\n第六节：12.30pm-1.10pm\n第七节：1.20pm-2.00pm\n第八节：2.10pm-2.50```' },
             )
                 .setImage('https://i.imgur.com/x9bLVxi.gif')
                 message.channel.send(embed);
