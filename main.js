@@ -245,12 +245,14 @@ client.on('message',message=>{
             }
             break;
         case 'time':
-            console.log(message.author.username);
-            if(message.author.username===""){
-                message.channel.send("Sorry! y²N is not longer support your username.");
-            }else{
-                message.channel.send("上课时间\n```第一节：7.35am-8.15am\n第二节：8.20am-9.00am\n第三节：9.05am-9.45am\n第四节：9.50am-10.30am\n第五节：10.35am-11.15am\n第六节：11.20am-12.00pm\n第七节：12.20pm-1.00pm\n第八节：1.05pm-1.45```")
-            }
+            var embed = new Discord.MessageEmbed()
+                .setColor("84FF00")
+                .setAuthor("上课时间")
+                .addFields(
+                { name: '高一电机电子1：', value: '```第一节：8.00am-8.40am\n第二节：8.50am-9.30am\n第三节：9.40am-10.20am\n第四节：10.30am-11.10am\n第五节：11.20am-12.00pm\n第六节：12.30pm-1.10pm\n第七节：1.20pm-2.00pm\n第八节：2.10pm-2.50```' },
+            )
+                .setImage('https://i.imgur.com/x9bLVxi.gif')
+                message.channel.send(embed);
             break;
             
         case 'clear':
@@ -358,29 +360,13 @@ client.on('message',message=>{
             break;
         case '更新':
             var embed = new Discord.MessageEmbed()
-
-            .setColor('#00FFF3')
-            .setTitle('y²N Bot List')
-            .setURL('https://yixiang.000webhostapp.com/')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
-            .setDescription('Thanks for using me~')
-            .setThumbnail('https://i.imgur.com/VDMbwcb.png')
-            .addFields(
-                { name: 'Developer', value: '```Yi Xiang```' },
-                { name: 'Introduction', value: "```This is a bot.That's all~```" },
-                { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
-                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
-                { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
-                //{ name: '\u200B', value: '\u200B' },
-                //{ name: 'Inline field title', value: 'Some value here', inline: true },
+                .setColor("B300FF")
+                .setAuthor("y²N Latest Update")
+                .addFields(
+                { name: '更新内容：', value: '```1)更新查看\n2)课程表更新\n3)课程表时间更新```' },
             )
-            //.addField('','More features are in development',true)
-            //.addField('Inline field title', 'Some value here', true)
-            //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
-            .setImage('https://i.imgur.com/x9bLVxi.gif')
-            .setTimestamp()
-            .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
-            message.channel.send(embed);
+                .setImage('https://i.imgur.com/x9bLVxi.gif')
+                message.channel.send(embed);
             break;
         case 'fs':
             message.reply('人家还要听嘛');
