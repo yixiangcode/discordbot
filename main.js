@@ -121,6 +121,9 @@ client.on('message',message=>{
         o+=1;
         message.channel.send(o);
     }
+    if(message.content==="animate"){
+        message.channel.send(":emoji_5:")
+    }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
