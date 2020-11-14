@@ -238,7 +238,7 @@ client.on('message',message=>{
                 .setColor("BLUE")
                 .setAuthor("课程表")
                 .addFields(
-                { name: '高一电机电子1', value: '```一.国文|物理|华文||电路|数位|英文||班会|电子\n二.电路|英文|电脑||体育|电子|华文||数学|国文\n三.华文|电子|数学||数位 实习|电脑||数位|物理\n四.数学|电子 实习||国历|电机|英文||联课|联课\n五.数学|数学|英文||物理|华文|国文||电机|电路\n六.空节|电机|国文||空节|数学|英文||华文|空节```' },
+                { name: '高一电机电子1', value: '```一.电路|数位|空节|电机|华文||国历|空节|班会\n二.英文|物理|华文|空节|电脑||数学|国文|空节\n三.国文|体育|空节|电子|英文||华文|数学|空节\n四.|电子|英文|电脑|国文|数学||空节|数位|空节\n五.数学|电机|电路|空节|华文||英文|物理|空节\n六.8点数位```' },
             )
                 .setImage('https://i.imgur.com/x9bLVxi.gif')
                 message.channel.send(embed);
@@ -355,7 +355,33 @@ client.on('message',message=>{
                 }else{
                     s+=1;
                 }
-            break;            
+            break;
+        case '更新':
+            var embed = new Discord.MessageEmbed()
+
+            .setColor('#00FFF3')
+            .setTitle('y²N Bot List')
+            .setURL('https://yixiang.000webhostapp.com/')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/GlJ21p6.png', 'https://www.instagram.com/yixiang_0906/')
+            .setDescription('Thanks for using me~')
+            .setThumbnail('https://i.imgur.com/VDMbwcb.png')
+            .addFields(
+                { name: 'Developer', value: '```Yi Xiang```' },
+                { name: 'Introduction', value: "```This is a bot.That's all~```" },
+                { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
+                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
+                { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
+                //{ name: '\u200B', value: '\u200B' },
+                //{ name: 'Inline field title', value: 'Some value here', inline: true },
+            )
+            //.addField('','More features are in development',true)
+            //.addField('Inline field title', 'Some value here', true)
+            //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
+            .setImage('https://i.imgur.com/x9bLVxi.gif')
+            .setTimestamp()
+            .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
+            message.channel.send(embed);
+            break;
         case 'fs':
             message.reply('人家还要听嘛');
             break;
