@@ -296,71 +296,72 @@ client.on('message',message=>{
             .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
-        case 'rps':
-            if(!args[1]) return message.reply('是不会出喔🙄');
-                const messages = ["石头","剪刀","布"];
-                const random025 = messages[Math.floor(Math.random() * messages.length)];
-                let v=0;
-                let s=0;
-                let score = "Bot : "+v+" 【VS】 "+"Player : "+s;
-                let gameWin = false;
-                if(random025==="石头"){
-                    message.react("👊");
-                }
-                if(random025==="剪刀"){
-                    message.react("✂️");
-                }
-                if(random025==="布"){
-                    message.react("🖐")
-                }
-                if(random025 === "剪刀"&& args[1] === "石头"){
-                    message.channel.send("让你一回=-=");
-                    gameWin = true;
-                    message.channel.send(score);
-                }
-                if(random025 === "石头"&& args[1] === "石头"){
-                    message.channel.send("不要学我好吗=-=");
-                    message.channel.send(score);
-                }
-                if(random025 === "布"&& args[1] === "石头"){
-                    message.channel.send("嫩喔😏");
-                    gameWin = false;
-                    message.channel.send(score);
-                }
-                if(random025 === "剪刀"&& args[1] === "剪刀"){
-                    message.channel.send("不要学我好吗=-=");
-                    message.channel.send(score);
-                }
-                if(random025 === "石头"&& args[1] === "剪刀"){
-                    message.channel.send("嫩喔😏");
-                    gameWin = false;
-                    message.channel.send(score);
-                }
-                if(random025 === "布"&& args[1] === "剪刀"){
-                    message.channel.send("让你一回=-=");
-                    gameWin = true;
-                    message.channel.send(score);
-                }
-                if(random025 === "剪刀"&& args[1] === "布"){
-                    message.channel.send("嫩喔😏");
-                    gameWin = false;
-                    message.channel.send(score);
-                }
-                if(random025 === "石头"&& args[1] === "布"){
-                    message.channel.send("让你一回=-=");
-                    gameWin = true;
-                    message.channel.send(score);
-                }
-                if(random025 === "布"&& args[1] === "布"){
-                    message.channel.send("不要学我好吗=-=");
-                    message.channel.send(score);
-                }
-                if(gameWin = true){
-                    v+=1;
-                }else{
-                    s+=1;
-                }
-            break;
+            case 'rps':
+                if(!args[1]) return message.reply('是不会出喔🙄');
+                    const messages = ["石头","剪刀","布"];
+                    const random025 = messages[Math.floor(Math.random() * messages.length)];
+                    let v=0;
+                    let s=0;
+                    let score = "Bot : v 【VS】 "+"Player : "+s;
+                    let gameWin = false;
+                    if(random025==="石头"){
+                        message.react("👊");
+                    }
+                    if(random025==="剪刀"){
+                        message.react("✂️");
+                    }
+                    if(random025==="布"){
+                        message.react("🖐")
+                    }
+                    if(random025 === "剪刀"&& args[1] === "石头"){
+                        message.channel.send("让你一回=-=");
+                        gameWin = true;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "石头"&& args[1] === "石头"){
+                        message.channel.send("不要学我好吗=-=");
+                        message.channel.send(score);
+                    }
+                    if(random025 === "布"&& args[1] === "石头"){
+                        message.channel.send("嫩喔😏");
+                        gameWin = false;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "剪刀"&& args[1] === "剪刀"){
+                        message.channel.send("不要学我好吗=-=");
+                        message.channel.send(score);
+                    }
+                    if(random025 === "石头"&& args[1] === "剪刀"){
+                        message.channel.send("嫩喔😏");
+                        gameWin = false;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "布"&& args[1] === "剪刀"){
+                        message.channel.send("让你一回=-=");
+                        gameWin = true;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "剪刀"&& args[1] === "布"){
+                        message.channel.send("嫩喔😏");
+                        gameWin = false;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "石头"&& args[1] === "布"){
+                        message.channel.send("让你一回=-=");
+                        gameWin = true;
+                        message.channel.send(score);
+                    }
+                    if(random025 === "布"&& args[1] === "布"){
+                        message.channel.send("不要学我好吗=-=");
+                        message.channel.send(score);
+                    }
+                    if(gameWin = true){
+                        v+=1;
+                    }else{
+                        s+=1;
+                    }
+            message.channel.send(score)
+                break;
         case '更新':
             var embed = new Discord.MessageEmbed()
                 .setColor("B300FF")
