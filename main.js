@@ -132,6 +132,12 @@ client.on('message',message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
+        case 'a':
+            var d = new Date
+            d.getHours()
+            d.getMinutes()
+            message.channel.send(d);
+            break;
         case 'play':
             function play(connection,message){
                 var server = servers[message.guild.me.id];
