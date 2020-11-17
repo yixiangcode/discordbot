@@ -11,13 +11,14 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
-cron.scheduledMessage('10 00 00 * * *',message=>{
+let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
     // This runs every day at 10:30:00, you can do anything you want
-    let myChannel = client.channels.find(channel => channel.id === '770291696034381844');
-    var d = new Date();
-    var b = 1;
-    myChannel.send(b+1);
-})
+    let channel = yourGuild.channels.get('770291696034381844');
+    channel.send('You message');
+  });
+  
+  // When you want to start it, use:
+  scheduledMessage.start()
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
