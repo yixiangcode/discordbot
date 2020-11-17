@@ -11,13 +11,13 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
-let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
+cron.scheduledMessage("10 00 00 * * *",function(){
     // This runs every day at 10:30:00, you can do anything you want
     let myChannel = client.channels.find(channel => channel.id === '770291696034381844');
     var d = new Date();
     var b = 1;
     myChannel.send(b+1);
-  });
+})
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
