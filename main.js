@@ -212,7 +212,7 @@ client.on('message',message=>{
             .setURL('https://meet.google.com/lookup/d5c2c4lq77')
             message.channel.send(embed);
             break;
-        case '华文':
+        case '华文'||'華文':
             var embed = new Discord.MessageEmbed()
             .setTitle('华文LINK')
             .setURL('https://meet.google.com/lookup/byaxnxtspq')
