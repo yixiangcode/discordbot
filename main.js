@@ -11,7 +11,7 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
-let scheduledMessage = new cron.CronJob('00 26 01,13 * * *', () => {
+let scheduledMessage = new cron.CronJob('00 16 01,13 * * *', () => {
     // This runs every day at 10:30:00, you can do anything you want
     let channel = yourGuild.channels.get('770291696034381844');
     var d = new Date();
