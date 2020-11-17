@@ -206,13 +206,14 @@ client.on('message',message=>{
             .setURL('https://meet.google.com/lookup/hk3hboi2l2')
             message.channel.send(embed);
             break;
-        case '国文'||'國文':
+        case '国文':
+        case '國文':
             var embed = new Discord.MessageEmbed()
             .setTitle('国文LINK')
             .setURL('https://meet.google.com/lookup/d5c2c4lq77')
             message.channel.send(embed);
             break;
-        case '华文','華文':
+        case '华文'||'華文':
             var embed = new Discord.MessageEmbed()
             .setTitle('华文LINK')
             .setURL('https://meet.google.com/lookup/byaxnxtspq')
