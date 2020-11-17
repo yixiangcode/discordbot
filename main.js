@@ -133,7 +133,7 @@ client.on('message',message=>{
 
     switch (args[0]) {
         case 'a':
-            var d = new Date;
+            var d = new Date();
             message.channel.send(d);
             break;
         case 'play':
