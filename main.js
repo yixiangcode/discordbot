@@ -5,10 +5,18 @@ const Commando = require('discord.js-commando')
 const path = require('path')
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
+const cron = require('cron');
 
 const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
+
+let scheduledMessage = new cron.CronJob('00 06 09 * * *', () => {
+    // This runs every day at 10:30:00, you can do anything you want
+    let channel = yourGuild.channels.get('770291696034381844');
+    var d = new Date();
+    message.channel.send(d);
+  });
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
@@ -132,10 +140,6 @@ client.on('message',message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
-        case 'a':
-            var d = new Date();
-            message.channel.send(d);
-            break;
         case 'play':
             function play(connection,message){
                 var server = servers[message.guild.me.id];
