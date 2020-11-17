@@ -13,8 +13,8 @@ var servers = {};
 
 let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
     // This runs every day at 10:30:00, you can do anything you want
-    let channel = yourGuild.channels.get('770291696034381844');
-    channel.send('You message');
+    let myChannel = guild.channels.get('770291696034381844');
+    myChannel.send('TEST');
   });
   
   // When you want to start it, use:
