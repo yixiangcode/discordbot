@@ -11,7 +11,7 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
-cron.scheduledMessage("10 00 00 * * *",function(){
+cron.scheduledMessage('10 00 00 * * *',message=>{
     // This runs every day at 10:30:00, you can do anything you want
     let myChannel = client.channels.find(channel => channel.id === '770291696034381844');
     var d = new Date();
