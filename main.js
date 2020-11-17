@@ -372,7 +372,7 @@ client.on('message',message=>{
                 .setColor("B300FF")
                 .setAuthor("y²N Latest Update")
                 .addFields(
-                { name: '更新内容：', value: '```1)更新查看\n2)课程表更新\n3)课程表时间更新```' },
+                { name: '更新内容：', value: '```1)更新查看\n2)课程表更新\n3)课程表时间更新\n4)LINK支持簡繁體```' },
             )
                 .setImage('https://i.imgur.com/x9bLVxi.gif')
                 message.channel.send(embed);
