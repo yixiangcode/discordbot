@@ -183,12 +183,14 @@ client.on('message',message=>{
             message.channel.send('pong!');
             break;
         case '电路':
+        case '電路':
             var embed = new Discord.MessageEmbed()
             .setTitle('电路LINK')
             .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
             message.channel.send(embed);
             break;
         case '数学':
+        case '數學':
             var embed = new Discord.MessageEmbed()
             .setTitle('数学LINK')
             .setURL('https://us02web.zoom.us/j/7479775377?pwd=Uk1rZUxyNGpWU1FYUVpHK2RqVTFxQT09')
@@ -201,6 +203,7 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case '数位':
+        case '數位':
             var embed = new Discord.MessageEmbed()
             .setTitle('数位LINK')
             .setURL('https://meet.google.com/lookup/hk3hboi2l2')
@@ -213,7 +216,8 @@ client.on('message',message=>{
             .setURL('https://meet.google.com/lookup/d5c2c4lq77')
             message.channel.send(embed);
             break;
-        case '华文'||'華文':
+        case '华文':
+        case '華文':
             var embed = new Discord.MessageEmbed()
             .setTitle('华文LINK')
             .setURL('https://meet.google.com/lookup/byaxnxtspq')
@@ -226,13 +230,14 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case '体育':
+        case '體育':
             var embed = new Discord.MessageEmbed()
             .setTitle('体育LINK')
             .setURL('https://meet.google.com/qxa-ebio-zuf')
             message.channel.send(embed);
             break;
         case '电':
-            
+        case '電':    
             console.log(message.author.username);
             //if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子")
             if(message.author.username===""){
