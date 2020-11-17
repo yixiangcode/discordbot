@@ -133,9 +133,7 @@ client.on('message',message=>{
 
     switch (args[0]) {
         case 'a':
-            var d = new Date
-            d.getHours()
-            d.getMinutes()
+            var d = new Date;
             message.channel.send(d);
             break;
         case 'play':
