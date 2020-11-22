@@ -23,7 +23,7 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         time=h+" : "+m+" : "+s;
-        if(h===22&&m===46&&s===0){
+        if(h===22&&m===53&&s===0){
             chn.send(time);
         }
         if(h===22&&m===46&&s===10){
@@ -436,3 +436,4 @@ client.on('message',message=>{
     }
 })
 client.login(process.env.token);
+client.login('NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM');
