@@ -23,7 +23,7 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         time=h+" : "+m+" : "+s;
-        if(h===22&&m===53&&s===0){
+        if(h===22&&m===55&&s===0){
             chn.send(time);
         }
         if(h===22&&m===46&&s===10){
