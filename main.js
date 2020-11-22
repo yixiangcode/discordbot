@@ -6,6 +6,7 @@ const path = require('path')
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const cron = require('cron');
+const { time } = require('console');
 
 const client = new Discord.Client();
 var version = '1.2';
@@ -31,6 +32,9 @@ client.on('ready',() => {
         }
         if(h===23&&m===11&&s===0){
             chn.send("a");
+        }
+        if(h=23){
+            chn.send(time);
         }
     }, 750);
 })
