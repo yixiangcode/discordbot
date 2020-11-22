@@ -23,16 +23,16 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         time=h+" : "+m+" : "+s;
-        if(h===23&&m===5&&s===0){
+        if(h===23&&m===9&&s===0){
             chn.send(time);
         }
-        if(h===23&&m===6&&s===10){
+        if(h===23&&m===10&&s===0){
             chn.send(time);
         }
-        if(h===23&&m===7&&s===15){
+        if(h===23&&m===11&&s===0){
             chn.send("a");
         }
-    }, 1);
+    }, 750);
 })
 
 let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
