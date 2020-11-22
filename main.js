@@ -23,13 +23,16 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h===2&&m===0&&s===0){
+        if(h==18&&m===0&&s===0){
             chn.send("两点了还不睡觉吗");
         }
-        if(h===3&&m===0&&s===0){
+        if(h===19&&m===0&&s===0){
             chn.send("03 : 00 : 00");
         }
-        if(h===4&&m===0&&s===0){
+        if(h===20&&m===0&&s===0){
+            chn.send("你的小可爱温馨提醒早点睡觉");
+        }
+        if(h===15&&m===55&&s===50){
             chn.send("你的小可爱温馨提醒早点睡觉");
         }
     }, 1000);
