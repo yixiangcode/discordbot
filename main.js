@@ -49,6 +49,10 @@ let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
 const PREFIX = '&';
 
 client.on('message',message=>{
+    const date = new Date(); // today
+    if(message.content==="time"){
+        message.channel.send(date.getHours()+" : "+date.getMinutes());
+    }
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
     /*
