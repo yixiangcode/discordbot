@@ -29,6 +29,8 @@ client.once('ready',()=>{
 });
 
 client.on('message',message=>{
+    client.user.setStatus("dnd");
+    client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
     /*
     const { voice } = message.member
 
