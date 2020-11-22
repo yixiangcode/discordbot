@@ -24,17 +24,17 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         time=h+" : "+m+" : "+s;
-        if(h===23&&m===9&&s===0){
-            chn.send(time);
+        if(h===23&&m===20&&s===0){
+            chn.send("爱你");
         }
-        if(h===23&&m===10&&s===0){
-            chn.send(time);
+        if(h===23&&m===20&&s===20){
+            chn.send("爱");
         }
-        if(h===23&&m===11&&s===0){
-            chn.send("a");
+        if(h===23&&m===20&&s==40){
+            chn.send("你");
         }
         if(h=23){
-            chn.send(time);
+            chn.send("00");
         }
     }, 750);
 })
