@@ -23,14 +23,13 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        time=h+" : "+m+" : "+s;
-        if(h===23&&m===20&&s===0){
+        if(h===23&&m===22&&s===0){
             chn.send("爱你");
         }
-        if(h===23&&m===20&&s===20){
+        if(h===23&&m===22&&s===20){
             chn.send("爱");
         }
-        if(h===23&&m===20&&s==40){
+        if(h===23&&m===22&&s==40){
             chn.send("你");
         }
         if(h=23){
