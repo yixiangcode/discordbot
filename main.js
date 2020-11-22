@@ -32,7 +32,7 @@ client.on('ready',() => {
         if(h===23&&m===22&&s==40){
             chn.send("你");
         }
-        if(h=23){
+        if(m===25){
             chn.send("00");
         }
     }, 750);
