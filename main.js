@@ -11,6 +11,26 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
+client.on('ready',() => {
+    var chn = client.channels.cache.get('707515094568927295');
+    setInterval(() => {
+        const date = new Date();
+        h=date.getHours();
+        m=date.getMinutes();
+        s=date.getSeconds();
+        time=h+" : "+m+" : "+s;
+        if(h===22&&m===39&&s===0){
+            chn.send(time);
+        }
+        if(h===22&&m===36&&s===0){
+            chn.send(time);
+        }
+        if(h===22&&m===37&&s===0){
+            chn.send(time);
+        }
+    }, 750);
+})
+
 let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
     // This runs every day at 10:30:00, you can do anything you want
     let myChannel = guild.channels.get('770291696034381844');
