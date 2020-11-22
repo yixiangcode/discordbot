@@ -23,17 +23,20 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h===23&&m===28&&s===0){
+        if(h===23&&m===35&&s===0){
             chn.send("爱你");
         }
-        if(h===23&&m===28&&s===20){
+        if(h===23&&m===35&&s===20){
             chn.send("爱");
         }
-        if(h===23&&m===28&&s==40){
+        if(h===23&&m===35&&s==40){
             chn.send("你");
         }
-        if(h===23&&m===31&&s===0){
+        if(h===23&&m===34&&s===0){
             chn.send("00");
+        }
+        if(h===23&&m===34&&s===20){
+            chn.send("01");
         }
     }, 750);
 })
