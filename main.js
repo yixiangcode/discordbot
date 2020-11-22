@@ -23,8 +23,14 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h===23&&m===47&&s===0){
-            chn.send("爱你---");
+        if(h===2&&m===0&&s===0){
+            chn.send("两点了还不睡觉吗");
+        }
+        if(h===3&&m===0&&s===0){
+            chn.send("03 : 00 : 00");
+        }
+        if(h===4&&m===0&&s===0){
+            chn.send("你的小可爱温馨提醒早点睡觉");
         }
     }, 1000);
 })
@@ -433,4 +439,4 @@ client.on('message',message=>{
             break;
     }
 })
-client.login('NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM');
+client.login(process.env.token);
