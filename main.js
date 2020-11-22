@@ -19,13 +19,13 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         time=h+" : "+m+" : "+s;
-        if(h===22&&m===39&&s===0){
+        if(h===22&&m===42&&s===0){
             chn.send(time);
         }
-        if(h===22&&m===36&&s===0){
+        if(h===22&&m===42&&s===10){
             chn.send(time);
         }
-        if(h===22&&m===37&&s===0){
+        if(h===22&&m===42&&s===15){
             chn.send(time);
         }
     }, 750);
