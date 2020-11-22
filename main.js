@@ -11,6 +11,10 @@ const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
 
+client.once('ready',()=>{
+    console.log('你的小可爱已上线哟~');
+});
+
 client.on('ready',() => {
     var chn = client.channels.cache.get('707515094568927295');
     setInterval(() => {
@@ -43,10 +47,6 @@ let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 const PREFIX = '&';
-
-client.once('ready',()=>{
-    console.log('你的小可爱已上线哟~');
-});
 
 client.on('message',message=>{
     client.user.setStatus("dnd");
