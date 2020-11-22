@@ -23,7 +23,7 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h===23&&m===45&&s===0){
+        if(h===23&&m===47&&s===0){
             chn.send("爱你---");
         }
     }, 1000);
