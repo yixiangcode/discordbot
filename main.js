@@ -20,7 +20,7 @@ client.on('ready',() => {
     var chn = client.channels.cache.get('770291696034381844');
     setInterval(() => {
         const date = new Date();
-        h=date.getHours()+8;
+        h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
         if(h==17&&m===0&&s===0){
@@ -276,6 +276,13 @@ client.on('message',message=>{
             var embed = new Discord.MessageEmbed()
             .setTitle('体育LINK')
             .setURL('https://meet.google.com/qxa-ebio-zuf')
+            message.channel.send(embed);
+            break;
+        case '国历':
+        case '國歷':
+            var embed = new Discord.MessageEmbed()
+            .setTitle('国历LINK')
+            .setURL('https://zoom.us/j/6425339389?pwd=cEMybDFFVVR3WHEyL0E0RmM3Ty83QT09')
             message.channel.send(embed);
             break;
         case '电':
