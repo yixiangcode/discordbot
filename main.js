@@ -23,20 +23,14 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h==17&&m===0&&s===0){
-            chn.send("你可爱的bot温馨提醒您早点睡觉哟~");
-        }
         if(h==18&&m===0&&s===0){
-            chn.send("现在时间凌晨2点，早点睡哟！");
-        }
-        if(h===19&&m===0&&s===0){
-            chn.send("现在时间为凌晨3点，快去睡觉~");
+            chn.send("02 : 00")
+            chn.send("你可爱的bot温馨提醒您早点睡觉~");
         }
         if(h===20&&m===0&&s===0){
-            chn.send("亲爱的还没睡吗~");
-        }
-        if(h===21&&m===0&&s===0){
-            chn.send("起床准备上课咯各位！！！");
+            chn.send("04 : 00")
+            chn.send("-电");
+            chn.send("-英文");
         }
     }, 1000);
 })
