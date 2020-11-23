@@ -20,7 +20,7 @@ client.on('ready',() => {
     var chn = client.channels.cache.get('770291696034381844');
     setInterval(() => {
         const date = new Date();
-        h=date.getHours();
+        h=date.getHours()+8;
         m=date.getMinutes();
         s=date.getSeconds();
         if(h==17&&m===0&&s===0){
