@@ -27,22 +27,8 @@ client.on('ready',() => {
             chn.send("02 : 00")
             chn.send("你可爱的bot温馨提醒您早点睡觉~");
         }
-        if(h===20&&m===0&&s===0){
-            chn.send("04 : 00")
-            chn.send("-电");
-            chn.send("-英文");
-        }
     }, 1000);
 })
-
-let scheduledMessage = new cron.CronJob('10 00 00 * * *', () => {
-    // This runs every day at 10:30:00, you can do anything you want
-    let myChannel = guild.channels.get('770291696034381844');
-    myChannel.send('TEST');
-  });
-  
-  // When you want to start it, use:
-  scheduledMessage.start()
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
@@ -55,18 +41,6 @@ client.on('message',message=>{
     }
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
-    /*
-    const { voice } = message.member
-
-    if(!voice.channelID){
-        message.reply('')
-        return
-    }
-
-    voice.channel.join().then((connection)=>{
-        connection.play(path.join(__dirname,'hellp.mp3'))
-    });
-    */
 
     if(message.content ==="嗨"||message.content ==="hi"){
         message.reply('hiiii亲爱的');
