@@ -23,9 +23,8 @@ client.on('ready',() => {
         h=date.getHours();
         m=date.getMinutes();
         s=date.getSeconds();
-        if(h==18&&m===0&&s===0){
-            chn.send("02 : 00")
-            chn.send("你可爱的bot温馨提醒您早点睡觉~");
+        if(h==19&&m===33&&s===0){
+            chn.send("💤");
         }
     }, 1000);
 })
@@ -42,6 +41,9 @@ client.on('message',message=>{
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
 
+    if(message.channel.id==="773829631848742912"){
+        message.fetch().then(message => message.delete());
+    }
     if(message.content ==="嗨"||message.content ==="hi"){
         message.reply('hiiii亲爱的');
     }
@@ -125,14 +127,6 @@ client.on('message',message=>{
         message.react("💈");
         message.react("😕");
         //message.member.roles.add("人工智障");
-    }
-    var o=0;
-    if(message.content==="rps"){
-        o+=1;
-        message.channel.send(o);
-    }
-    if(message.content==="animate"){
-        message.channel.send(":emoji_5:")
     }
     console.log("用户名称：",message.author.username);
     console.log("信息内容：",message.content);
@@ -243,7 +237,7 @@ client.on('message',message=>{
         case '體育':
             var embed = new Discord.MessageEmbed()
             .setTitle('体育LINK')
-            .setURL('https://meet.google.com/qxa-ebio-zuf')
+            .setURL('https://meet.google.com/nmq-itte-pqd')
             message.channel.send(embed);
             break;
         case '国历':
