@@ -129,9 +129,6 @@ client.on('message',message=>{
         //message.member.roles.add("人工智障");
     }
     console.log(message.author.username + "(" + message.author.id + ")" + "向" + message.guild.name + "(" + message.guild.id + ")" + "发送了" + message.content);
-    console.log("信息内容：",message.content);
-    console.log("服务器id：",message.guild.id);
-    console.log("服务器名称：",message.guild.name);
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
