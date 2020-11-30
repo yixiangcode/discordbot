@@ -128,7 +128,7 @@ client.on('message',message=>{
         message.react("😕");
         //message.member.roles.add("人工智障");
     }
-    console.log(message.author.username + "(" + message.author.id + ")" + "向" + message.guild.name + "(" + message.guild.id + ")" + "发送了" + message.content);
+    console.log(message.author.username + "(id:" + message.author.id + ")" + " 向 " + message.guild.name + "(id:" + message.guild.id + ")" + "发送了" + "【" + message.content + "】");
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
