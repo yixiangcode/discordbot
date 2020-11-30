@@ -128,7 +128,6 @@ client.on('message',message=>{
         message.react("😕");
         //message.member.roles.add("人工智障");
     }
-    console.log(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
     var chn = client.channels.cache.get('782935833501368320');
     if(message.channel.id !== "782935833501368320"){
         chn.send(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
@@ -298,7 +297,7 @@ client.on('message',message=>{
             .setDescription('Thanks for using me~')
             .setThumbnail('https://i.imgur.com/VDMbwcb.png')
             .addFields(
-                { name: 'Developer', value: '```Yi Xiang```' },
+                { name: 'Developer', value: '```<@632908358935904258>```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
