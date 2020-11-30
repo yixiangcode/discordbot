@@ -128,7 +128,7 @@ client.on('message',message=>{
         message.react("😕");
         //message.member.roles.add("人工智障");
     }
-    console.log("用户名称：",message.author.username);
+    console.log(message.author.username + "(" + message.author.id + ")" + "向" + message.guild.name + "(" + message.guild.id + ")" + "发送了" + message.content);
     console.log("信息内容：",message.content);
     console.log("服务器id：",message.guild.id);
     console.log("服务器名称：",message.guild.name);
@@ -414,4 +414,5 @@ client.on('message',message=>{
             break;
     }
 })
-client.login(process.env.token);
+//client.login(process.env.token);
+client.login('NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM');
