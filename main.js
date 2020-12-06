@@ -24,7 +24,7 @@ client.on('ready',() => {
         m=date.getMinutes();
         s=date.getSeconds();
         if(h==19&&m===33&&s===0){
-            chn.send("💤");
+            //chn.send("💤");
         }
     }, 1000);
 })
