@@ -7,6 +7,7 @@ const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const { time } = require('console');
+const { createSecretKey } = require('crypto');
 
 const client = new Discord.Client();
 var version = '1.2';
@@ -48,7 +49,7 @@ client.on('message',message=>{
         message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
-        message.reply('<a:catsleep:778203433701474364>');
+        message.channel.send('<a:catsleep:778203433701474364>');
     }
     if(message.content ==="sad"){
         message.reply("😥");
@@ -389,26 +390,24 @@ client.on('message',message=>{
                 message.channel.send(embed);
             break;
         case 'fs':
-            message.reply('人家还要听嘛');
+            message.channel.send('<a:crying:786944293729730560>');
             break;
         case 's':
-            message.reply('亲爱的不要');
-            break;
         case 'skip':
-            message.reply('亲爱的不要');
+            message.channel.send('<:skip:786943173866815508>');
             break;
         case 'p':
-            message.reply('好听咩亲爱的😗');
+            message.channel.send('<a:pepeJam:777478863268741120>');
             break;
         case 'q':
-            message.reply('人家也在你的清单里吗😜')
+            message.channel.send('<a:music:786942432730152980>')
             break;
         case 'fshutdown':
-            message.reply('Shutting down......');
+            message.channel.send('Shutting down......');
             client.off();
             break;
         case 'restart':
-            message.reply('Restarting......');
+            message.channel.send('Restarting......');
             client.destroy();
             client.login(process.env.token);
             break;
