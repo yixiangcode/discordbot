@@ -48,7 +48,7 @@ client.on('message',message=>{
         message.reply('hiiii亲爱的');
     }
     if(message.content ==="晚安"){
-        message.reply('晚安亲爱的😘');
+        message.reply('<a:catsleep:778203433701474364>');
     }
     if(message.content ==="sad"){
         message.reply("😥");
