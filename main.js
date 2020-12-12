@@ -140,7 +140,7 @@ client.on('message',message=>{
         chn.send(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
     }
     
-    let args = message.content.substring(PREFIX.length).split(" ");
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
     switch (args[0]) {
         case 'play':
