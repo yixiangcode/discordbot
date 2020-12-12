@@ -16,6 +16,7 @@ var version = '1.2';
 var servers = {};
 
 const { Player } = require("discord-player");
+const { prependListener } = require('discord-xp/models/levels');
 const player = new Player(client);
 client.player = player;
 
@@ -39,6 +40,19 @@ client.on('ready',() => {
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 const PREFIX = '&';
+/*
+client.on("message", async message => {
+    const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if(command === 'play'){
+        let track = await client.player.play(message.member.voice.channel,args[0], message.member.user.tag);
+    }
+    if(command === 'stop'){
+        let track = await client.player.stop(message.guild.id);
+    }
+})
+*/
 
 client.on('message',message=>{
     const date = new Date(); // today
@@ -144,7 +158,6 @@ client.on('message',message=>{
 
     switch (args[0]) {
         case 'play':
-            /*
             function play(connection,message){
                 var server = servers[message.guild.me.id];
                 server.dispatcher = connection.play(ytdl(server.queue[0], {filter: "audioonly"}));
@@ -157,8 +170,6 @@ client.on('message',message=>{
                     }
                 })
             }
-            */
-           let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
             if(!args[1]){
                 message.channel.send("亲爱的要给link哟~");
                 return;
@@ -169,9 +180,11 @@ client.on('message',message=>{
             }
             if(!servers[message.guild.me.id]) servers[message.guild.me.id] = {
                 queue: []
-            }
+            };
             var server = servers[message.guild.me.id];
+
             server.queue.push(args[1]);
+            
             if(!message.member.voice.connection) message.member.voice.channel.join().then(function(connection){
                 play(connection,message);
             })
@@ -182,8 +195,16 @@ client.on('message',message=>{
             message.channel.send("已跳过>>")
             break;
         case 'stop':
-            let track = await client.player.stop(message.guild.id);
-            message.channel.send("结束LIST离开语音频道~")
+            var server =servers[message.guild.me.id];
+            if(message.guild.me.voice.connection){
+                for(var i = server.queue.length -1;i >= 0; i--){
+                    server.queue.splice(i,1);
+                }
+
+                server.dispatcher.end();
+                message.channel.send("结束LIST离开语音频道~")
+            }
+            if(message.guild.me.voice.connection) message.guild.me.voice.connection.disconnect();
             break;
         case 'ping':
             message.channel.send('pong!');
