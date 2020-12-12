@@ -8,6 +8,9 @@ const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const { time } = require('console');
 const { createSecretKey } = require('crypto');
+const { Player } = require("discord-player");
+const player = new Player(client);
+client.player = player;
 
 const client = new Discord.Client();
 var version = '1.2';
