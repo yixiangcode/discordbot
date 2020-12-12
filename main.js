@@ -140,10 +140,11 @@ client.on('message',message=>{
         chn.send(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
     }
     
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    let args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0]) {
         case 'play':
+            /*
             function play(connection,message){
                 var server = servers[message.guild.me.id];
                 server.dispatcher = connection.play(ytdl(server.queue[0], {filter: "audioonly"}));
@@ -156,6 +157,8 @@ client.on('message',message=>{
                     }
                 })
             }
+            */
+           let track = await client.player.play(message.member.voice.channel,args[0],message.member.user.tag);
             if(!args[1]){
                 message.channel.send("亲爱的要给link哟~");
                 return;
@@ -179,16 +182,8 @@ client.on('message',message=>{
             message.channel.send("已跳过>>")
             break;
         case 'stop':
-            var server =servers[message.guild.me.id];
-            if(message.guild.me.voice.connection){
-                for(var i = server.queue.length -1;i >= 0; i--){
-                    server.queue.splice(i,1);
-                }
-
-                server.dispatcher.end();
-                message.channel.send("结束LIST离开语音频道~")
-            }
-            if(message.guild.me.connection) message.guild.me.voice.connection.disconnect();
+            let track = await client.player.stop(message.guild.id);
+            message.channel.send("结束LIST离开语音频道~")
             break;
         case 'ping':
             message.channel.send('pong!');
