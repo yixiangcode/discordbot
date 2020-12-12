@@ -6,15 +6,18 @@ const path = require('path')
 const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const cron = require('cron');
+/*
 const { time } = require('console');
 const { createSecretKey } = require('crypto');
-const { Player } = require("discord-player");
-const player = new Player(client);
-client.player = player;
+*/
 
 const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
+
+const { Player } = require("discord-player");
+const player = new Player(client);
+client.player = player;
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
@@ -416,5 +419,5 @@ client.on('message',message=>{
             break;
     }
 })
-client.login(process.env.token);
-//client.login('NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM');
+//client.login(process.env.token);
+client.login('NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM');

@@ -10,6 +10,7 @@
   "dependencies": {
     "canvacord": "^5.0.8",
     "cron": "^1.8.2",
+    "discord-player": "^3.0.3",
     "discord-xp": "^1.0.6",
     "discord.js": "^12.4.1",
     "discord.js-commando": "^0.10.0",
