@@ -22,6 +22,8 @@ client.player = player;
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
+    var chn = client.channels.cache.get('707515094568927295');
+    chn.send("你的小可爱已上线哟~");
 });
 
 client.on('ready',() => {
