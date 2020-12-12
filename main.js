@@ -175,7 +175,7 @@ client.on('message',message=>{
                 return;
             }
             if(!message.member.voice.channel){
-                message.channel.send("亲爱的要在语音频道才可执行此操作哟~");
+                message.channel.send("要在语音频道才可执行此操作哟~");
                 return;
             }
             if(!servers[message.guild.me.id]) servers[message.guild.me.id] = {
