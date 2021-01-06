@@ -303,8 +303,9 @@ client.on('message',message=>{
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Emoji', value: "```你懂的 | 拿 | 666 | 丑逼 | ok```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 喵 | 爱你 | 。。| time【UTC时间】 | 时间【UTC时间】```'},
-                { name: 'Prefix',value: '```Whatever symbol you want~```'},
+                { name: 'Prefix', value: '```Whatever symbol you want~```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $rps | $dev | $time | $fshutdown【紧急用】```' },
+                { name: '商业合作请联系', value: '```07-6636892```'},
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
