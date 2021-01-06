@@ -65,6 +65,7 @@ client.on('message',message=>{
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
 
     if(message.channel.id==="773829631848742912"){
+        message.channel.send("Clearing...");
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
@@ -73,32 +74,14 @@ client.on('message',message=>{
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
     }
-    if(message.content ==="sad"){
-        message.reply("😥");
-    }
     if(message.content ==="QAQ"){
-        message.reply("不哭不哭眼泪是珍珠越哭越像🐖欸不是你本来就是");
+        message.reply("OwO");
     }
     if(message.content ==="030"){
-        message.reply("你以为你跟我一样可爱吗😘");
+        message.reply("040");
     }
     if(message.content ==="干"){
-        message.reply("亲爱的骂粗话bad bad啊");
-    }
-    if(message.content ==="先下"||message.content ==="下了"){
-        message.reply("亲爱的早点睡哟😘");
-    }
-    if(message.content ==="有人嗎"||message.content ==="有人吗"){
-        message.reply("\n没人哦\n想跟我做坏坏的事吗😜");
-    }
-    if(message.content ==="笑死"){
-        message.channel.send("🤣");
-    }
-    if(message.content ==="嘿嘿"||message.content ==="你懂的"){
-        message.channel.send("😏");
-    }
-    if(message.content ==="傻眼"){
-        message.channel.send("🙄");
+        message.reply("骂粗话bad bad啊");
     }
     if(message.content ==="喵"){
         message.channel.send("喵喵尼哥");
@@ -115,20 +98,11 @@ client.on('message',message=>{
     if(message.content ==="爱你"){
         message.channel.send("baby我也爱你😘");
     }
-    if(message.content ==="好看"){
-        message.channel.send("biiii你很sweet勒~");
-    }
     if(message.content ==="。。"){
         message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
     }
-    if(message.content ==="来咯"){
-        message.channel.send("亲爱的我来惹~");
-    }
     if(message.content ==="ok"){
         message.channel.send("👌");
-    }
-    if(message.content ==="走咯"){
-        message.channel.send("带上我😏");
     }
     if(message.content ==="emoji"){
         message.react("🥳");
@@ -311,7 +285,8 @@ client.on('message',message=>{
             }
             
             break;
-
+        case 'dev':
+            message.channel.send("<@632908358935904258>");
         case 'help':
             var embed = new Discord.MessageEmbed()
 
@@ -322,7 +297,7 @@ client.on('message',message=>{
             .setDescription('Thanks for using me~')
             .setThumbnail('https://i.imgur.com/VDMbwcb.png')
             .addFields(
-                { name: 'Developer', value: '```<@632908358935904258>```' },
+                { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
