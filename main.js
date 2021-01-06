@@ -289,6 +289,7 @@ client.on('message',message=>{
             break;
         case 'dev':
             message.channel.send("<@632908358935904258>");
+            break;
         case 'help':
             var embed = new Discord.MessageEmbed()
 
