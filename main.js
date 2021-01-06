@@ -58,8 +58,8 @@ client.on("message", async message => {
 
 client.on('message',message=>{
     const date = new Date(); // today
-    if(message.content==="time"){
-        message.channel.send(date.getHours()+" : "+date.getMinutes());
+    if(message.content==="time"||message.content ==="时间"){
+        message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
     }
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
@@ -86,7 +86,7 @@ client.on('message',message=>{
         message.reply("骂粗话bad bad啊");
     }
     if(message.content ==="喵"){
-        message.channel.send("喵喵尼哥");
+        message.channel.send("好猫一只");
     }
     if(message.content ==="拿"){
         message.channel.send("🖕😑🖕");
@@ -301,9 +301,10 @@ client.on('message',message=>{
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
-                { name: 'Emeoji', value: "```sad | 笑死 | 嘿嘿 | 你懂的 | 拿 | 666 | 丑逼 | ok```" },
-                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 先下 | 下了 | 有人吗 | 喵 | 爱你 | 好看 | 。。 | 来咯 | 走咯```'},
-                { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $fshutdown(emergency)```' },
+                { name: 'Emoji', value: "```你懂的 | 拿 | 666 | 丑逼 | ok```" },
+                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | QAQ | 030 | 干 | 喵 | 爱你 | 。。| time【UTC时间】 | 时间【UTC时间】```'},
+                { name: 'Prefix',value: 'Whatever symbol you want~'}
+                { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $科目 | $rps | $dev | $time | $fshutdown【紧急用】```' },
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
             )
@@ -316,7 +317,7 @@ client.on('message',message=>{
             message.channel.send(embed);
             break;
         case 'rps':
-            if(!args[1]) return message.reply('是不会出喔🙄');
+            if(!args[1]) return message.reply('【RPS石头剪刀布】\n是不会出喔🙄');
                 const messages = ["石头","剪刀","布"];
                 const random025 = messages[Math.floor(Math.random() * messages.length)];
                 let v=0;
