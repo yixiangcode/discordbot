@@ -65,7 +65,9 @@ client.on('message',message=>{
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
 
     if(message.channel.id==="773829631848742912"){
-        message.channel.send("Clearing...");
+        if(message.content!=="Clearing..."){
+            message.channel.send("Clearing...");
+        }
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
@@ -310,7 +312,7 @@ client.on('message',message=>{
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             .setTimestamp()
-            .setFooter('小可爱’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
+            .setFooter('y²N’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             message.channel.send(embed);
             break;
         case 'rps':
