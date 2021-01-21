@@ -44,9 +44,10 @@ client.on('ready',() => {
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("00FFFD")
             .addFields(
-                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'（已关闭）'+'```' },
-                { name: '正在进行', value: '```无```' },
-                { name: '即将进行', value: '```无```' },
+                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '正在进行', value: '```由于老子功课还没做所以暂未完成```' },
+                { name: '即将进行', value: '```由于老子功课还没做所以暂未完成```' },
+                { name: '状态', value: '```关闭，未完成```' },
             )
 
             chn.messages.fetch({around: "801802326603202591", limit: 1}).then(msg => {
@@ -54,6 +55,7 @@ client.on('ready',() => {
                 fetchedMsg.edit(主界面);
             });
         }
+        /*
         if(d==="Fri"&&h===07&&m===30&&a==="am"){
             var 五一 = new Discord.MessageEmbed()
             .setAuthor('Xiang自动化网课LINK系统')
@@ -67,11 +69,11 @@ client.on('ready',() => {
             .setTitle('英文LINK')
             .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
 
-            chn.messages.fetch({around: "801776029169221676", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "801828958978965525", limit: 2}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(五一);
             });
-        }
+        }*/
     }, 1000);
 })
 
@@ -107,7 +109,7 @@ client.on('message',message=>{
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
-
+        message.channel.send("hiii亲爱的");
     }
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
