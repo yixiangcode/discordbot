@@ -44,7 +44,7 @@ client.on('ready',() => {
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("00FFFD")
             .addFields(
-                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'（已关闭）'+'```' },
                 { name: '正在进行', value: '```无```' },
                 { name: '即将进行', value: '```无```' },
             )
@@ -54,7 +54,7 @@ client.on('ready',() => {
                 fetchedMsg.edit(主界面);
             });
         }
-        if(d==="Thu"&&h===10&&m===49&&a==="pm"){
+        if(d==="Fri"&&h===07&&m===30&&a==="am"){
             var 五一 = new Discord.MessageEmbed()
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("#00FFFD")
