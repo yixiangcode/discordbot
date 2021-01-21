@@ -54,7 +54,7 @@ client.on('ready',() => {
                 fetchedMsg.edit(主界面);
             });
         }
-        if(d==="Thu"&&h===10&&m===45&&a==="pm"){
+        if(d==="Thu"&&h===10&&m===49&&a==="pm"){
             var 五一 = new Discord.MessageEmbed()
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("#00FFFD")
