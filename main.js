@@ -33,20 +33,20 @@ client.on('ready',() => {
     //var chn = client.channels.cache.get('707515094568927295');
     setInterval(() => {
         const date = new Date();
-        d=date.getDay();
-        h=date.getHours();
-        m=date.getMinutes();
-        s=date.getSeconds();
-        q=moment().utcOffset(+8).format("hh")
-        if(s===0){
+        //d=date.getDay();
+        d=moment().utcOffset(+8).format("ddd")
+        h=moment().utcOffset(+8).format("hh")
+        m=moment().utcOffset(+8).format("mm")
+        s=moment().utcOffset(+8).format("ss")
+        a=moment().utcOffset(+8).format("a")
+        if(s===00){
             var 主界面 = new Discord.MessageEmbed()
-            .setAuthor('Xiang自动化LINK系统')
-            .setTitle('')
+            .setAuthor('Xiang自动化网课LINK系统')
             .setColor("00FFFD")
-            .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
             .addFields(
-                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm:ss a")+'```' },
-                { name: '即时课程', value: q },
+                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '正在进行', value: '```无```' },
+                { name: '即将进行', value: '```无```' },
             )
 
             chn.messages.fetch({around: "801802326603202591", limit: 1}).then(msg => {
@@ -54,16 +54,18 @@ client.on('ready',() => {
                 fetchedMsg.edit(主界面);
             });
         }
-        if(d===5){
+        if(d==="Thu"&&h===10&&m===45&&a==="pm"){
             var 五一 = new Discord.MessageEmbed()
-            .setAuthor('Xiang自动化LINK系统')
+            .setAuthor('Xiang自动化网课LINK系统')
             .setColor("#00FFFD")
+            .addFields(
+                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '正在进行', value: '```无```' },
+                { name: '即将进行', value: '```数位逻辑```' },
+                { name: '课程Link' },
+            )
             .setTitle('英文LINK')
             .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
-            .addFields(
-                { name: '即刻时间', value: h+":"+m },
-                { name: '即时课程', value: '```无```' },
-            )
 
             chn.messages.fetch({around: "801776029169221676", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
@@ -105,7 +107,7 @@ client.on('message',message=>{
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
-        message.reply('hiiii亲爱的');
+
     }
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
@@ -137,18 +139,6 @@ client.on('message',message=>{
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(embed);
             });
-    }
-    if(message.content ==="丑逼"){
-        message.channel.send({files:["./images/ML.jpg"]});
-    }
-    if(message.content ==="爱你"){
-        message.channel.send("baby我也爱你😘");
-    }
-    if(message.content ==="。。"){
-        message.channel.send("。。。。。。。。。。。。。。。。。。。。。。。。。");
-    }
-    if(message.content ==="ok"){
-        message.channel.send("👌");
     }
     if(message.content ==="emoji"){
         message.react("🥳");
