@@ -7,10 +7,6 @@ const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const moment = require('moment');
-/*
-const { time } = require('console');
-const { createSecretKey } = require('crypto');
-*/
 
 const client = new Discord.Client();
 var version = '1.2';
@@ -19,13 +15,13 @@ var servers = {};
 const { Player } = require("discord-player");
 const { prependListener } = require('discord-xp/models/levels');
 const { time } = require('console');
+const { discordTime } = require('canvacord/src/Util');
 const player = new Player(client);
 client.player = player;
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
     var chn = client.channels.cache.get('707515094568927295');
-    //chn.send("你的小可爱已上线哟~");
 });
 
 client.on('ready',() => {
@@ -39,36 +35,72 @@ client.on('ready',() => {
         m=moment().utcOffset(+8).format("mm")
         s=moment().utcOffset(+8).format("ss")
         a=moment().utcOffset(+8).format("a")
+        var 电路 = new Discord.MessageEmbed()
+            .setTitle('电路Link')
+            .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
+        var 英文 = new Discord.MessageEmbed()
+            .setTitle('英文Link')
+            .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
+        var 国文 = new Discord.MessageEmbed()
+            .setTitle('国文Link')
+            .setURL('https://meet.google.com/lookup/aitlqfg7rw')
+        var 华文 = new Discord.MessageEmbed()
+            .setTitle('华文Link')
+            .setURL('https://meet.google.com/lookup/e7mv5pql56')
+        var Dp = new Discord.MessageEmbed()
+            .setTitle('德培Link')
+            .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
+        var 未知 = new Discord.MessageEmbed()
+            .setTitle('未知Link')
+        var 物理 = new Discord.MessageEmbed()
+            .setTitle("物理Link")
+            .setURL("https://zoom.us/j/3901234262?pwd=NFFHYkpHK09va2pVU1AxWU52ejAvZz09")
+        var 宝哥 = new Discord.MessageEmbed()
+            .setTitle("宝哥Link")
+            .setURL("https://zoom.us/j/7023351694?pwd=dytJcXM2dGdTOUEvVmNubk40Nmg0Zz09")
+        var 课程默认图 = new Discord.MessageEmbed()
+            .setTitle("此时间段无课程")
+            .setColor("GREEN")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
-            .setAuthor('Xiang自动化网课LINK系统')
+            .setAuthor('XianG自动化网课Link系统')
             .setColor("00FFFD")
             .addFields(
-                { name: '即刻时间 🟢', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
-                { name: '正在进行 🔴', value: '```无```' },
-                { name: '即将进行 🔴', value: '```无```' },
+                { name: '标准时间  🟢', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
             )
-            .setTitle('状态 🟢 🔴')
-
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
         }
-        if(d==="Sat"&&h===07&&m===20&&a==="am"){
-            var 六一 = new Discord.MessageEmbed()
-            .setAuthor('Xiang自动化网课LINK系统')
-            .setColor("#00FFFD")
-            .addFields(
-                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
-                { name: '正在进行', value: '```无```' },
-                { name: '即将进行', value: '```物理```' },
-                { name: '课程Link' },
-            )
-
-            chn.messages.fetch({around: "802029057029832735", limit: 2}).then(msg => {
+        if(d==="Sat"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
-                fetchedMsg.edit(六一);
+                fetchedMsg.edit(物理);
+            });
+        }
+        if(d==="Sat"&&h==="08"&&m==="25"&&a==="am"){
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Sat"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(未知);
+            });
+        }
+        if(d==="Sat"&&h==="10"&&m==="10"&&a==="am"){
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(Dp);
+            });
+        }
+        if(d==="Sat"&&h==="11"&&m==="00"&&a==="am"){
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
             });
         }
     }, 1000);
@@ -77,19 +109,6 @@ client.on('ready',() => {
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
 
 const PREFIX = '&';
-/*
-client.on("message", async message => {
-    const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-    if(command === 'play'){
-        let track = await client.player.play(message.member.voice.channel,args[0], message.member.user.tag);
-    }
-    if(command === 'stop'){
-        let track = await client.player.stop(message.guild.id);
-    }
-})
-*/
 
 client.on('message',message=>{
     const date = new Date(); // today
@@ -108,6 +127,16 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("hiii亲爱的");
         message.channel.send(moment().utcOffset(+8).format("ss"));
+    }
+    if(message.content ==="rs"){
+        var chn = client.channels.cache.get('770291696034381844');
+        var 课程默认图 = new Discord.MessageEmbed()
+            .setTitle("此时间段无课程")
+            .setColor("GREEN")
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
     }
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
@@ -199,75 +228,6 @@ client.on('message',message=>{
         case 'ping':
             message.channel.send('pong!');
             break;
-        case '电路':
-        case '電路':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('电路LINK')
-            .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
-            message.channel.send(embed);
-            break;
-        case '数学':
-        case '數學':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('数学LINK')
-            .setDescription("未知")
-            //setURL('https://us02web.zoom.us/j/7479775377?pwd=Uk1rZUxyNGpWU1FYUVpHK2RqVTFxQT09')
-            message.channel.send(embed);
-            break;
-        case '英文':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('英文LINK')
-            .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
-            message.channel.send(embed);
-            break;
-        case '数位':
-        case '數位':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('数位LINK')
-            .setURL('https://meet.google.com/lookup/hk3hboi2l2')
-            message.channel.send(embed);
-            break;
-        case '国文':
-        case '國文':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('国文LINK')
-            .setURL('https://meet.google.com/lookup/aitlqfg7rw')
-            message.channel.send(embed);
-            break;
-        case '华文':
-        case '華文':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('华文LINK')
-            .setURL('https://meet.google.com/lookup/e7mv5pql56')
-            message.channel.send(embed);
-            break;
-        case 'dp':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('德培LINK')
-            .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
-            message.channel.send(embed);
-            break;
-        case '体育':
-        case '體育':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('体育LINK')
-            .setURL('https://meet.google.com/lookup/cqjmopwuvn')
-            message.channel.send(embed);
-            break;
-        case '物理':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('物理')
-            .setColor('#00FFF3')
-            .setDescription('Zoom ID：3901234262\nPassword：0wqvCU')
-            message.channel.send(embed);
-            break;
-        case '国历':
-        case '國歷':
-            var embed = new Discord.MessageEmbed()
-            .setTitle('国历LINK')
-            .setURL('https://zoom.us/j/6425339389?pwd=cEMybDFFVVR3WHEyL0E0RmM3Ty83QT09')
-            message.channel.send(embed);
-            break;
         case '电':
         case '電':    
             console.log(message.author.username);
@@ -285,17 +245,6 @@ client.on('message',message=>{
                 message.channel.send(embed);
             }
             break;
-        case 'time':
-            var embed = new Discord.MessageEmbed()
-                .setColor("84FF00")
-                .setAuthor("上课时间")
-                .addFields(
-                { name: '高一电机电子1', value: '```第一节：8.00am-8.40am\n第二节：8.50am-9.30am\n第三节：9.40am-10.20am\n第四节：10.30am-11.10am\n第五节：11.20am-12.00pm\n第六节：12.30pm-1.10pm\n第七节：1.20pm-2.00pm\n第八节：2.10pm-2.50```' },
-            )
-                .setImage('https://i.imgur.com/x9bLVxi.gif')
-                message.channel.send(embed);
-            break;
-            
         case 'clear':
             console.log(message.author.username);
             if(message.author.username===""){
