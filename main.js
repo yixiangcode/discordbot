@@ -39,41 +39,38 @@ client.on('ready',() => {
         m=moment().utcOffset(+8).format("mm")
         s=moment().utcOffset(+8).format("ss")
         a=moment().utcOffset(+8).format("a")
-        if(s===00){
+        if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("00FFFD")
             .addFields(
-                { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
-                { name: '正在进行', value: '```由于老子功课还没做所以暂未完成```' },
-                { name: '即将进行', value: '```由于老子功课还没做所以暂未完成```' },
-                { name: '状态', value: '```关闭，未完成```' },
+                { name: '即刻时间 🟢', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '正在进行 🔴', value: '```无```' },
+                { name: '即将进行 🔴', value: '```无```' },
             )
+            .setTitle('状态 🟢 🔴')
 
-            chn.messages.fetch({around: "801802326603202591", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
         }
-        /*
-        if(d==="Fri"&&h===07&&m===30&&a==="am"){
-            var 五一 = new Discord.MessageEmbed()
+        if(d==="Sat"&&h===07&&m===20&&a==="am"){
+            var 六一 = new Discord.MessageEmbed()
             .setAuthor('Xiang自动化网课LINK系统')
             .setColor("#00FFFD")
             .addFields(
                 { name: '即刻时间', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
                 { name: '正在进行', value: '```无```' },
-                { name: '即将进行', value: '```数位逻辑```' },
+                { name: '即将进行', value: '```物理```' },
                 { name: '课程Link' },
             )
-            .setTitle('英文LINK')
-            .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
 
-            chn.messages.fetch({around: "801828958978965525", limit: 2}).then(msg => {
+            chn.messages.fetch({around: "802029057029832735", limit: 2}).then(msg => {
                 const fetchedMsg = msg.first();
-                fetchedMsg.edit(五一);
+                fetchedMsg.edit(六一);
             });
-        }*/
+        }
     }, 1000);
 })
 
@@ -110,37 +107,16 @@ client.on('message',message=>{
     }
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("hiii亲爱的");
+        message.channel.send(moment().utcOffset(+8).format("ss"));
     }
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
-    }
-    if(message.content ==="QAQ"){
-        message.reply("OwO");
-    }
-    if(message.content ==="030"){
-        message.reply("040");
-    }
-    if(message.content ==="干"){
-        message.reply("骂粗话bad bad啊");
     }
     if(message.content ==="喵"){
         message.channel.send("好猫一只");
     }
     if(message.content ==="拿"){
         message.channel.send("🖕😑🖕");
-    }
-    if(message.content ==="t"){
-        var embed = new Discord.MessageEmbed()
-            .setAuthor('自动给LINK系统')
-            .setTitle('英文LINK')
-            .setURL('https://zoom.us/j/91898041291?pwd=eDJTSko2V1RhdjFSUCtBWG9TWHRoZz09')
-
-            var newEmbed = new Discord.MessageEmbed()
-            .setDescription(m+":"+s);
-            message.channel.messages.fetch({around: "801776029169221676", limit: 1}).then(msg => {
-                const fetchedMsg = msg.first();
-                fetchedMsg.edit(embed);
-            });
     }
     if(message.content ==="emoji"){
         message.react("🥳");
