@@ -27,6 +27,7 @@ client.once('ready',()=>{
 client.on('ready',() => {
     var chn = client.channels.cache.get('770291696034381844');
     //var chn = client.channels.cache.get('707515094568927295');
+    var msgNumber = "802029057029832735";
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
@@ -50,23 +51,27 @@ client.on('ready',() => {
         var Dp = new Discord.MessageEmbed()
             .setTitle('德培Link')
             .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
-        var 未知 = new Discord.MessageEmbed()
-            .setTitle('未知Link')
+        var 数学 = new Discord.MessageEmbed()
+            .setTitle('数学Link未知')
         var 物理 = new Discord.MessageEmbed()
             .setTitle("物理Link")
             .setURL("https://zoom.us/j/3901234262?pwd=NFFHYkpHK09va2pVU1AxWU52ejAvZz09")
         var 宝哥 = new Discord.MessageEmbed()
             .setTitle("宝哥Link")
             .setURL("https://zoom.us/j/7023351694?pwd=dytJcXM2dGdTOUEvVmNubk40Nmg0Zz09")
+        var 国历 = new Discord.MessageEmbed()
+            .setTitle("国历Link")
+            .setURL("https://meet.google.com/lookup/bjtzgmbgcx")
         var 课程默认图 = new Discord.MessageEmbed()
-            .setTitle("此时间段无课程")
+            .setTitle("课程Link将在每堂课结束后自动生成")
+            .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
-            .setAuthor('XianG自动化网课Link系统')
+            .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
             .setColor("00FFFD")
             .addFields(
-                { name: '标准时间  🟢', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
             )
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
@@ -74,31 +79,85 @@ client.on('ready',() => {
             });
         }
         if(d==="Sat"&&h==="07"&&m==="20"&&a==="am"){
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(物理);
             });
         }
         if(d==="Sat"&&h==="08"&&m==="25"&&a==="am"){
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
         if(d==="Sat"&&h==="09"&&m==="15"&&a==="am"){
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
-                fetchedMsg.edit(未知);
+                fetchedMsg.edit(国历);
             });
         }
         if(d==="Sat"&&h==="10"&&m==="10"&&a==="am"){
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(Dp);
             });
         }
         if(d==="Sat"&&h==="11"&&m==="00"&&a==="am"){
-            chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
+        }
+        if(d==="Mon"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(Dp);
+            });
+        }
+        if(d==="Mon"&&h==="08"&&m==="25"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+        }
+        if(d==="Mon"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(国文);
+            });
+        }
+        if(d==="Mon"&&h==="10"&&m==="10"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Mon"&&h==="11"&&m==="00"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(华文);
+            });
+        }
+        if(d==="Mon"&&h==="11"&&m==="50"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Mon"&&h==="01"&&m==="00"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(英文);
+            });
+        }
+        if(d==="Mon"&&h==="01"&&m==="50"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(电路);
+            });
+        }
+        if(d==="Mon"&&h==="03"&&m==="30"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(课程默认图);
             });
@@ -131,7 +190,8 @@ client.on('message',message=>{
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
         var 课程默认图 = new Discord.MessageEmbed()
-            .setTitle("此时间段无课程")
+            .setTitle("课程Link将在每堂课结束后自动生成")
+            .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
             chn.messages.fetch({around: "802029057029832735", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
