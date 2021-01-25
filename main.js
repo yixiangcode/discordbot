@@ -62,8 +62,11 @@ client.on('ready',() => {
         var 国历 = new Discord.MessageEmbed()
             .setTitle("国历Link")
             .setURL("https://meet.google.com/lookup/bjtzgmbgcx")
+        var 体育 = new Discord.MessageEmbed()
+            .setTitle("体育Link")
+            .setURL("https://meet.google.com/lookup/cqjmopwuvn")
         var 课程默认图 = new Discord.MessageEmbed()
-            .setTitle("课程Link将在每堂课结束后自动生成")
+            .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
         if(s==="00"){
@@ -207,7 +210,7 @@ client.on('ready',() => {
         if(d==="Wed"&&h==="08"&&m==="25"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
-                fetchedMsg.edit();
+                fetchedMsg.edit(体育);
             });
         }
         if(d==="Wed"&&h==="09"&&m==="15"&&a==="am"){
