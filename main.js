@@ -37,7 +37,7 @@ client.on('ready',() => {
         s=moment().utcOffset(+8).format("ss")
         a=moment().utcOffset(+8).format("a")
         var 电路 = new Discord.MessageEmbed()
-            .setTitle('电路Link')
+            .setTitle('Bp Link')
             .setURL('https://us04web.zoom.us/j/2468450244?pwd=M3QzTzJpYmhraytpbnNMRmZrU05hdz09')
         var 英文 = new Discord.MessageEmbed()
             .setTitle('英文Link')
@@ -157,6 +157,90 @@ client.on('ready',() => {
             });
         }
         if(d==="Mon"&&h==="03"&&m==="30"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
+        }
+        if(d==="Tue"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(英文);
+            });
+        }
+        if(d==="Tue"&&h==="08"&&m==="25"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(物理);
+            });
+        }
+        if(d==="Tue"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Tue"&&h==="11"&&m==="50"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(电路);
+            });
+        }
+        if(d==="Tue"&&h==="01"&&m==="50"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+        }
+        if(d==="Tue"&&h==="02"&&m==="40"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
+        }
+        if(d==="Wed"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(华文);
+            });
+        }
+        if(d==="Wed"&&h==="08"&&m==="25"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit();
+            });
+        }
+        if(d==="Wed"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Wed"&&h==="10"&&m==="10"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(英文);
+            });
+        }
+        if(d==="Wed"&&h==="11"&&m==="00"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(Dp);
+            });
+        }
+        if(d==="Wed"&&h==="11"&&m==="50"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+        }
+        if(d==="Wed"&&h==="01"&&m==="00"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(国文);
+            });
+        }
+        if(d==="Wed"&&h==="01"&&m==="50"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(课程默认图);
