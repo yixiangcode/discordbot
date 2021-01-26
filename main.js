@@ -249,6 +249,96 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
+        if(d==="Thu"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+        }
+        if(d==="Thu"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(英文);
+            });
+        }
+        if(d==="Thu"&&h==="10"&&m==="10"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(电路);
+            });
+        }
+        if(d==="Thu"&&h==="11"&&m==="00"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(国文);
+            });
+        }
+        if(d==="Thu"&&h==="11"&&m==="50"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(华文);
+            });
+        }
+        if(d==="Thu"&&h==="01"&&m==="50"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
+        }
+        if(d==="Fri"&&h==="07"&&m==="20"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(宝哥);
+            });
+        }
+        if(d==="Fri"&&h==="08"&&m==="25"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+        }
+        if(d==="Fri"&&h==="09"&&m==="15"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(英文);
+            });
+        }
+        if(d==="Fri"&&h==="10"&&m==="10"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(电路);
+            });
+        }
+        if(d==="Fri"&&h==="11"&&m==="00"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(华文);
+            });
+        }
+        if(d==="Fri"&&h==="11"&&m==="50"&&a==="am"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(Dp);
+            });
+        }
+        if(d==="Fri"&&h==="01"&&m==="50"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(物理);
+            });
+        }
+        if(d==="Fri"&&h==="02"&&m==="45"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(国文);
+            });
+        }
+        if(d==="Fri"&&h==="03"&&m==="30"&&a==="pm"){
+            chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(课程默认图);
+            });
+        }
     }, 1000);
 })
 
