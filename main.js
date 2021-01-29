@@ -76,6 +76,7 @@ client.on('ready',() => {
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
             )
+            .setImage('https://i.imgur.com/Gdy6F10.jpg');
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
