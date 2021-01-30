@@ -75,6 +75,7 @@ client.on('ready',() => {
             .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '᲼', value: '◉已修改Link更新时间\n◉已更正所有课程Link' },
             )
             .setImage('https://i.imgur.com/Gdy6F10.jpg');
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
