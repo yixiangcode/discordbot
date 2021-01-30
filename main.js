@@ -58,7 +58,7 @@ client.on('ready',() => {
             .setURL("https://zoom.us/j/3901234262?pwd=NFFHYkpHK09va2pVU1AxWU52ejAvZz09")
         var 宝哥 = new Discord.MessageEmbed()
             .setTitle("宝哥Link")
-            .setURL("https://zoom.us/j/7023351694?pwd=dytJcXM2dGdTOUEvVmNubk40Nmg0Zz09")
+            .setURL("https://meet.google.com/lookup/f4jrhfglxq")
         var 国历 = new Discord.MessageEmbed()
             .setTitle("国历Link")
             .setURL("https://meet.google.com/lookup/bjtzgmbgcx")
@@ -88,73 +88,73 @@ client.on('ready',() => {
                 fetchedMsg.edit(物理);
             });
         }
-        if(d==="Sat"&&h==="08"&&m==="25"&&a==="am"){
+        if(d==="Sat"&&h==="08"&&m==="15"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Sat"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Sat"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国历);
             });
         }
-        if(d==="Sat"&&h==="10"&&m==="10"&&a==="am"){
+        if(d==="Sat"&&h==="10"&&m==="00"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(Dp);
             });
         }
-        if(d==="Sat"&&h==="11"&&m==="00"&&a==="am"){
+        if(d==="Sat"&&h==="10"&&m==="50"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(课程默认图);
             });
         }
-        if(d==="Mon"&&h==="07"&&m==="20"&&a==="am"){
+        if(d==="Mon"&&h==="07"&&m==="10"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(Dp);
             });
         }
-        if(d==="Mon"&&h==="08"&&m==="25"&&a==="am"){
+        if(d==="Mon"&&h==="08"&&m==="15"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(数学);
             });
         }
-        if(d==="Mon"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Mon"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国文);
             });
         }
-        if(d==="Mon"&&h==="10"&&m==="10"&&a==="am"){
+        if(d==="Mon"&&h==="10"&&m==="00"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Mon"&&h==="11"&&m==="00"&&a==="am"){
+        if(d==="Mon"&&h==="10"&&m==="50"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(华文);
             });
         }
-        if(d==="Mon"&&h==="11"&&m==="50"&&a==="am"){
+        if(d==="Mon"&&h==="11"&&m==="40"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Mon"&&h==="01"&&m==="00"&&a==="pm"){
+        if(d==="Mon"&&h==="12"&&m==="50"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(英文);
             });
         }
-        if(d==="Mon"&&h==="01"&&m==="50"&&a==="pm"){
+        if(d==="Mon"&&h==="01"&&m==="40"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(电路);
@@ -166,31 +166,31 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
-        if(d==="Tue"&&h==="07"&&m==="20"&&a==="am"){
+        if(d==="Tue"&&h==="07"&&m==="10"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(英文);
             });
         }
-        if(d==="Tue"&&h==="08"&&m==="25"&&a==="am"){
+        if(d==="Tue"&&h==="08"&&m==="15"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(物理);
             });
         }
-        if(d==="Tue"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Tue"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Tue"&&h==="11"&&m==="50"&&a==="am"){
+        if(d==="Tue"&&h==="11"&&m==="40"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(电路);
             });
         }
-        if(d==="Tue"&&h==="01"&&m==="50"&&a==="pm"){
+        if(d==="Tue"&&h==="01"&&m==="40"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(数学);
@@ -202,43 +202,43 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
-        if(d==="Wed"&&h==="07"&&m==="20"&&a==="am"){
+        if(d==="Wed"&&h==="07"&&m==="10"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(华文);
             });
         }
-        if(d==="Wed"&&h==="08"&&m==="25"&&a==="am"){
+        if(d==="Wed"&&h==="08"&&m==="15"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(体育);
             });
         }
-        if(d==="Wed"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Wed"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Wed"&&h==="10"&&m==="10"&&a==="am"){
+        if(d==="Wed"&&h==="10"&&m==="00"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(英文);
             });
         }
-        if(d==="Wed"&&h==="11"&&m==="00"&&a==="am"){
+        if(d==="Wed"&&h==="10"&&m==="50"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(Dp);
             });
         }
-        if(d==="Wed"&&h==="11"&&m==="50"&&a==="am"){
+        if(d==="Wed"&&h==="11"&&m==="40"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(数学);
             });
         }
-        if(d==="Wed"&&h==="01"&&m==="00"&&a==="pm"){
+        if(d==="Wed"&&h==="12"&&m==="50"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国文);
@@ -250,31 +250,31 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
-        if(d==="Thu"&&h==="07"&&m==="20"&&a==="am"){
+        if(d==="Thu"&&h==="07"&&m==="10"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(数学);
             });
         }
-        if(d==="Thu"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Thu"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(英文);
             });
         }
-        if(d==="Thu"&&h==="10"&&m==="10"&&a==="am"){
+        if(d==="Thu"&&h==="10"&&m==="00"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(电路);
             });
         }
-        if(d==="Thu"&&h==="11"&&m==="00"&&a==="am"){
+        if(d==="Thu"&&h==="10"&&m==="50"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国文);
             });
         }
-        if(d==="Thu"&&h==="11"&&m==="50"&&a==="am"){
+        if(d==="Thu"&&h==="11"&&m==="40"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(华文);
@@ -286,49 +286,49 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
-        if(d==="Fri"&&h==="07"&&m==="20"&&a==="am"){
+        if(d==="Fri"&&h==="07"&&m==="10"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(宝哥);
             });
         }
-        if(d==="Fri"&&h==="08"&&m==="25"&&a==="am"){
+        if(d==="Fri"&&h==="08"&&m==="15"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(数学);
             });
         }
-        if(d==="Fri"&&h==="09"&&m==="15"&&a==="am"){
+        if(d==="Fri"&&h==="09"&&m==="05"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(英文);
             });
         }
-        if(d==="Fri"&&h==="10"&&m==="10"&&a==="am"){
+        if(d==="Fri"&&h==="10"&&m==="00"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(电路);
             });
         }
-        if(d==="Fri"&&h==="11"&&m==="00"&&a==="am"){
+        if(d==="Fri"&&h==="10"&&m==="50"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(华文);
             });
         }
-        if(d==="Fri"&&h==="11"&&m==="50"&&a==="am"){
+        if(d==="Fri"&&h==="11"&&m==="40"&&a==="am"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(Dp);
             });
         }
-        if(d==="Fri"&&h==="01"&&m==="50"&&a==="pm"){
+        if(d==="Fri"&&h==="01"&&m==="40"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(物理);
             });
         }
-        if(d==="Fri"&&h==="02"&&m==="45"&&a==="pm"){
+        if(d==="Fri"&&h==="02"&&m==="35"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国文);
