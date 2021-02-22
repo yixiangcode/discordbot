@@ -465,7 +465,7 @@ client.on('message',message=>{
             if(message.guild.me.voice.connection) message.guild.me.voice.connection.disconnect();
             break;
         case 'ping':
-            message.channel.send('pong!');
+            message.channel.send(`Ping: **${Date.now() - message.createdTimestamp}ms.**`);
             break;
         case '电':
         case '電':    
