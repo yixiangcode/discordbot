@@ -52,7 +52,8 @@ client.on('ready',() => {
             .setTitle('德培Link')
             .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
         var 数学 = new Discord.MessageEmbed()
-            .setTitle('数学Link未知')
+            .setTitle('数学Link')
+            .setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
         var 物理 = new Discord.MessageEmbed()
             .setTitle("物理Link")
             .setURL("https://zoom.us/j/3901234262?pwd=NFFHYkpHK09va2pVU1AxWU52ejAvZz09")
@@ -364,7 +365,6 @@ client.on('message',message=>{
     }
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("hiii亲爱的");
-        message.channel.send(moment().utcOffset(+8).format("ss"));
     }
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
