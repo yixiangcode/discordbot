@@ -80,7 +80,7 @@ client.on('ready',() => {
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('y²N Version 2.1.2', 'https://i.imgur.com/VDMbwcb.png');
+            .setFooter('y²N version 2.1.2', 'https://i.imgur.com/VDMbwcb.png');
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
