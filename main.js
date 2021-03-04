@@ -76,9 +76,12 @@ client.on('ready',() => {
             .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
-                { name: '᲼', value: '◉已修改Link更新时间\n◉已更正所有课程Link' },
+                { name: '᲼', value: '◉已优化Link更新时间\n◉已将所有Link更新至最新' },
             )
-            .setImage('https://i.imgur.com/Gdy6F10.jpg');
+            .setImage('https://i.imgur.com/Gdy6F10.jpg')
+            .setImage('https://i.imgur.com/x9bLVxi.gif')
+            .setTimestamp()
+            .setFooter('y²N’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
