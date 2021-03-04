@@ -76,11 +76,11 @@ client.on('ready',() => {
             .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
-                { name: '᲼', value: '◉已优化Link更新时间' },
+                { name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('Version 2.1.1', 'https://i.imgur.com/VDMbwcb.png');
+            .setFooter('y²N Version 2.1.2', 'https://i.imgur.com/VDMbwcb.png');
             chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
