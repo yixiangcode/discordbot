@@ -332,7 +332,7 @@ client.on('ready',() => {
                 fetchedMsg.edit(物理);
             });
         }
-        if(d==="Fri"&&h==="02"&&m==="35"&&a==="pm"){
+        if(d==="Fri"&&h==="02"&&m==="25"&&a==="pm"){
             chn.messages.fetch({around: msgNumber, limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(国文);
