@@ -26,6 +26,7 @@ client.once('ready',()=>{
 
 client.on('ready',() => {
     var chn = client.channels.cache.get('770291696034381844');
+    var lamp = client.channels.cache.get('707515094568927295');
     //var chn = client.channels.cache.get('707515094568927295');
     var msgNumber = "802029057029832735";
     setInterval(() => {
@@ -74,37 +75,37 @@ client.on('ready',() => {
 
 
             if(s==="00"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🔴🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="10"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🔴🟢🟢🟢🟢");
                 });
             }
             if(s==="20"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🔴🟢🟢🟢");
                 });
             }
             if(s==="30"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🔴🟢🟢");
                 });
             }
             if(s==="40"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🔴🟢");
                 });
             }
             if(s==="50"){
-                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                lamp.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🔴");
                 });
