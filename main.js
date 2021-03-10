@@ -31,7 +31,7 @@ client.on('ready',() => {
 
     //var chn = client.channels.cache.get('707515094568927295');
     var msgNumber = "802029057029832735";
-    var lamp = "819036967144259614"
+    var lamp = "819038501940363304";
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
@@ -78,73 +78,73 @@ client.on('ready',() => {
 
 
             if(s==="00"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="05"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="10"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="15"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="20"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="25"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="30"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢");
                 });
             }
             if(s==="35"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢");
                 });
             }
             if(s==="40"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢");
                 });
             }
             if(s==="45"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢");
                 });
             }
             if(s==="50"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢");
                 });
             }
             if(s==="55"){
-                lampchn.messages.fetch({around: "lamp", limit: 1}).then(msg => {
+                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴");
                 });
