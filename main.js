@@ -70,6 +70,50 @@ client.on('ready',() => {
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
+
+
+
+            if(s==="00"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🔴🟢🟢🟢🟢🟢");
+                });
+            }
+            if(s==="10"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🟢🔴🟢🟢🟢🟢");
+                });
+            }
+            if(s==="20"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🟢🟢🔴🟢🟢🟢");
+                });
+            }
+            if(s==="30"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🟢🟢🟢🔴🟢🟢");
+                });
+            }
+            if(s==="40"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🟢🟢🟢🟢🔴🟢");
+                });
+            }
+            if(s==="50"){
+                chn.messages.fetch({around: "819032725960654868", limit: 1}).then(msg => {
+                    const fetchedMsg = msg.first();
+                    fetchedMsg.edit("🟢🟢🟢🟢🟢🔴");
+                });
+            }
+
+        
+
+
+
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
