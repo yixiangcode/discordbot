@@ -83,72 +83,73 @@ client.on('ready',() => {
                     fetchedMsg.edit("🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="05"){
+            if(s==="01"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="10"){
+            if(s==="02"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="15"){
+            if(s==="03"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="20"){
+            if(s==="04"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="25"){
+            if(s==="05"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="30"){
+            if(s==="06"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢");
                 });
             }
-            if(s==="35"){
+            if(s==="07"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢");
                 });
             }
-            if(s==="40"){
+            if(s==="08"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢");
                 });
             }
-            if(s==="45"){
+            if(s==="09"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢");
                 });
             }
-            if(s==="50"){
+            if(s==="10"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢");
                 });
             }
-            if(s==="55"){
+            if(s==="11"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴");
                 });
             }
+            
 
         
 
