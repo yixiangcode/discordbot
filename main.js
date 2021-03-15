@@ -76,7 +76,7 @@ client.on('ready',() => {
             .setColor("GREEN")
 
 
-
+/*
             if(s==="00"){
                 lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
                     const fetchedMsg = msg.first();
@@ -149,7 +149,7 @@ client.on('ready',() => {
                     fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴");
                 });
             }
-
+*/
         
 
 
