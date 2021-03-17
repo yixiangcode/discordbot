@@ -360,7 +360,7 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
-    if(message.content==="write2"){
+    if(message.content==="write"){
         editedmessage= message.content.slice(6);
 
         client.msgs[message.author.username]={
@@ -371,7 +371,7 @@ client.on('message',message=>{
             message.channel.send("message written");
         })
 
-        if(message.content.startsWith("get")){
+        if(message.content==="get"){
             let _message = client.msgs[message.author.username].message;
             message.channel.send("message is : " + _message);
         }
