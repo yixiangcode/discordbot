@@ -19,6 +19,9 @@ const { discordTime } = require('canvacord/src/Util');
 const player = new Player(client);
 client.player = player;
 
+client.msgs = require("./data.json")
+const fs = require("fs");
+
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
     var chn = client.channels.cache.get('707515094568927295');
@@ -74,86 +77,6 @@ client.on('ready',() => {
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
-
-
-/*
-            if(s==="00"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="05"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="10"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="15"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="20"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="25"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="30"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢🟢");
-                });
-            }
-            if(s==="35"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢🟢");
-                });
-            }
-            if(s==="40"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢🟢");
-                });
-            }
-            if(s==="45"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢🟢");
-                });
-            }
-            if(s==="50"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴🟢");
-                });
-            }
-            if(s==="55"){
-                lampchn.messages.fetch({around: lamp, limit: 1}).then(msg => {
-                    const fetchedMsg = msg.first();
-                    fetchedMsg.edit("🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🔴");
-                });
-            }
-*/
-        
-
-
-
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
@@ -436,6 +359,18 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
+    if(message.content.startsWith("write")){
+        message.edit = message.content.slice(6);
+
+        client.msgs[message.author.username]={
+            message:message.content
+        }
+        fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+            if(err)throw err;
+            message.channel.send("message written");
+        })
+    }
+
     const date = new Date(); // today
     if(message.content==="time"||message.content ==="时间"){
         message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
