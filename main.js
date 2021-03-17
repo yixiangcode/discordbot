@@ -364,9 +364,9 @@ client.on('message',message=>{
         editedmessage= message.content.slice(6);
 
         client.msgs[message.author.username]={
-            message:message.content
+            message:editedmessage
         }
-        fs.writeFileSync("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+        fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
             if(err)throw err;
             message.channel.send("message written");
         })
