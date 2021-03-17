@@ -360,6 +360,7 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
+    /*
     if(message.content==="write"){
         editedmessage= message.content.slice(6);
 
@@ -376,7 +377,7 @@ client.on('message',message=>{
             message.channel.send("message is : " + _message);
         }
     }
-
+*/
     const date = new Date(); // today
     if(message.content==="time"||message.content ==="时间"){
         message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
