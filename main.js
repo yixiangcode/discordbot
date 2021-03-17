@@ -360,12 +360,12 @@ const PREFIX = '&';
 
 client.on('message',message=>{
     if(message.content==="write2"){
-        message.edit = message.content.slice(6);
+        editedmessage= message.content.slice(6);
 
         client.msgs[message.author.username]={
             message:message.content
         }
-        fs.writeFileSync("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+        fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
             if(err)throw err;
             message.channel.send("message written");
         })
