@@ -21,6 +21,7 @@ client.player = player;
 
 client.msgs = require("./data.json")
 const fs = require("fs");
+const { send } = require('process');
 
 client.once('ready',()=>{
     console.log('你的小可爱已上线哟~');
@@ -369,6 +370,11 @@ client.on('message',message=>{
             if(err)throw err;
             message.channel.send("message written");
         })
+
+        if(message.content.startsWith("get")){
+            let _message = client.msgs[message.author.username].message;
+            message.channel.send("message is : " + _message);
+        }
     }
 
     const date = new Date(); // today
