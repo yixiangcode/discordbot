@@ -360,7 +360,6 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
-    /*
     if(message.content==="write"){
         editedmessage= message.content.slice(6);
 
@@ -377,7 +376,7 @@ client.on('message',message=>{
             message.channel.send("message is : " + _message);
         }
     }
-*/
+
     const date = new Date(); // today
     if(message.content==="time"||message.content ==="时间"){
         message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
@@ -514,8 +513,8 @@ client.on('message',message=>{
             break;
         case 'clear':
             console.log(message.author.username);
-            if(message.author.username===""){
-                message.channel.send("Sorry! y²N is not longer support your username.");
+            if(message.author.username==="K."){
+                message.channel.send("删屁删 030");
             }else{
                 if(!args[1]) return message.reply('亲爱的要写几行哟~');
                 message.channel.bulkDelete(args[1]);
