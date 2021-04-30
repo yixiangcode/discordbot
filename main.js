@@ -393,6 +393,9 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("hiii亲爱的");
     }
+	if(message.content === "a"){
+		message.channel.send("<a:queue:786936888262393927>")
+	}
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
         var 课程默认图 = new Discord.MessageEmbed()
@@ -407,8 +410,14 @@ client.on('message',message=>{
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
     }
+	if(message.content ==="各位吃午餐了没？:rice:"||message.content ==="各位吃晚餐了没？:rice:"){
+		message.channel.send('<a:pepeEggplant:777479557472583710>')
+	}
+	if(message.content ==="好耶，3点了:sparkles:"){
+		message.channel.send('<a:winnie:778827377240309762>')
+	}
     if(message.content ==="喵"){
-        message.channel.send("好猫一只");
+        message.channel.send("<:queue:786936888262393927><:gun_2:777479299162308610>");
     }
     if(message.content ==="拿"){
         message.channel.send("🖕😑🖕");
