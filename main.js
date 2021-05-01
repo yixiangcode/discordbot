@@ -415,6 +415,7 @@ client.on('message',message=>{
 	}
 	if(message.content ==="好耶，3点了✨"){
 		message.channel.send('<a:winnie:778827377240309762>')
+		message.channel.send("<:queue:786936888262393927><:gun_2:777479299162308610>");
 	}
     if(message.content ==="喵"){
         message.channel.send("<:queue:786936888262393927><:gun_2:777479299162308610>");
