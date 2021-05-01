@@ -410,10 +410,10 @@ client.on('message',message=>{
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
     }
-	if(message.content ==="各位吃午餐了没？:rice:"||message.content ==="各位吃晚餐了没？:rice:"){
+	if(message.content ==="各位吃午餐了没？🍚"||message.content ==="各位吃晚餐了没？🍚"){
 		message.channel.send('<a:pepeEggplant:777479557472583710>')
 	}
-	if(message.content ==="好耶，3点了:sparkles:"){
+	if(message.content ==="好耶，3点了✨"){
 		message.channel.send('<a:winnie:778827377240309762>')
 	}
     if(message.content ==="喵"){
