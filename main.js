@@ -541,9 +541,9 @@ client.on('message',message=>{
             .setColor('#00FFF3')
             .setTitle('y²N Bot List')
             .setURL('https://yixiang.000webhostapp.com/')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/x9bLVxi.gif', 'https://www.instagram.com/yixiang_0906/')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
-            .setThumbnail('https://i.imgur.com/VDMbwcb.png')
+            .setThumbnail('https://i.imgur.com/o7yI7Gq.gif')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
