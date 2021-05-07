@@ -535,7 +535,7 @@ client.on('message',message=>{
         case 'dev':
             message.channel.send("<@632908358935904258>");
             break;
-        case 'help.':
+        case 'help':
             var embed = new Discord.MessageEmbed()
 
             .setColor('#00FFF3')
