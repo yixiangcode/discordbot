@@ -30,12 +30,9 @@ client.once('ready',()=>{
 
 client.on('ready',() => {
     var chn = client.channels.cache.get('770291696034381844');
-    var lampchn = client.channels.cache.get('770291696034381844');
-
 
     //var chn = client.channels.cache.get('707515094568927295');
     var msgNumber = "802009634020917248";
-    var lamp = "802009634020917248";
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
@@ -83,7 +80,7 @@ client.on('ready',() => {
             .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
             .setColor("00FFFD")
             .addFields(
-                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm:ss a")+'```' },
                 { name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
@@ -352,7 +349,7 @@ client.on('ready',() => {
                 fetchedMsg.edit(课程默认图);
             });
         }
-    }, 1000);
+    }, 100);
 })
 
 //const token = 'NzcwMjY3NTEwOTU5ODk4NjI1.X5bFhQ.ngJSg0pTO6RKRtdy6GlDVPdLGmM';
