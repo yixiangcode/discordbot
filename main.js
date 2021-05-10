@@ -75,12 +75,12 @@ client.on('ready',() => {
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
-        if(ms==="1000"){
+        if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
             .setColor("00FFFD")
             .addFields(
-                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm:ss a")+'```' },
+                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
                 { name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
