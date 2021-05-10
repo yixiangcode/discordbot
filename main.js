@@ -75,7 +75,7 @@ client.on('ready',() => {
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
-        if(s==="00"){
+        if(ms==="1000"){
             var 主界面 = new Discord.MessageEmbed()
             .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
             .setColor("00FFFD")
@@ -394,7 +394,7 @@ client.on('message',message=>{
 		message.channel.send("<a:queue:786936888262393927>")
 	}
     if(message.content ==="rs"){
-        var chn = client.channels.cache.get('770291696034381844');
+        var chn = client.channels.cache.get('802009634020917248');
         var 课程默认图 = new Discord.MessageEmbed()
             .setTitle("课程Link将在每堂课结束后自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
