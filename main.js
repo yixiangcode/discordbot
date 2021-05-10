@@ -34,8 +34,8 @@ client.on('ready',() => {
 
 
     //var chn = client.channels.cache.get('707515094568927295');
-    var msgNumber = 802009634020917248;
-    var lamp = "802029057029832735";
+    var msgNumber = "802009634020917248";
+    var lamp = "802009634020917248";
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
