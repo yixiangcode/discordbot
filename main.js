@@ -34,7 +34,7 @@ client.on('ready',() => {
 
 
     //var chn = client.channels.cache.get('707515094568927295');
-    var msgNumber = "802029057029832735";
+    var msgNumber = "802009634020917248";
     var lamp = "802029057029832735";
     setInterval(() => {
         const date = new Date();
@@ -89,7 +89,7 @@ client.on('ready',() => {
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
             .setFooter('y²N version 2.1.2', 'https://i.imgur.com/VDMbwcb.png');
-            chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
