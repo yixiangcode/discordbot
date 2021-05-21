@@ -418,6 +418,7 @@ client.on('message',message=>{
         message.channel.send("<:queue:786936888262393927><:gun_2:777479299162308610>");
     }
     if(message.content ==="拿"){
+		message.channel.send("拿条淋");
         message.channel.send("🖕😑🖕");
     }
     if(message.content ==="emoji"){
