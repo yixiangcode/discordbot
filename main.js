@@ -444,7 +444,8 @@ client.on('message',message=>{
     }
     var chn = client.channels.cache.get('782935833501368320');
     if(message.channel.id !== "782935833501368320"){
-        chn.send(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
+		chn.send(message.author.username + " 向 " + message.guild.name + " 发送了 " + "【" + message.content + "】");
+        //chn.send(message.author.username + " (id:" + message.author.id + ") " + " 向 " + message.guild.name + " (id:" + message.guild.id + ") " + "发送了" + "【" + message.content + "】");
     }
     
     let args = message.content.substring(PREFIX.length).split(" ");
