@@ -358,9 +358,10 @@ const PREFIX = '&';
 
 client.on('message',message=>{
 	const date = new Date(); // today
+	/*
 	if(message.content==="jt"){
 		message.channel.send("**Server join Date: **" + author.date.join + "\n");
-	}
+	}*/
     if(message.content.startsWith ("write")){
         editedmessage= message.content.slice(6);
 
