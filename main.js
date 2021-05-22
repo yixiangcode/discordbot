@@ -357,7 +357,7 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
-    if(message.content.startsWith==="write"){
+    if(message.content.startsWith ("write")){
         editedmessage= message.content.slice(6);
 
         client.msgs[message.author.username]={
