@@ -367,11 +367,10 @@ client.on('message',message=>{
             if(err)throw err;
             message.channel.send("message written");
         })
-
-        if(message.content==="get"){
-            let _message = client.msgs[message.author.username].message;
-            message.channel.send("message is : " + _message);
-        }
+    }
+	if(message.content.startsWith ("get")){
+        let _message = client.msgs[message.author.username].message;
+        message.channel.send("message is : " + _message);
     }
 
     const date = new Date(); // today
