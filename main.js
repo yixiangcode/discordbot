@@ -357,8 +357,9 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
+	const date = new Date(); // today
 	if(message.content==="jt"){
-		message.channel.send("**Server join Date: **" + moment.utc(member.joinedTimestamp).format('DD/MM/YY') + "\n");
+		message.channel.send("**Server join Date: **" + date(member.joinedAt) + "\n");
 	}
     if(message.content.startsWith ("write")){
         editedmessage= message.content.slice(6);
@@ -376,7 +377,6 @@ client.on('message',message=>{
         message.channel.send("message is : " + _message);
     }
 
-    const date = new Date(); // today
     if(message.content==="time"||message.content ==="时间"){
         message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
     }
