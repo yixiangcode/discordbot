@@ -357,6 +357,22 @@ client.on('ready',() => {
 const PREFIX = '&';
 
 client.on('message',message=>{
+	if(message.content.startsWith ("写")){
+        editedmessage= message.content.slice(3);
+
+        client.msgs[message.author.username]={
+            message:editedmessage
+        }
+        fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+            if(err)throw err;
+            message.channel.send("message written");
+        })
+    }
+	if(message.content.startsWith ("读")){
+        let _message = client.msgs[message.author.username].message;
+        message.channel.send("message is : " + _message);
+    }
+	
     if(message.content.startsWith ("write")){
         editedmessage= message.content.slice(6);
 
