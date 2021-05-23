@@ -396,11 +396,8 @@ client.on('message',message=>{
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
-        message.channel.send("hiii亲爱的");
+        message.channel.send("ih");
     }
-	if(message.content === "a"){
-		message.channel.send("<a:queue:786936888262393927>")
-	}
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
         var 课程默认图 = new Discord.MessageEmbed()
