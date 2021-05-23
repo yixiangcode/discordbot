@@ -379,9 +379,12 @@ client.on('message',message=>{
     }
 
     if(message.content==="time"||message.content ==="时间"||message.content ==="几点"){
-        //.format("ddd")
-        message.channel.send(moment.utcOffset(+8).time);
-        message.channel.send(moment.utcOffset(+8).setTimestamp);
+        d=moment().utcOffset(+8).format("ddd")
+        h=moment().utcOffset(+8).format("hh")
+        m=moment().utcOffset(+8).format("mm")
+        s=moment().utcOffset(+8).format("ss")
+        a=moment().utcOffset(+8).format("a")
+        message.channel.send(d + "  " + h + " : " + m + " : " + s + " " + a);
     }
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
