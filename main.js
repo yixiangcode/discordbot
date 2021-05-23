@@ -378,8 +378,10 @@ client.on('message',message=>{
         message.channel.send("message is : " + _message);
     }
 
-    if(message.content==="time"||message.content ==="时间"){
-        message.channel.send(date.getHours()+" : "+date.getMinutes()+" 【UTC时间】 ");
+    if(message.content==="time"||message.content ==="时间"||message.content ==="几点"){
+        //.format("ddd")
+        message.channel.send(moment.utcOffset(+8).time);
+        message.channel.send(moment.utcOffset(+8).setTimestamp);
     }
     client.user.setStatus("dnd");
     client.user.setActivity("Visual Studio Code",{type:'STREAMING'}).catch(console.error);
