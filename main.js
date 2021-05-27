@@ -366,21 +366,22 @@ client.on('message',message=>{
 	if(message.content.startsWith ("n")){
 		guess = message.content.slice(2);
 		
-		let ans = client.msgs[message.author.username].message;
+		
 		client.msgs[message.author.username]={
-			message:guess
+			message:random
 		}
 		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
             if(err)throw err;
             message.channel.send("message written");
         })
-		if(guess==random){
+		let ans = client.msgs[message.author.username].message;
+		if(guess==ans){
 			message.channel.send("恭喜！答案是" + random);
 		}
-		if(guess<random){
+		if(guess<ans){
 			message.channel.send("猜大一点");
 		}
-		if(guess>random){
+		if(guess>ans){
 			message.channel.send("猜小一点");
 		}
 	}
