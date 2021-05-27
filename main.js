@@ -364,7 +364,7 @@ client.on('message',message=>{
 		message.channel.send("**Server join Date: **" + author.date.join + "\n");
 	}*/
 	if(message.content.startsWith ("n")){
-		guess = message.content.slice(2);
+		guess = message.content.slice(1);
 		
 		
 		client.msgs[message.author.username]={
@@ -372,9 +372,9 @@ client.on('message',message=>{
 		}
 		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
             if(err)throw err;
-            message.channel.send("message written");
         })
 		let ans = client.msgs[message.author.username].message;
+		message.channel.send("答案：" + ans);
 		if(guess==ans){
 			message.channel.send("恭喜！答案是" + random);
 		}
