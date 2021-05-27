@@ -365,6 +365,12 @@ client.on('message',message=>{
 	}*/
 	if(message.content=="set"){
 		const random = Math.floor(Math.random() * 100);
+		client.msgs[message.author.username]={
+			message:random
+		}
+		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+            if(err)throw err;
+        })
 		message.channel.send("Finished");
 	}
 	
