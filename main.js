@@ -358,15 +358,18 @@ const PREFIX = '&';
 
 client.on('message',message=>{
 	const date = new Date(); // today
-	const random = Math.floor(Math.random() * 100);
+	
 	/*
 	if(message.content==="jt"){
 		message.channel.send("**Server join Date: **" + author.date.join + "\n");
 	}*/
+	if(message.content=="set"){
+		const random = Math.floor(Math.random() * 100);
+		message.channel.send("Finished");
+	}
+	
 	if(message.content.startsWith ("n")){
 		guess = message.content.slice(1);
-		
-		
 		client.msgs[message.author.username]={
 			message:random
 		}
@@ -377,6 +380,7 @@ client.on('message',message=>{
 		message.channel.send("答案：" + ans);
 		if(guess==ans){
 			message.channel.send("恭喜！答案是" + random);
+			const random = Math.floor(Math.random() * 100);
 		}
 		if(guess<ans){
 			message.channel.send("猜大一点");
