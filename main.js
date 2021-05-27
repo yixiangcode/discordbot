@@ -376,17 +376,19 @@ client.on('message',message=>{
 	
 	if(message.content.startsWith ("n")){
 		guess = message.content.slice(1);
-		client.msgs[message.author.username]={
-			message:random
-		}
-		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
-            if(err)throw err;
-        })
+		
 		let ans = client.msgs[message.author.username].message;
 		message.channel.send("答案：" + ans);
 		if(guess==ans){
 			message.channel.send("恭喜！答案是" + random);
 			const random = Math.floor(Math.random() * 100);
+			
+			client.msgs[message.author.username]={
+			message:random
+			}
+			fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+				if(err)throw err;
+			})
 		}
 		else if(guess<ans){
 			message.channel.send("猜大一点");
