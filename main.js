@@ -380,7 +380,7 @@ client.on('message',message=>{
 		let ans = client.msgs[message.author.username].message;
 		message.channel.send("答案：" + ans);
 		if(guess==ans){
-			message.channel.send("恭喜！答案是" + random);
+			message.channel.send("恭喜！答案是" + ans);
 			const random = Math.floor(Math.random() * 100);
 			
 			client.msgs[message.author.username]={
