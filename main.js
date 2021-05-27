@@ -358,10 +358,33 @@ const PREFIX = '&';
 
 client.on('message',message=>{
 	const date = new Date(); // today
+	const random = Math.floor(Math.random() * 100);
 	/*
 	if(message.content==="jt"){
 		message.channel.send("**Server join Date: **" + author.date.join + "\n");
 	}*/
+	if(message.content.startsWith ("n")){
+		guess = message.content.slice(2);
+		
+		let ans = client.msgs[message.author.username].message;
+		client.msgs[message.author.username]={
+			message:guess
+		}
+		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
+            if(err)throw err;
+            message.channel.send("message written");
+        })
+		if(guess==random){
+			message.channel.send("恭喜！答案是" + random);
+		}
+		if(guess<random){
+			message.channel.send("猜大一点");
+		}
+		if(guess>random){
+			message.channel.send("猜小一点");
+		}
+	}
+
     if(message.content.startsWith ("write")){
         editedmessage= message.content.slice(6);
 
