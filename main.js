@@ -388,11 +388,14 @@ client.on('message',message=>{
 			message.channel.send("恭喜！答案是" + random);
 			const random = Math.floor(Math.random() * 100);
 		}
-		if(guess<ans){
+		else if(guess<ans){
 			message.channel.send("猜大一点");
 		}
-		if(guess>ans){
+		else if(guess>ans){
 			message.channel.send("猜小一点");
+		}
+		else{
+			message.channel.send("Error!");
 		}
 	}
 
