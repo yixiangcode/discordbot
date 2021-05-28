@@ -375,7 +375,7 @@ client.on('message',message=>{
 	}
 	
 	if(message.content.startsWith (";n")){
-		guess = message.content.slice(1);
+		guess = message.content.slice(2);
 		
 		let ans = client.msgs[message.author.username].message;
 		//message.channel.send("答案：" + ans);
