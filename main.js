@@ -374,7 +374,7 @@ client.on('message',message=>{
 		message.channel.send("Finished");
 	}
 	
-	if(message.content.startsWith ("n")){
+	if(message.content.startsWith (";n")){
 		guess = message.content.slice(1);
 		
 		let ans = client.msgs[message.author.username].message;
