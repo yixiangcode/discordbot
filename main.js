@@ -374,7 +374,7 @@ client.on('message',message=>{
 		message.channel.send("Finished");
 	}
 	
-	if(message.content.startsWith (";n")){
+	if(message.content.startsWith ("$n")){
 		guess = message.content.slice(2);
 		
 		let ans = client.msgs[message.author.username].message;
@@ -595,6 +595,7 @@ client.on('message',message=>{
                 { name: 'Instruction', value: '```hi | 嗨 | 晚安 | 喵 | time | 时间 | 几点 ```'},
                 { name: 'Prefix', value: '```Whatever symbol you want~```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $rps | $dev | $fshutdown【紧急用】```' },
+				{ name: 'Latest Update', value: '```$n + number (猜数字)[输入set初始化]小心嫑玩坏它（：```' },
                 { name: '商业合作请联系', value: '```07-6636892```'},
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
