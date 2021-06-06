@@ -371,7 +371,7 @@ client.on('message',message=>{
 		fs.writeFile("./data.json",JSON.stringify(client.msgs,null,4),err=>{
             if(err)throw err;
         })
-		message.channel.send("Finished");
+		message.channel.send("请开始猜数字~");
 	}
 	
 	if(message.content.startsWith ("$n")){
