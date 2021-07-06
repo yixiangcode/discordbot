@@ -437,6 +437,14 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("ih");
     }
+	
+	if(message.content ==="0"){
+		for(int i=0;i<100;i++){
+			message.channel.send(i);
+		}
+        
+    }
+	
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
         var 课程默认图 = new Discord.MessageEmbed()
