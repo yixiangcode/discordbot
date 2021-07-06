@@ -439,13 +439,13 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123"){
-		var nb = 1;
-		while(true){
-			message.channel.send(nb++);
+		for(var i=0;i<999999;i++){
+			message.channel.send(i+1);
 			if(message.content === "$STOP"){
 				break;
 			}
 		}
+        
     }
 	
     if(message.content ==="rs"){
