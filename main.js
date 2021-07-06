@@ -439,8 +439,8 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123"){
-		while(True){
-			message.channel.send(1++);
+		while(true){
+			message.channel.send(0++);
 		}
     }
 	
