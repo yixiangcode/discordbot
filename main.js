@@ -439,7 +439,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="0"){
-		for(int i=0;i<100;i++){
+		for(var i=0;i<100;i++){
 			message.channel.send(i);
 		}
         
