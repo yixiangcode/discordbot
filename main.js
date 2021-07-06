@@ -439,11 +439,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123"){
-		for(var i=0;i<88888;i++){
-			if(message.content === "$STOP"){
-				message.channel.send("**已停止**");
-				break;
-			}
+		for(var i=0;i<99999;i++){
 			message.channel.send(i+1);
 		}
         
