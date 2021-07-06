@@ -439,10 +439,10 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123"){
-		for(var i=0;i<10000;i++){
-			message.channel.send(i+1);
+		var n = 0;
+		while(True){
+			message.channel.send(n++);
 		}
-        
     }
 	
     if(message.content ==="rs"){
