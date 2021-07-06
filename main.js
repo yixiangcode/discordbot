@@ -438,9 +438,9 @@ client.on('message',message=>{
         message.channel.send("ih");
     }
 	
-	if(message.content ==="0"){
+	if(message.content ==="123"){
 		for(var i=0;i<100;i++){
-			message.channel.send(i);
+			message.channel.send(i+1);
 		}
         
     }
