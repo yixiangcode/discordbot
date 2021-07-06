@@ -440,7 +440,7 @@ client.on('message',message=>{
 	
 	if(message.content ==="123"){
 		while(true){
-			message.channel.send(0+=1);
+			message.channel.send(var x += 1);
 			if(message.content === "$STOP"){
 				break;
 			}
