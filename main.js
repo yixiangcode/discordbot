@@ -439,7 +439,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123" && message.author.username==="X230221"){
-		for(var i=101205;i<333333;i++){
+		for(var i=101205;i<222222;i++){
 			message.channel.send(i+1);
 		}
         
