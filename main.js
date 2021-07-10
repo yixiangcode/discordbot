@@ -55,8 +55,8 @@ client.on('ready',() => {
             .setURL('https://meet.google.com/lookup/e7mv5pql56')
         var Dp = new Discord.MessageEmbed()
             .setTitle('德培Link')
-			.setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley')
-            //.setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
+			//.setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley')
+            .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
         var 数学 = new Discord.MessageEmbed()
             .setTitle('数学Link')
             .setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
@@ -440,7 +440,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123" && message.author.username==="X230221"){
-		for(var i=167246;i<266666;i++){
+		for(var i=234177;i<333333;i++){
 			message.channel.send(i+1);
 		}
         
