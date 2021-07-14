@@ -692,6 +692,13 @@ client.on('message',message=>{
                 .setImage('https://i.imgur.com/x9bLVxi.gif')
                 message.channel.send(embed);
             break;
+		case 'csh':
+			var embed = new Discord.MessageEmbed()
+                .setColor("B300FF")
+                .setAuthor("Initialization")
+                .setImage('https://i.imgur.com/x9bLVxi.gif')
+                message.channel.send(embed);
+            break;
         case 'fs':
             message.channel.send('<a:crying:786944293729730560>');
             break;
