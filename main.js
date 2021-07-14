@@ -707,6 +707,7 @@ client.on('message',message=>{
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
+			break;
         case 'fs':
             message.channel.send('<a:crying:786944293729730560>');
             break;
