@@ -447,12 +447,12 @@ client.on('message',message=>{
     }
 	*/
     if(message.content ==="rs"){
-        var chn = client.channels.cache.get('864900050206982185');
+        var chn = client.channels.cache.get('864894398113906688');
         var 课程默认图 = new Discord.MessageEmbed()
             .setTitle("课程Link将在每堂课结束后自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
             .setColor("GREEN")
-            chn.messages.fetch({around: "802009634020917248", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(课程默认图);
             });
