@@ -78,7 +78,7 @@ client.on('ready',() => {
             .setColor("GREEN")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
-            .setAuthor('XianG自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
+            .setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
             .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
@@ -86,7 +86,7 @@ client.on('ready',() => {
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('y²N version 2.1.2', 'https://i.imgur.com/VDMbwcb.png');
+            .setFooter('version 1.0.0', 'https://i.imgur.com/kqd6hKk.gif');
             chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
