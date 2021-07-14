@@ -29,10 +29,10 @@ client.once('ready',()=>{
 });
 
 client.on('ready',() => {
-    var chn = client.channels.cache.get('770291696034381844');
+    var chn = client.channels.cache.get('864894398113906688');
 
     //var chn = client.channels.cache.get('707515094568927295');
-    var msgNumber = "802009634020917248";
+    var msgNumber = "864900050206982185";
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
@@ -87,7 +87,7 @@ client.on('ready',() => {
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
             .setFooter('version 1.0.0', 'https://i.imgur.com/kqd6hKk.gif');
-            chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
+            chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
@@ -438,14 +438,14 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("ih");
     }
-	
+	/*
 	if(message.content ==="123" && message.author.username==="X230221"){
 		for(var i=466666;i<566666;i++){
 			message.channel.send(i+1);
 		}
         
     }
-	
+	*/
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('770291696034381844');
         var 课程默认图 = new Discord.MessageEmbed()
