@@ -693,12 +693,20 @@ client.on('message',message=>{
                 message.channel.send(embed);
             break;
 		case 'csh':
-			var embed = new Discord.MessageEmbed()
-                .setColor("B300FF")
-                .setAuthor("Initialization")
-                .setImage('https://i.imgur.com/x9bLVxi.gif')
-                message.channel.send(embed);
-            break;
+			var 主界面 = new Discord.MessageEmbed()
+            .setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
+            .setColor("00FFFD")
+            .addFields(
+                { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
+            )
+            .setImage('https://i.imgur.com/pBo1t9i.jpg')
+            .setTimestamp()
+            .setFooter('version 1.0.0', 'https://i.imgur.com/kqd6hKk.gif');
+            chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(主界面);
+            });
         case 'fs':
             message.channel.send('<a:crying:786944293729730560>');
             break;
