@@ -24,9 +24,9 @@ const fs = require("fs");
 const { send } = require('process');
 
 client.once('ready',()=>{
-    console.log('你的小可爱已上线~~');
+    console.log('ONLINE');
     var chn = client.channels.cache.get('707515094568927295');
-	message.chn.send("ONLINE");
+	message.chn.send("ONLINE~");
 });
 
 client.on('ready',() => {
@@ -92,10 +92,6 @@ client.on('ready',() => {
             .setFooter('version 2.1.3', 'https://i.imgur.com/kqd6hKk.gif');
 			
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
-                const fetchedMsg = msg.first();
-                fetchedMsg.edit(主界面);
-            });
-			chn2.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
