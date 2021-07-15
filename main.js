@@ -29,10 +29,12 @@ client.once('ready',()=>{
 });
 
 client.on('ready',() => {
-    var chn = client.channels.cache.get('864894398113906688');
+    var chn = client.channels.cache.get('864894398113906688');//抄抄时间
+	var chn2 = client.channels.cache.get('770291696034381844');//下课Link
 
-    //var chn = client.channels.cache.get('707515094568927295');
-    var msgNumber = "864900050206982185";
+    var msgNumber = "864900050206982185";//抄抄时间
+	var msgNumber2 = "802009634020917248"//下课Link
+	
     setInterval(() => {
         const date = new Date();
         //d=date.getDay();
@@ -88,6 +90,10 @@ client.on('ready',() => {
             .setTimestamp()
             .setFooter('version 1.0.0', 'https://i.imgur.com/kqd6hKk.gif');
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(主界面);
+            });
+			chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
