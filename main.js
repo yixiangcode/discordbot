@@ -578,7 +578,6 @@ client.on('message',message=>{
             }
             break;
         case 'clear':
-            console.log(message.author.username);
             if(message.author.username==="K."){
                 message.channel.send("删屁删 030");
             }else{
@@ -703,19 +702,14 @@ client.on('message',message=>{
                 .setImage('https://i.imgur.com/x9bLVxi.gif')
                 message.channel.send(embed);
             break;
-        case 'fs':
-            message.channel.send('<a:crying:786944293729730560>');
-            break;
+			
+		/*
         case 's':
         case 'skip':
             message.channel.send('<:skip:786943173866815508>');
             break;
-        case 'p':
-            message.channel.send('<a:pepeJam:777478863268741120>');
-            break;
-        case 'q':
-            message.channel.send('<a:music:786942432730152980>')
-            break;
+		*/
+		
         case 'fshutdown':
             message.channel.send('Shutting down......');
             client.off();
