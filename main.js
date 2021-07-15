@@ -24,8 +24,9 @@ const fs = require("fs");
 const { send } = require('process');
 
 client.once('ready',()=>{
-    console.log('你的小可爱已上线哟~');
+    console.log('你的小可爱已上线~~');
     var chn = client.channels.cache.get('707515094568927295');
+	message.chn.send("ONLINE");
 });
 
 client.on('ready',() => {
@@ -88,12 +89,13 @@ client.on('ready',() => {
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('version 1.0.0', 'https://i.imgur.com/kqd6hKk.gif');
+            .setFooter('version 2.1.3', 'https://i.imgur.com/kqd6hKk.gif');
+			
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
-			chn.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
+			chn2.messages.fetch({around: "801997167802843157", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
             });
