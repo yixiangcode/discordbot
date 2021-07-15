@@ -26,7 +26,7 @@ const { send } = require('process');
 client.once('ready',()=>{
     console.log('ONLINE');
     var chn = client.channels.cache.get('707515094568927295');
-	message.chn.send("ONLINE~");
+	chn.send("ONLINE~");
 });
 
 client.on('ready',() => {
