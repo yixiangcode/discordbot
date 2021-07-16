@@ -88,7 +88,7 @@ client.on('ready',() => {
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('version 2.1.3', 'https://i.imgur.com/kqd6hKk.gif');
+            .setFooter('version 2.1.3', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
 			
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
@@ -577,13 +577,17 @@ client.on('message',message=>{
             }
             break;
         case 'clear':
+			if(!args[1]) return message.reply('亲爱的要写几行哟~');
+            message.channel.bulkDelete(args[1]);
+            message.reply("```message deleted```");
+
+			/*
             if(message.author.username==="K."){
                 message.channel.send("删屁删 030");
             }else{
-                if(!args[1]) return message.reply('亲爱的要写几行哟~');
-                message.channel.bulkDelete(args[1]);
-                message.reply("```message deleted```");
+				//阿巴阿巴
             }
+			*/
             
             break;
         case 'dev':
