@@ -19,7 +19,6 @@ const { discordTime } = require('canvacord/src/Util');
 const player = new Player(client);
 client.player = player;
 
-client.msgs = require("./data.json")
 const fs = require("fs");
 const { send } = require('process');
 
