@@ -441,14 +441,14 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.channel.send("ih");
     }
-	/*
+	
 	if(message.content ==="123" && message.author.username==="X230221"){
 		for(var i=504797;i<588888;i++){
 			message.channel.send(i+1);
 		}
         
     }
-	*/
+	
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('864894398113906688');
         var 课程默认图 = new Discord.MessageEmbed()
