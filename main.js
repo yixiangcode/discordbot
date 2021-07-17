@@ -583,13 +583,12 @@ client.on('message',message=>{
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
-            .setThumbnail('https://i.imgur.com/o7yI7Gq.gif')
+            .setThumbnail('https://i.ibb.co/NKjn6d8/451544875641339905.gif')
             .addFields(
                 { name: 'Developer', value: '```Yi Xiang```' },
-                { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Website', value: "```https://yixiang.000webhostapp.com/```" },
                 { name: 'Instruction', value: '```hi | 晚安 | 喵 | time | 喵 | 拿 ```'},
-                { name: 'Prefix', value: '```Whatever symbol you want~```'},
+                { name: 'Prefix', value: '```**WHATEVER**```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $rps | $dev | $fshutdown【紧急用】```' },
 				{ name: 'Latest Update', value: '```$n + number (猜数字)[输入set初始化]小心嫑玩坏它（：```' },
                 { name: '商业合作请联系', value: '```07-6636892```'},
