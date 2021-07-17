@@ -443,7 +443,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123" && message.author.username==="X230221"){
-		for(var i=523819;i<622222;i++){
+		for(var i=540459;i<622222;i++){
 			message.channel.send(i+1);
 		}
         
@@ -503,7 +503,7 @@ client.on('message',message=>{
                 })
             }
             if(!args[1]){
-                message.channel.send("亲爱的要给link哟~");
+                message.channel.send("要给link哟~");
                 return;
             }
             if(!message.member.voice.channel){
@@ -524,7 +524,7 @@ client.on('message',message=>{
         case 'skip':
             var server = servers[message.guild.me.id];
             if(server.dispatcher) server.dispatcher.end();
-            message.channel.send("已跳过>>")
+            message.react("<:skip:786943173866815508>");
             break;
         case 'stop':
             var server =servers[message.guild.me.id];
@@ -559,7 +559,7 @@ client.on('message',message=>{
             }
             break;
         case 'clear':
-			if(!args[1]) return message.reply('亲爱的要写几行哟~');
+			if(!args[1]) return message.reply('请加上行数~ max:100');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
 
@@ -573,7 +573,7 @@ client.on('message',message=>{
             
             break;
         case 'dev':
-            message.channel.send("<@632908358935904258>");
+            message.channel.send("Developer : <@632908358935904258>");
             break;
         case 'help':
             var embed = new Discord.MessageEmbed()
