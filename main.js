@@ -439,7 +439,7 @@ client.on('message',message=>{
         message.fetch().then(message => message.delete());
     }
     if(message.content ==="嗨"||message.content ==="hi"){
-        message.channel.send("ih");
+        message.react("<a:451544987952218112:865439645197271060>");
     }
 	
 	if(message.content ==="123" && message.author.username==="X230221"){
@@ -474,28 +474,10 @@ client.on('message',message=>{
         message.channel.send("<:queue:786936888262393927><:gun_2:777479299162308610>");
     }
     if(message.content ==="拿"){
-		message.channel.send("拿条淋");
         message.channel.send("🖕😑🖕");
     }
-    if(message.content ==="emoji"){
-        message.react("🥳");
-        message.react("🤪");
-        message.react("🤔");
-        message.react("👀");
-        message.react("😋");
-        message.react("😳");
-        message.react("🦥");
+    if(message.content ==="干"){
         message.react("🖕🏻");
-        message.react("❌");
-        message.react("✅");
-        message.react("😶");
-        message.react("🙃");
-        message.react("🥴");
-        message.react("😑");
-        message.react("🐔");
-        message.react("🎃");
-        message.react("💈");
-        message.react("😕");
         //message.member.roles.add("人工智障");
     }
     var chn = client.channels.cache.get('782935833501368320');
@@ -606,8 +588,7 @@ client.on('message',message=>{
                 { name: 'Developer', value: '```Yi Xiang```' },
                 { name: 'Introduction', value: "```This is a bot.That's all~```" },
                 { name: 'Website', value: "```https://yixiang.000webhostapp.com/```" },
-                { name: 'Emoji', value: "```喵 | 拿 | emoji```" },
-                { name: 'Instruction', value: '```hi | 嗨 | 晚安 | 喵 | time | 时间 | 几点 ```'},
+                { name: 'Instruction', value: '```hi | 晚安 | 喵 | time | 喵 | 拿 ```'},
                 { name: 'Prefix', value: '```Whatever symbol you want~```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $rps | $dev | $fshutdown【紧急用】```' },
 				{ name: 'Latest Update', value: '```$n + number (猜数字)[输入set初始化]小心嫑玩坏它（：```' },
@@ -620,7 +601,7 @@ client.on('message',message=>{
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             .setTimestamp()
-            .setFooter('y²N’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.imgur.com/VDMbwcb.png');
+            .setFooter('y²N’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
             message.channel.send(embed);
             break;
         case 'rps':
