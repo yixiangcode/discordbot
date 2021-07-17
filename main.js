@@ -367,7 +367,7 @@ client.on('message',message=>{
 	if(message.content==="jt"){
 		message.channel.send("**Server join Date: **" + author.date.join + "\n");
 	}*/
-	if(message.content=="set"){
+	if(message.content=="$set"){
 		const random = Math.floor(Math.random() * 100);
 		client.msgs[message.author.username]={
 			message:random
@@ -590,7 +590,7 @@ client.on('message',message=>{
                 { name: 'Instruction', value: '```hi | 晚安 | 喵 | time | 喵 | 拿 ```'},
                 { name: 'Prefix', value: '```WHATEVER```'},
                 { name: 'Features', value: '```$clear 10 | $电 | $ping | $play | $stop | $skip | $help | $rps | $dev | $fshutdown【紧急用】```' },
-				{ name: 'Latest Update', value: '```$n + number (猜数字)[输入set初始化]小心嫑玩坏它（：```' },
+				//{ name: 'Latest Update', value: '```$n + number (猜数字)[输入set初始化]小心嫑玩坏它（：```' },
                 { name: '商业合作请联系', value: '```07-6636892```'},
                 //{ name: '\u200B', value: '\u200B' },
                 //{ name: 'Inline field title', value: 'Some value here', inline: true },
