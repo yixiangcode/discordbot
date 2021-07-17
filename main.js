@@ -579,13 +579,13 @@ client.on('message',message=>{
             var embed = new Discord.MessageEmbed()
 
             .setColor('#00FFF3')
-            .setTitle('y²N Bot List')
+            .setTitle('EEB Bot List')
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
             .setThumbnail('https://i.ibb.co/NKjn6d8/451544875641339905.gif')
             .addFields(
-                { name: '**Developer**', value: '**Yi Xiang**' },
+                { name: '**Developer**', value: '```Yi Xiang```' },
                 { name: 'Website', value: "```https://yixiang.000webhostapp.com/```" },
                 { name: 'Instruction', value: '```hi | 晚安 | 喵 | time | 喵 | 拿 ```'},
                 { name: 'Prefix', value: '```WHATEVER```'},
@@ -600,7 +600,7 @@ client.on('message',message=>{
             //.setImage('https://i.imgur.com/O0VqCrZ.jpg')
             .setImage('https://i.imgur.com/x9bLVxi.gif')
             .setTimestamp()
-            .setFooter('y²N’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
+            .setFooter('Bot’s Birthday : Monday, ‎October ‎26, ‎2020, ‏‎8:50 PM', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
             message.channel.send(embed);
             break;
         case 'rps':
