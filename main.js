@@ -442,7 +442,7 @@ client.on('message',message=>{
         message.react("<a:451544987952218112:865439645197271060>");
     }
 	
-	if(message.content ==="123" && message.author.username==="X230221"){
+	if(message.content ==="123" && message.author.username==="2302"){
 		for(var i=599770;i<622222;i++){
 			message.channel.send(i+1);
 		}
