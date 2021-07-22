@@ -80,7 +80,8 @@ client.on('ready',() => {
             .setColor("GREEN")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
-            .setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
+            //.setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
+			.setTitle('高二电1自动化网课Link系统©', 'https://yixiang.000webhostapp.com/')
             .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```'+moment().utcOffset(+8).format("hh:mm a")+'```' },
@@ -88,7 +89,7 @@ client.on('ready',() => {
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('version 2.1.3', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
+            .setFooter('version 2.1.4', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
 			
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
@@ -581,7 +582,7 @@ client.on('message',message=>{
             .setColor('#00FFF3')
             .setTitle('EEB Bot List')
             .setURL('https://yixiang.000webhostapp.com/')
-            .setAuthor('https://i.imgur.com/kqd6hKk.gif')
+            .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
             .setThumbnail('https://i.ibb.co/NKjn6d8/451544875641339905.gif')
             .addFields(
