@@ -579,7 +579,7 @@ client.on('message',message=>{
             var embed = new Discord.MessageEmbed()
 
             .setColor('#00FFF3')
-            .setTitle('EEB Bot List')
+            .setTitle('EEB Bot List','https://i.imgur.com/kqd6hKk.gif')
             .setURL('https://yixiang.000webhostapp.com/')
             .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
             .setDescription('Thanks for using me~')
