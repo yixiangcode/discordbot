@@ -579,9 +579,9 @@ client.on('message',message=>{
             var embed = new Discord.MessageEmbed()
 
             .setColor('#00FFF3')
-            .setTitle('EEB Bot List','https://i.imgur.com/kqd6hKk.gif')
+            .setTitle('EEB Bot List')
             .setURL('https://yixiang.000webhostapp.com/')
-            .setAuthor('Yi Xiang', 'https://i.imgur.com/kqd6hKk.gif', 'https://www.instagram.com/yixiang_0906/')
+            .setAuthor('https://i.imgur.com/kqd6hKk.gif')
             .setDescription('Thanks for using me~')
             .setThumbnail('https://i.ibb.co/NKjn6d8/451544875641339905.gif')
             .addFields(
