@@ -77,13 +77,13 @@ client.on('ready',() => {
         var 课程默认图 = new Discord.MessageEmbed()
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
-            .setColor("GREEN")
+            .setColor("00FFFD")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             //.setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
 			.setTitle('高二电1自动化网课Link系统')
 			.setURL('https://yixiang.000webhostapp.com/')
-            .setColor("00FFFD")
+            .setColor("FFFB00")
             .addFields(
                 { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
@@ -445,7 +445,7 @@ client.on('message',message=>{
     }
 	
 	if(message.content ==="123" && message.author.username==="2302"){
-		for(var i=668938;i<788888;i++){
+		for(var i=735202;i<888888;i++){
 			message.channel.send(i+1);
 		}
         
