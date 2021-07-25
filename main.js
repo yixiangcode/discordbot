@@ -77,13 +77,13 @@ client.on('ready',() => {
         var 课程默认图 = new Discord.MessageEmbed()
             .setTitle("课程Link将在每堂课结束自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
-            .setColor("00FFFD")
+            .setColor("FFFB00")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
             //.setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
 			.setTitle('高二电1自动化网课Link系统')
 			.setURL('https://yixiang.000webhostapp.com/')
-            .setColor("FFFB00")
+            .setColor("00FFFD")
             .addFields(
                 { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
@@ -456,7 +456,7 @@ client.on('message',message=>{
         var 课程默认图 = new Discord.MessageEmbed()
             .setTitle("课程Link将在每堂课结束后自动生成")
             .setDescription("```"+"此时间段无课程"+"```")
-            .setColor("GREEN")
+            .setColor("FFFB00")
             chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(课程默认图);
