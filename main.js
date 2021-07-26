@@ -469,6 +469,7 @@ client.on('message',message=>{
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(主界面);
+            });
     }
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('864894398113906688');
