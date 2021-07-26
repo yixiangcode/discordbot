@@ -85,7 +85,7 @@ client.on('ready',() => {
 			.setURL('https://yixiang.000webhostapp.com/')
             .setColor("00FFFD")
             .addFields(
-                { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("ddd hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
@@ -459,7 +459,7 @@ client.on('message',message=>{
 			.setURL('https://yixiang.000webhostapp.com/')
             .setColor("00FFFD")
             .addFields(
-                { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("ddd hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
             .setImage('https://i.imgur.com/pBo1t9i.jpg')
