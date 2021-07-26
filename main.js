@@ -80,11 +80,6 @@ client.on('ready',() => {
             .setColor("FFFB00")
         if(s==="00"){
             var 主界面 = new Discord.MessageEmbed()
-			d=moment().utcOffset(+8).format("ddd")//
-			h=moment().utcOffset(+8).format("hh")//
-			m=moment().utcOffset(+8).format("mm")//
-			s=moment().utcOffset(+8).format("ss")//
-			a=moment().utcOffset(+8).format("a")//
             //.setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
 			.setTitle('高二电1自动化网课Link系统')
 			.setURL('https://yixiang.000webhostapp.com/')
