@@ -451,6 +451,25 @@ client.on('message',message=>{
         
     }
 	
+	if(message.content ==="mn"){
+        var chn = client.channels.cache.get('864894398113906688');
+        var 主界面 = new Discord.MessageEmbed()
+            //.setAuthor('高二电1自动化网课Link系统©','https://i.imgur.com/kqd6hKk.gif')
+			.setTitle('高二电1自动化网课Link系统')
+			.setURL('https://yixiang.000webhostapp.com/')
+            .setColor("00FFFD")
+            .addFields(
+                { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("hh:mm a")+'```' },
+                //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
+            )
+            .setImage('https://i.imgur.com/pBo1t9i.jpg')
+            .setTimestamp()
+            .setFooter('version 2.1.4', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
+			
+            chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(主界面);
+    }
     if(message.content ==="rs"){
         var chn = client.channels.cache.get('864894398113906688');
         var 课程默认图 = new Discord.MessageEmbed()
