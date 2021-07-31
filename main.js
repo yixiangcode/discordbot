@@ -443,14 +443,7 @@ client.on('message',message=>{
     if(message.content ==="嗨"||message.content ==="hi"){
         message.react("<a:451544987952218112:865439645197271060>");
     }
-	
-	if(message.content ==="123" && message.author.username==="2302"){
-		for(var i=889274;i<966666;i++){
-			message.channel.send(i+1);
-		}
-        
-    }
-	
+
 	if(message.content ==="mn"){
         var chn = client.channels.cache.get('864894398113906688');
         var 主界面 = new Discord.MessageEmbed()
