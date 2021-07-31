@@ -581,7 +581,7 @@ client.on('message',message=>{
             }
             break;
         case 'clear':
-			if(!args[1]) return message.reply('请加上行数~ max:100');
+			if(!args[1]) return message.reply('**要行数哟~**');
             message.channel.bulkDelete(args[1]);
             message.reply("```message deleted```");
 
