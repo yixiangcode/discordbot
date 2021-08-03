@@ -88,7 +88,7 @@ client.on('ready',() => {
                 { name: '不标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("ddd hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
-            .setImage('https://i.imgur.com/pBo1t9i.jpg')
+            .setImage('https://i.ibb.co/X3hTLqd/pBo1t9i.jpg')
             .setTimestamp()
             .setFooter('version 2.1.4', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
 			
@@ -455,7 +455,7 @@ client.on('message',message=>{
                 { name: '标准时间  🕓', value: '```fix'+'\n'+moment().utcOffset(+8).format("ddd hh:mm a")+'```' },
                 //{ name: '᲼', value: '◉已优化Link更新时间\n◉已更新最新调整时间' },
             )
-            .setImage('https://i.ibb.co/X3hTLqd/pBo1t9i.jpg')
+            .setImage('https://i.imgur.com/pBo1t9i.jpg')
             .setTimestamp()
             .setFooter('version 2.1.4', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
 			
