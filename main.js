@@ -475,6 +475,20 @@ client.on('message',message=>{
                 fetchedMsg.edit(课程默认图);
             });
     }
+	
+    if(message.content ==="$dp"){
+        var chn = client.channels.cache.get('864894398113906688');
+        var Dp = new Discord.MessageEmbed()
+            .setTitle('德培Link')
+			//.setURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley')
+            .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
+            chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(dp);
+            });
+    }
+
+	
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
     }
