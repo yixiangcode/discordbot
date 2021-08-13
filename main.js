@@ -484,7 +484,7 @@ client.on('message',message=>{
             .setURL('https://zoom.us/j/5906765099?pwd=bUNLT2RmcVpJbjJWbTEwbzFXZ3NZZz09')
             chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
-                fetchedMsg.edit(dp);
+                fetchedMsg.edit(Dp);
             });
     }
 
