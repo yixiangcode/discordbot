@@ -90,7 +90,7 @@ client.on('ready',() => {
             )
             .setImage('https://i.ibb.co/X3hTLqd/pBo1t9i.jpg')
             .setTimestamp()
-            .setFooter('version 2.1.4', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
+            .setFooter('version 2.1.5', 'https://i.ibb.co/8z5HFp8/760029871102754837.png');
 			
             chn.messages.fetch({around: "864900044057214998", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
