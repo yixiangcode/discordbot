@@ -707,7 +707,7 @@ client.on('message',message=>{
                     s+=1;
                 }
             break;
-        case '更新':
+        case 'lupdate':
             var embed = new Discord.MessageEmbed()
                 .setColor("B300FF")
                 .setAuthor("y²N Latest Update")
