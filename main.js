@@ -490,8 +490,8 @@ client.on('message',message=>{
     if(message.content ==="wgg"){
         var chn = client.channels.cache.get('864894398113906688');
         var 华文 = new Discord.MessageEmbed()
-            .setTitle('华文Link')
-            .setURL('https://meet.google.com/lookup/e7mv5pql56')
+            .setTitle('华文Link NEW')
+            .setURL('https://meet.google.com/dbi-oicf-jzx')
             chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
                 fetchedMsg.edit(华文);
