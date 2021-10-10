@@ -508,14 +508,14 @@ client.on('message',message=>{
                 fetchedMsg.edit(华文);
             });
     }
-	
+	/*
 	if(message.content ==="tss"){
 		client.channels.cache.get('707515094568927295').messages.fetch({around: "896761067282243636", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
 				fetchedMsg.edit('123456'));
             });
     }
-
+*/
 	
     if(message.content ==="晚安"){
         message.channel.send('<a:catsleep:778203433701474364>');
