@@ -29,6 +29,7 @@ client.once('ready',()=>{
 });
 
 client.on('ready',() => {
+	firstMessage(client,'896708937007661066','abc')
     var chn = client.channels.cache.get('864894398113906688');//抄抄时间
 	var chn2 = client.channels.cache.get('770291696034381844');//下课Link
 
@@ -449,6 +450,7 @@ client.on('message',message=>{
                 fetchedMsg.delete();
             });
     }
+	
     if(message.content ==="嗨"||message.content ==="hi"){
         message.react("<a:451544987952218112:865439645197271060>");
     }
