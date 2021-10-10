@@ -511,8 +511,9 @@ client.on('message',message=>{
 	
 	if(message.content ==="tss"){
 		client.channels.cache.get('707515094568927295').messages.fetch({around: "896727882586538007", limit: 1}).then(msg => {
+				const fetchedMsg.setTitle('aaa');
                 const fetchedMsg = msg.first();
-				fetchedMsg.setTitle('ABC');
+				fetchedMsg.edit(fetchedMsg);
             });
     }
 
