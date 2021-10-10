@@ -441,6 +441,7 @@ client.on('message',message=>{
         }
         message.fetch().then(message => message.delete());
     }
+	/*
 	if(message.content ==="abc删"){
 		var chn = client.channels.cache.get('805460499977601074');//抄抄时间
 		var msgNumber = "895499894754795521";//抄抄时间
@@ -450,7 +451,7 @@ client.on('message',message=>{
                 fetchedMsg.delete();
             });
     }
-	
+	*/
     if(message.content ==="嗨"||message.content ==="hi"){
         message.react("<a:451544987952218112:865439645197271060>");
     }
