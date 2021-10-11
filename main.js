@@ -29,7 +29,7 @@ client.once('ready',()=>{
 });
 
 client.on('ready',() => {
-	firstMessage(client,'896708937007661066','abc')
+	//firstMessage(client,'896708937007661066','abc')
     var chn = client.channels.cache.get('864894398113906688');//抄抄时间
 	var chn2 = client.channels.cache.get('770291696034381844');//下课Link
 
@@ -513,7 +513,7 @@ client.on('message',message=>{
 	if(message.content ==="sxx"){
         var chn = client.channels.cache.get('864894398113906688');
         var 数学 = new Discord.MessageEmbed()
-            .setTitle('华文Link NEW')
+            .setTitle('数学Link')
             .setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
             chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
                 const fetchedMsg = msg.first();
