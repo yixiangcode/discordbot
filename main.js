@@ -509,6 +509,17 @@ client.on('message',message=>{
                 fetchedMsg.edit(华文);
             });
     }
+	
+	if(message.content ==="sxx"){
+        var chn = client.channels.cache.get('864894398113906688');
+        var 数学 = new Discord.MessageEmbed()
+            .setTitle('华文Link NEW')
+            .setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
+            chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
+                const fetchedMsg = msg.first();
+                fetchedMsg.edit(数学);
+            });
+    }
 	/*
 	if(message.content ==="tss"){
 		client.channels.cache.get('707515094568927295').messages.fetch({around: "896761067282243636", limit: 1}).then(msg => {
