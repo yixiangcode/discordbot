@@ -8,10 +8,6 @@ const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const moment = require('moment');
 
-const dbs = require("discord-buttons");
-dbs(client)
-const { MessageMenuOption, MessageMenu } = require("discord-buttons")
-
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 const client = new Discord.Client();
