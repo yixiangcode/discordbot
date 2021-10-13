@@ -28,12 +28,14 @@ const { send } = require('process');
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
-	if (message.content === 'ping') {
+	if (interaction.commandName === 'ping') {
 		const row = new MessageActionRow()
 			.addComponents(
 				new MessageSelectMenu()
 					.setCustomId('select')
 					.setPlaceholder('Nothing selected')
+					.setMinValues(2)
+					.setMaxValues(3)
 					.addOptions([
 						{
 							label: 'Select me',
@@ -44,6 +46,11 @@ client.on('interactionCreate', async interaction => {
 							label: 'You can select me too',
 							description: 'This is also a description',
 							value: 'second_option',
+						},
+						{
+							label: 'I am also an option',
+							description: 'This is a description as well',
+							value: 'third_option',
 						},
 					]),
 			);
