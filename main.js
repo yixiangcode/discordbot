@@ -8,12 +8,6 @@ const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const moment = require('moment');
 
-const dbs = require("discord-buttons");
-dbs(client)
-const { MessageMenuOption, MessageMenu } = require("discord-buttons")
-
-const { MessageActionRow, MessageSelectMenu } = require('discord.js');
-
 const client = new Discord.Client();
 var version = '1.2';
 var servers = {};
@@ -27,6 +21,12 @@ client.player = player;
 
 const fs = require("fs");
 const { send } = require('process');
+
+const dbs = require("discord-buttons");
+dbs(client)
+const { MessageMenuOption, MessageMenu } = require("discord-buttons")
+
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 client.once('ready',()=>{
     console.log('ONLINE');
