@@ -8,6 +8,10 @@ const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const moment = require('moment');
 
+const dbs = require("discord-buttons");
+dbs(client)
+const { MessageMenuOption, MessageMenu } = require("discord-buttons")
+
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 const client = new Discord.Client();
@@ -28,45 +32,6 @@ client.once('ready',()=>{
     console.log('ONLINE');
     var chn = client.channels.cache.get('707515094568927295');
 	chn.send("ONLINE~");
-});
-
-client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-
-	if (message.content === 'ping') {
-		const row = new MessageActionRow()
-			.addComponents(
-				new MessageSelectMenu()
-					.setCustomId('select')
-					.setPlaceholder('Nothing selected')
-					.setMinValues(2)
-					.setMaxValues(3)
-					.addOptions([
-						{
-							label: 'Select me',
-							description: 'This is a description',
-							value: 'first_option',
-						},
-						{
-							label: 'You can select me too',
-							description: 'This is also a description',
-							value: 'second_option',
-						},
-						{
-							label: 'I am also an option',
-							description: 'This is a description as well',
-							value: 'third_option',
-						},
-					]),
-			);
-
-		await interaction.reply({ content: 'Pong!', components: [row] });
-	}
-});
-
-client.on('interactionCreate', interaction => {
-	if (!interaction.isSelectMenu()) return;
-	console.log(interaction);
 });
 
 client.on('ready',() => {
@@ -561,7 +526,10 @@ client.on('message',message=>{
                 fetchedMsg.edit(数学);
             });
     }
+	
+	if(message.content ==="slc"){
 
+    }
 	/*
 	if(message.content ==="tss"){
 		client.channels.cache.get('707515094568927295').messages.fetch({around: "896761067282243636", limit: 1}).then(msg => {
