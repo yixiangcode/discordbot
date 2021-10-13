@@ -28,7 +28,7 @@ const { send } = require('process');
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
-	if (interaction.commandName === 'ping') {
+	if (message.content === 'ping') {
 		const row = new MessageActionRow()
 			.addComponents(
 				new MessageSelectMenu()
