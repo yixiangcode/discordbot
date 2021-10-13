@@ -9,6 +9,22 @@ const cron = require('cron');
 const moment = require('moment');
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
+
+
+const client = new Discord.Client();
+var version = '1.2';
+var servers = {};
+
+const { Player } = require("discord-player");
+const { prependListener } = require('discord-xp/models/levels');
+const { time } = require('console');
+const { discordTime } = require('canvacord/src/Util');
+const player = new Player(client);
+client.player = player;
+
+const fs = require("fs");
+const { send } = require('process');
+
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
@@ -35,20 +51,6 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply({ content: 'Pong!', components: [row] });
 	}
 });
-
-const client = new Discord.Client();
-var version = '1.2';
-var servers = {};
-
-const { Player } = require("discord-player");
-const { prependListener } = require('discord-xp/models/levels');
-const { time } = require('console');
-const { discordTime } = require('canvacord/src/Util');
-const player = new Player(client);
-client.player = player;
-
-const fs = require("fs");
-const { send } = require('process');
 
 client.once('ready',()=>{
     console.log('ONLINE');
