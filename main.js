@@ -7,6 +7,7 @@ const ytdl = require("ytdl-core");
 const levels = require('discord-xp/models/levels');
 const cron = require('cron');
 const moment = require('moment');
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 const client = new Discord.Client();
 var version = '1.2';
