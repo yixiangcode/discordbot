@@ -527,60 +527,7 @@ client.on('message', async message=>{
             });
     }
 	
-	if(message.content ==="slc"){
-		let option1 = new MessageMenuOption()
-			.setLabel("Option 1")
-			.setValue("Option 1")
-			.setDescription("1")
-			.setDefault()
-			.setEmoji("😋")
-		let option2 = new MessageMenuOption()
-			.setLabel("Option 2")
-			.setValue("Option 2")
-			.setDescription("2")
-			.setDefault()
-			.setEmoji("😋")
-		let option3 = new MessageMenuOption()
-			.setLabel("Option 3")
-			.setValue("Option 3")
-			.setDescription("3")
-			.setDefault()
-			.setEmoji("😋")
-		
-		let selection = MessageMenu()
-			.setID("Selection")
-			.setMaxValues(1)
-			.setMinValues(1)
-			.setPlaceholder("Click me")
-			.addOption(option1)
-			.addOption(option2)
-			.addOption(option3)
-		
-		let embed = new Discord.MessageEmbed()
-		.setColor("RANDOM").setTitle("SELECT NO!")
-		
-		let menumsg = await message.channel.send(embed, selection)
-		
-		function menuselection(menu){
-			switch(menu.values[0]){
-				case "Option 1":
-					menu.reply.send("the reply for option 1", true)
-				break;
-				case "Option 2":
-					menu.reply.send("the reply for option 2", true)
-				break;
-				case "Option 3":
-					menu.reply.send("the reply for option 3", true)
-				break;
-			}
-		}
-		client.on("clickMenu", (menu){
-			if(menu.message.id == menumsg.id){
-				if(menu.clicker.user.id == message.author.id) menuselection(menu)
-				else menu.reply.send(":x: you are not allowed", true)
-			}
-		})
-    }
+
 	/*
 	if(message.content ==="tss"){
 		client.channels.cache.get('707515094568927295').messages.fetch({around: "896761067282243636", limit: 1}).then(msg => {
