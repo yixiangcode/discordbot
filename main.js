@@ -574,7 +574,7 @@ client.on('message', async message=>{
 				break;
 			}
 		}
-		client.on("clickMenu", (menu){
+		client.on("clickMenu", (menu) => {
 			if(menu.message.id == menumsg.id){
 				if(menu.clicker.user.id == message.author.id) menuselection(menu)
 				else menu.reply.send(":x: you are not allowed", true)
