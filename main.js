@@ -564,7 +564,14 @@ client.on('message', async message=>{
 		function menuselection(menu){
 			switch(menu.values[0]){
 				case "Option 1":
-					menu.reply.send("the reply for option 1", true)
+					var chn = client.channels.cache.get('864894398113906688');
+					var 数学 = new Discord.MessageEmbed()
+						.setTitle('数学Link')
+						.setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
+						chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
+							const fetchedMsg = msg.first();
+							fetchedMsg.edit(数学);
+						});
 				break;
 				case "Option 2":
 					menu.reply.send("the reply for option 2", true)
