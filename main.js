@@ -685,7 +685,7 @@ client.on('message', async message=>{
                 .setColor("GREEN")
                 .setAuthor("Link")
 
-		.addField("Title here, no hyperlinks allowed", "Main text here, so you can put a hyperlink here [like so.](https://example.com)")
+		.addField("Title", "Main text here, so you can put a hyperlink here [like so.](https://example.com)")
                 message.channel.send(embed);
             }
             break;
