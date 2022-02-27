@@ -684,9 +684,8 @@ client.on('message', async message=>{
                 var embed = new Discord.MessageEmbed()
                 .setColor("GREEN")
                 .setTitle("https://meet.google.com/iyg-jaut-uoy?pli=1&authuser=1")
-                .addField("中国象棋选修", "https://meet.google.com/iyg-jaut-uoy?pli=1&authuser=1")
-		.addField("金融初探选修", "https://meet.google.com/rhq-qyxv-utc?pli=1&authuser=1")
-		.addField("联课活动", "https://meet.google.com/rpm-rjgq-rip?pli=1&authuser=1")
+
+		.addField("Title here, no hyperlinks allowed", "Main text here, so you can put a hyperlink here [like so.](https://example.com)")
                 message.channel.send(embed);
             }
             break;
