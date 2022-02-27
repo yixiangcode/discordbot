@@ -506,29 +506,7 @@ client.on('message', async message=>{
                 fetchedMsg.edit(Dp);
             });
     }
-	
-    if(message.content ==="wgg"){
-        var chn = client.channels.cache.get('864894398113906688');
-        var 华文 = new Discord.MessageEmbed()
-            .setTitle('华文Link NEW')
-            .setURL('https://meet.google.com/dbi-oicf-jzx')
-            chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
-                const fetchedMsg = msg.first();
-                fetchedMsg.edit(华文);
-            });
-    }
-	
-	if(message.content ==="sxx"){
-        var chn = client.channels.cache.get('864894398113906688');
-        var 数学 = new Discord.MessageEmbed()
-            .setTitle('数学Link')
-            .setURL('https://us04web.zoom.us/j/4645446141?pwd=VXlSbUxISGo2NG1DRldIRWg4MXNIdz09')
-            chn.messages.fetch({around: "864900050206982185", limit: 1}).then(msg => {
-                const fetchedMsg = msg.first();
-                fetchedMsg.edit(数学);
-            });
-    }
-	
+
 	if(message.content ==="slc"){
 		let option1 = new MessageMenuOption()
 			.setLabel("Option 1")
@@ -697,10 +675,24 @@ client.on('message', async message=>{
                 message.channel.send(embed);
             }
             break;
+	case 'link':    
+            console.log(message.author.username);
+            //if(message.author.username==="K."||message.author.username==="KK."||message.author.username==="阿乐"||message.author.username==="疯子")
+            if(message.author.username===""){
+                message.channel.send("Sorry! y²N is not longer support your username.");
+            }else{
+                var embed = new Discord.MessageEmbed()
+                .setColor("GREEN")
+                .setTitle("https://meet.google.com/iyg-jaut-uoy?pli=1&authuser=1")
+                .addField("中国象棋选修", "https://meet.google.com/iyg-jaut-uoy?pli=1&authuser=1")
+		.addField("金融初探选修", "https://meet.google.com/rhq-qyxv-utc?pli=1&authuser=1")
+		.addField("联课活动", "https://meet.google.com/rpm-rjgq-rip?pli=1&authuser=1")
+                message.channel.send(embed);
+            }
+            break;
         case 'clear':
 			if(!args[1]) return message.reply('**要行数哟~**');
             message.channel.bulkDelete(args[1]);
-            message.reply("```message deleted```");
 
 			/*
             if(message.author.username==="K."){
