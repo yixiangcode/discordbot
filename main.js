@@ -683,7 +683,7 @@ client.on('message', async message=>{
             }else{
                 var embed = new Discord.MessageEmbed()
                 .setColor("GREEN")
-                .setTitle("https://meet.google.com/iyg-jaut-uoy?pli=1&authuser=1")
+                .setAuthor("Link")
 
 		.addField("Title here, no hyperlinks allowed", "Main text here, so you can put a hyperlink here [like so.](https://example.com)")
                 message.channel.send(embed);
